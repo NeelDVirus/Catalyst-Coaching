@@ -1,0 +1,101 @@
+/* Extra small device */
+
+/*
+	Content
+	00. Wrapper-page
+	01. Header
+	xx. Miscellaneous
+*/
+
+/* -------------------------------------------------
+-------------   Wrapper-page  ----------------------
+-------------------------------------------------- */
+#wrapper-page {
+}
+
+/* -------------------------------------------------
+-------------   HEADER  ----------------------------
+-------------------------------------------------- */
+header.wrapper {
+	font-size: 1.6rem;
+}
+
+header.wrapper .row.welcome {
+	display: flex;
+	align-items: center;	
+	font-size: 0.9em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0 auto;	
+	color: #FFF;	
+	font-weight: $regular-openSans;
+	background-color: #111;
+	
+	//-- Welcome-Note --
+	.welcomeNote {
+		margin-right: auto;
+		.wrapper-welcomeIcon {
+			color: red;
+		}
+	}
+	//-- Social Icons --
+	.wrapper-socialIcon {
+		display: flex;
+		align-items: center;
+		color: #aaa;
+		
+		.icon { padding-right: 0.8em; } 
+		.facebook {font-size: 1em;}
+		.twitter {font-size: 1.1em;}
+		.instagram {font-size: 1.2em;}
+		.googlePlus {font-size: 1.25em;}
+	}
+	
+	.register {
+		padding-left: 2em;
+		color: red;
+	}
+}
+
+header .row.brand {
+	display: flex;
+	align-items: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	.brand {
+		margin-right: auto;
+	}
+	address {
+		display: flex;
+		align-items: center;
+		
+		>div {
+			display: flex;
+			align-items: stretch;
+			padding: 1em;
+			
+			.wrapper-icon {
+				color: red;
+				background-color: black;
+				.abc {
+					position: relative;
+					height: 100%;
+				}
+				.abc:before {
+					content: "";
+					display: block;
+					padding-left: 100%; 
+				}
+			}
+			p {
+				font-weight: $bold-openSans;
+				font-size: 0.95em;
+				padding: 0.2em 0 1em 1em;
+				span {
+					font-weight: $regular-openSans;
+					font-size: 0.9em;
+				}
+			}
+		}		
+	} //End of Address element
+}

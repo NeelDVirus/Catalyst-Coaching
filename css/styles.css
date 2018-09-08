@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*-----------------------------------------------------
+---------    Priority: Ultra    -----------
+-----------------------------------------------------*/
+html {
+  font-size: 10px;
+  height: 100%; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.6rem;
+  height: 100%; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; }
+
+/* Prevents adjustments of font size after orientation changes in IE on Windows Phone and in iOS */
+html {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/***********************************************  
+***************   TYPOGRAPHY    ****************
+************************************************/
+/*****************************************************  
+*****************  media queries  ********************
+******************************************************/
+/********* BREAKPOINT ***********/
+/* Small devices (landscape phones, 576px and up)
+Medium devices (tablets, 768px and up)
+Large devices (desktops, 992px and up)
+Extra large devices (large desktops, 1200px and up) */
+/************************************************  
+*********  0-BODY AND ITS COMPONENT  ************
+*************************************************/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
+
+#wrapper-page, main {
+  height: 100%; }
+
+.row {
+  padding-right: 10%;
+  padding-left: 10%; }
+
+/* Extra small device */
+/*
+	Content
+	00. Wrapper-page
+	01. Header
+	xx. Miscellaneous
+*/
+/* -------------------------------------------------
+-------------   Wrapper-page  ----------------------
+-------------------------------------------------- */
+/* -------------------------------------------------
+-------------   HEADER  ----------------------------
+-------------------------------------------------- */
+header.wrapper {
+  font-size: 1.6rem; }
+
+header.wrapper .row.welcome {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  color: #FFF;
+  font-weight: 400;
+  background-color: #111; }
+  header.wrapper .row.welcome .welcomeNote {
+    margin-right: auto; }
+    header.wrapper .row.welcome .welcomeNote .wrapper-welcomeIcon {
+      color: red; }
+  header.wrapper .row.welcome .wrapper-socialIcon {
+    display: flex;
+    align-items: center;
+    color: #aaa; }
+    header.wrapper .row.welcome .wrapper-socialIcon .icon {
+      padding-right: 0.8em; }
+    header.wrapper .row.welcome .wrapper-socialIcon .facebook {
+      font-size: 1em; }
+    header.wrapper .row.welcome .wrapper-socialIcon .twitter {
+      font-size: 1.1em; }
+    header.wrapper .row.welcome .wrapper-socialIcon .instagram {
+      font-size: 1.2em; }
+    header.wrapper .row.welcome .wrapper-socialIcon .googlePlus {
+      font-size: 1.25em; }
+  header.wrapper .row.welcome .register {
+    padding-left: 2em;
+    color: red; }
+
+header .row.brand {
+  display: flex;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  header .row.brand .brand {
+    margin-right: auto; }
+  header .row.brand address {
+    display: flex;
+    align-items: center; }
+    header .row.brand address > div {
+      display: flex;
+      align-items: stretch;
+      padding: 1em; }
+      header .row.brand address > div .wrapper-icon {
+        color: red;
+        background-color: black; }
+        header .row.brand address > div .wrapper-icon .abc {
+          position: relative;
+          height: 100%; }
+        header .row.brand address > div .wrapper-icon .abc:before {
+          content: "";
+          display: block;
+          padding-left: 100%; }
+      header .row.brand address > div p {
+        font-weight: 600;
+        font-size: 0.95em;
+        padding: 0.2em 0 1em 1em; }
+        header .row.brand address > div p span {
+          font-weight: 400;
+          font-size: 0.9em; }
+
+/*Medium devices (tablets, 768px and up)
+  min width 768px = 48em */
+/*Large devices (desktops, 992px and up)
+  min-width 992px = 62em */
+/* Extra large devices (large desktops, 1200px and up) 
+   min-width 1200px = 72em*/
+@media only screen and (min-width: 72em) {
+  .row {
+    max-width: 1800px; } }

@@ -1,0 +1,13 @@
+/************************************************  
+*********  0-BODY AND ITS COMPONENT  ************
+*************************************************/
+body {
+	//font-size: 16px; (set in set in the 01_generic-scss/_02-genericStyles.scss)
+	font-family: $openSans;
+	font-weight: $light-openSans; //300~normal, 600~bold
+}
+#wrapper-page, main {height: 100%}
+.row {
+	padding-right: 10%;
+	padding-left: 10%;
+}

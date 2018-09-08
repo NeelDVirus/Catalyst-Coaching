@@ -1,0 +1,55 @@
+/***********************************************  
+***************   TYPOGRAPHY    ****************
+************************************************/
+
+//----- FONT FAMILIES ----
+
+//OPEN SANS
+$openSans: 'Open Sans', sans-serif;
+$light-openSans: 300;
+$regular-openSans: 400;
+$bold-openSans: 600;
+
+//LATO
+$lato: 'Lato', sans-serif;
+$normal-lato: 300;
+$bold-lato: 400;
+
+//----- COLOR ------------
+$secondaryColor: #baa256;
+
+
+
+
+
+
+/*****************************************************  
+*****************  media queries  ********************
+******************************************************/
+
+
+
+/********* BREAKPOINT ***********/
+
+/* Small devices (landscape phones, 576px and up)
+Medium devices (tablets, 768px and up)
+Large devices (desktops, 992px and up)
+Extra large devices (large desktops, 1200px and up) */
+
+//--- MIN-WIDTH ----
+
+//$xs-min : no media query (default)
+$smBp-min : 36em;  //576px   
+$mdBp-min : 48em;  //768px   
+$lgBP-min : 62em;  //992px   
+$xlBp-min : 72em;  //1200px  
+
+//--- MAX-WIDTH ----
+
+$xsBp-max : 36.9375em;  //575px   
+$smBp-max : 47.9375em;  //767px   
+$mdBp-max : 61.9375em;  //991px   
+$lgBp-max : 74.9375em;  //1199px  
+$xlBp-max : 100em;      //1600px  
+
+
