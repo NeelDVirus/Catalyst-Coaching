@@ -1,7 +1,7 @@
 /* Extra large devices (large desktops, 1200px and up) 
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
-	.row {
+	.col {
 		max-width: 1800px;
 	}
 }
