@@ -101,22 +101,31 @@ body {
 /*
 	Content
 	00. Wrapper-page
-	01. Header
+	01. Landing page
+		01.00 Header
+		01.01 Banner
 	xx. Miscellaneous
 */
-/* -------------------------------------------------
--------------   Wrapper-page  ----------------------
--------------------------------------------------- */
-/* -------------------------------------------------
--------------   HEADER  ----------------------------
--------------------------------------------------- */
-header.wrapper {
+/*###############################################
+##############   01. Landing page    ############
+################################################*/
+.landingPage-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+/*###############################################
+##############   01.00 Header    ################
+################################################*/
+.wrapper-header {
   font-size: 1.6rem; }
 
-header.wrapper .row-welcome {
+/****************************************
+************  Welcome row ***************/
+.wrapper-header .row-welcome {
   background-color: #111; }
 
-header.wrapper .col-welcome {
+.wrapper-header .col-welcome {
   display: flex;
   align-items: center;
   font-size: 0.9em;
@@ -124,46 +133,48 @@ header.wrapper .col-welcome {
   padding: 1em 0;
   color: #FFF;
   font-weight: 400; }
-  header.wrapper .col-welcome .welcomeNote {
+  .wrapper-header .col-welcome .welcomeNote {
     margin-right: auto; }
-    header.wrapper .col-welcome .welcomeNote .wrapper-welcomeIcon {
+    .wrapper-header .col-welcome .welcomeNote .wrapper-welcomeIcon {
       color: red; }
-  header.wrapper .col-welcome .wrapper-socialIcon {
+  .wrapper-header .col-welcome .wrapper-socialIcon {
     display: flex;
     align-items: center;
     color: #aaa; }
-    header.wrapper .col-welcome .wrapper-socialIcon .icon {
+    .wrapper-header .col-welcome .wrapper-socialIcon .icon {
       padding-right: 0.8em; }
-    header.wrapper .col-welcome .wrapper-socialIcon .facebook {
+    .wrapper-header .col-welcome .wrapper-socialIcon .facebook {
       font-size: 1em; }
-    header.wrapper .col-welcome .wrapper-socialIcon .twitter {
+    .wrapper-header .col-welcome .wrapper-socialIcon .twitter {
       font-size: 1.1em; }
-    header.wrapper .col-welcome .wrapper-socialIcon .instagram {
+    .wrapper-header .col-welcome .wrapper-socialIcon .instagram {
       font-size: 1.2em; }
-    header.wrapper .col-welcome .wrapper-socialIcon .googlePlus {
+    .wrapper-header .col-welcome .wrapper-socialIcon .googlePlus {
       font-size: 1.25em; }
-  header.wrapper .col-welcome .register {
+  .wrapper-header .col-welcome .register {
     padding-left: 2em;
     color: red; }
 
-header .col-brand {
+/*****************************************
+*************   Brand row   *************/
+.wrapper-header .col-brand {
   display: flex;
   align-items: center;
   margin: 0 auto;
   padding: 2em 0; }
-  header .col-brand .container-brandMain {
+  .wrapper-header .col-brand .container-brandMain {
     margin-right: auto;
     display: flex;
     align-items: center; }
-    header .col-brand .container-brandMain .container-logo {
+    .wrapper-header .col-brand .container-brandMain .container-logo {
       width: 2.7em;
       height: 2.7em;
       background-color: #ccc;
       overflow: hidden; }
-      header .col-brand .container-brandMain .container-logo img {
+      .wrapper-header .col-brand .container-brandMain .container-logo img {
         width: auto;
         height: 100%; }
-    header .col-brand .container-brandMain .brand-name {
+    .wrapper-header .col-brand .container-brandMain .brand-name {
       font-family: "Lato", sans-serif;
       font-size: 2em;
       font-weight: 600;
@@ -171,28 +182,63 @@ header .col-brand {
       border-radius: 2px;
       color: #000;
       text-transform: uppercase; }
-  header .col-brand address {
+  .wrapper-header .col-brand address {
     display: flex;
     align-items: center; }
-    header .col-brand address > div {
+    .wrapper-header .col-brand address > div {
       display: flex;
       align-items: stretch;
       padding-left: 1em; }
-      header .col-brand address > div .wrapper-icon {
+      .wrapper-header .col-brand address > div .wrapper-icon {
         display: flex;
         align-items: center;
         color: red;
         background-color: #222;
         padding: 0 1em;
         border-radius: 2px; }
-      header .col-brand address > div p {
+      .wrapper-header .col-brand address > div p {
         font-weight: 600;
         font-size: 0.93em;
         padding: 0.1em 0 0.9em 0.8em;
         line-height: 1.2; }
-        header .col-brand address > div p span {
+        .wrapper-header .col-brand address > div p span {
           font-weight: 400;
           font-size: 0.9em; }
+
+/*****************************************
+*************   Nav row   ****************/
+.wrapper-header .col-nav {
+  color: white;
+  background-color: #000; }
+
+.wrapper-header .col-nav ul {
+  display: flex; }
+  .wrapper-header .col-nav ul li {
+    padding: 1.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: background-color 0.3s ease; }
+    .wrapper-header .col-nav ul li a {
+      transform: scale(1, 0.9); }
+  .wrapper-header .col-nav ul li:last-child {
+    margin-left: auto;
+    background-color: red; }
+  .wrapper-header .col-nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+
+/*###############################################
+##############     01.01 Banner    ##############
+################################################*/
+.wrapper-banner {
+  height: 100%;
+  display: flex; }
+
+.wrapper-banner .row.hero-image {
+  flex: 1 1 auto;
+  background-image: url("../images/heroImage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 /*Medium devices (tablets, 768px and up)
   min width 768px = 48em */

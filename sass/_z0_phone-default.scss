@@ -3,30 +3,44 @@
 /*
 	Content
 	00. Wrapper-page
-	01. Header
+	01. Landing page
+		01.00 Header
+		01.01 Banner
 	xx. Miscellaneous
 */
 
-/* -------------------------------------------------
--------------   Wrapper-page  ----------------------
--------------------------------------------------- */
-#wrapper-page {
-}
 
-/* -------------------------------------------------
--------------   HEADER  ----------------------------
--------------------------------------------------- */
-header.wrapper {
+
+
+
+
+
+
+/*###############################################
+##############   01. Landing page    ############
+################################################*/
+.landingPage-layout {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/*###############################################
+##############   01.00 Header    ################
+################################################*/
+
+.wrapper-header {
 	font-size: 1.6rem;
 }
 
 
+/****************************************
+************  Welcome row ***************/
 
-header.wrapper .row-welcome {
+.wrapper-header .row-welcome {
 	background-color: #111;
 }
 
-header.wrapper .col-welcome {
+.wrapper-header .col-welcome {
 	display: flex;
 	align-items: center;	
 	font-size: 0.9em;
@@ -61,7 +75,11 @@ header.wrapper .col-welcome {
 	}
 }
 
-header .col-brand {
+/*****************************************
+*************   Brand row   *************/
+
+.wrapper-header .row-brand {}
+.wrapper-header .col-brand {
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
@@ -117,4 +135,46 @@ header .col-brand {
 			}
 		}		
 	} //End of Address element
+}
+
+/*****************************************
+*************   Nav row   ****************/
+.wrapper-header .row-nav {}
+.wrapper-header .col-nav {
+	color: white;
+	background-color: #000;
+}
+.wrapper-header .col-nav ul {
+	display: flex;
+	li {
+		padding: 1.5em;
+		text-transform: uppercase;
+		font-weight: $bold-lato;
+		transition: background-color 0.3s ease;
+		a {
+			transform: scale(1,0.9);
+		}
+	}
+	li:last-child {
+		margin-left: auto;
+		background-color: rgba(255,0,0,1);
+	}
+	li:hover {
+		background-color: rgba(255,255,255,0.5);
+	}
+}
+
+/*###############################################
+##############     01.01 Banner    ##############
+################################################*/
+.wrapper-banner {
+	height: 100%;
+	display: flex;
+}
+.wrapper-banner .row.hero-image {
+	flex: 1 1 auto;
+	background-image: url("../images/heroImage.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
