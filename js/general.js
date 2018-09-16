@@ -2,6 +2,17 @@
 $(document).ready(function(){
 
 	/*######################################################
+	###     Making the div square (making width same   #####
+	###     as height (header .col-brand address       #####
+	###     .wrapper-icon)                             #####
+	#######################################################*/
+	var $targetBrandIcon = $(".row-brand .wrapper-icon");
+	var $targetBrandIconHeight = $targetBrandIcon.outerHeight();
+	$targetBrandIcon.css("width", $targetBrandIconHeight +"");
+
+
+
+	/*######################################################
 	###     Overlapping(vertically) the half          ######
 	###     part of Nav section over the       
 	###     banner section                            ######  
