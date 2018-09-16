@@ -84,7 +84,7 @@ Medium devices (tablets, 768px and up)
 Large devices (desktops, 992px and up)
 Extra large devices (large desktops, 1200px and up) */
 /************************************************  
-*********  0-BODY AND ITS COMPONENT  ************
+*******      BODY AND ITS COMPONENT      ********
 *************************************************/
 body {
   font-family: "Open Sans", sans-serif;
@@ -96,6 +96,17 @@ body {
 .row {
   padding-right: 10%;
   padding-left: 10%; }
+
+/************************************************  
+*************       Z-INDEX         *************
+*************************************************/
+.col-nav {
+  z-index: 999;
+  position: relative; }
+
+.wrapper-banner {
+  z-index: 998;
+  position: relative; }
 
 /* Extra small device */
 /*
@@ -136,7 +147,7 @@ body {
   .wrapper-header .col-welcome .welcomeNote {
     margin-right: auto; }
     .wrapper-header .col-welcome .welcomeNote .wrapper-welcomeIcon {
-      color: red; }
+      color: #ff3215; }
   .wrapper-header .col-welcome .wrapper-socialIcon {
     display: flex;
     align-items: center;
@@ -153,7 +164,7 @@ body {
       font-size: 1.25em; }
   .wrapper-header .col-welcome .register {
     padding-left: 2em;
-    color: red; }
+    color: #ff3215; }
 
 /*****************************************
 *************   Brand row   *************/
@@ -192,7 +203,7 @@ body {
       .wrapper-header .col-brand address > div .wrapper-icon {
         display: flex;
         align-items: center;
-        color: red;
+        color: #ff3215;
         background-color: #222;
         padding: 0 1em;
         border-radius: 2px; }
@@ -213,17 +224,19 @@ body {
 
 .wrapper-header .col-nav ul {
   display: flex; }
+  .wrapper-header .col-nav ul li {
+    display: flex; }
   .wrapper-header .col-nav ul li a {
     padding: 1.5em;
     text-transform: uppercase;
-    font-style: 600;
+    font-weight: 400;
     transition: background-color 0.3s ease; }
     .wrapper-header .col-nav ul li a span {
       display: inline-block;
       transform: scaleY(0.9); }
   .wrapper-header .col-nav ul li:last-child {
     margin-left: auto;
-    background-color: red; }
+    background-color: #ff3215; }
   .wrapper-header .col-nav ul li:hover a {
     background-color: rgba(155, 25, 255, 0.5); }
 
@@ -237,8 +250,8 @@ body {
 .wrapper-banner .row.hero-image {
   flex: 1 1 auto;
   background-image: url("../images/heroImage.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 104%;
+  background-position: 0% -30px;
   background-repeat: no-repeat; }
 
 /*Medium devices (tablets, 768px and up)

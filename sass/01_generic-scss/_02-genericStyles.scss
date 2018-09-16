@@ -1,8 +1,9 @@
+
 /************************************************  
-*********  0-BODY AND ITS COMPONENT  ************
+*******      BODY AND ITS COMPONENT      ********
 *************************************************/
 body {
-	//font-size: 16px; (set in set in the 01_generic-scss/_02-genericStyles.scss)
+	//font-size: 16px; (set in set in the 00_intrinsic-scss/_02-normalizeSelfMade.scss)
 	font-family: $openSans;
 	font-weight: $light-openSans; //300~normal, 600~bold
 }
@@ -10,4 +11,16 @@ body {
 .row {
 	padding-right: 10%;
 	padding-left: 10%;
+}
+
+/************************************************  
+*************       Z-INDEX         *************
+*************************************************/
+.col-nav {
+	z-index: 999;
+	position: relative;
+}
+.wrapper-banner {
+	z-index: 998;
+	position: relative;
 }

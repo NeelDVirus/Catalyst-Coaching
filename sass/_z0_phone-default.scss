@@ -53,7 +53,7 @@
 	.welcomeNote {
 		margin-right: auto;
 		.wrapper-welcomeIcon {
-			color: red;
+			color: $primaryRed;
 		}
 	}
 	//-- Social Icons --
@@ -71,7 +71,7 @@
 	
 	.register {
 		padding-left: 2em;
-		color: red;
+		color: $primaryRed;
 	}
 }
 
@@ -118,7 +118,7 @@
 			.wrapper-icon {
 				display: flex;
 				align-items: center;
-				color: red;
+				color: $primaryRed;
 				background-color: #222;
 				padding: 0 1em;
 				border-radius: 2px;
@@ -147,10 +147,11 @@
 .wrapper-header .col-nav ul {
 	display: flex;
 	
+	li {display:flex;}
 	li a {
 		padding: 1.5em;
 		text-transform: uppercase;
-		font-style: $bold-openSans;
+		font-weight: $regular-openSans;
 		transition: background-color 0.3s ease;
 		span {
 			display: inline-block; //for transform to work;
@@ -159,7 +160,7 @@
 	}
 	li:last-child {
 		margin-left: auto;
-		background-color: rgba(255,0,0,1);
+		background-color: $primaryRed;
 		a span {
 			//transform: scale(1,1);
 		}
@@ -179,7 +180,7 @@
 .wrapper-banner .row.hero-image {
 	flex: 1 1 auto;
 	background-image: url("../images/heroImage.jpg");
-	background-size: cover;
-	background-position: center;
+	background-size: 100% 104%;
+	background-position: 0% -30px;
 	background-repeat: no-repeat;
 }
