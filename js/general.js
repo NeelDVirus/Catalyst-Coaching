@@ -20,4 +20,5 @@ $(document).ready(function(){
 	var $navSectionHeight = $(".col-nav").outerHeight();
 	console.log($navSectionHeight);
 	$(".wrapper-banner").css("margin-top", "-"+(0.5 * $navSectionHeight) +"px");
+	$(".wrapper-banner .row-banner.hero-image").css("padding-top", (0.5 * $navSectionHeight)+"px");
 })

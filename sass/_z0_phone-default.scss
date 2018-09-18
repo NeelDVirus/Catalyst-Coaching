@@ -6,6 +6,7 @@
 	01. Landing page
 		01.00 Header
 		01.01 Banner
+	02. About us
 	xx. Miscellaneous
 */
 
@@ -176,6 +177,7 @@
 .wrapper-banner {
 	height: 100%;
 	display: flex;
+	//negative margin set in javascript
 }
 .wrapper-banner .row.hero-image {
 	flex: 1 1 auto;
@@ -183,4 +185,20 @@
 	background-size: 100% 104%;
 	background-position: 0% -30px;
 	background-repeat: no-repeat;
+}
+.wrapper-banner.row.content-appendix {
+	color: #000;
+	background-color: #FFF;
+}
+
+
+
+/*###############################################
+##############     02 About Us    ##############
+################################################*/
+.wrapper-aboutUs {
+	height: 400px;
+	width: 400px;
+	margin-top: 50px;
+	background-color: red;
 }
