@@ -177,18 +177,40 @@
 .wrapper-banner {
 	height: 100%;
 	display: flex;
+	padding-bottom: 3em;
 	//negative margin set in javascript
 }
+
 .wrapper-banner .row.hero-image {
+	//position
+	position: relative;
+	//flex	
 	flex: 1 1 auto;
+	display: flex;
+	//general
 	background-image: url("../images/heroImage.jpg");
 	background-size: 100% 104%;
 	background-position: 0% -30px;
 	background-repeat: no-repeat;
 }
-.wrapper-banner.row.content-appendix {
-	color: #000;
-	background-color: #FFF;
+.wrapper-banner .col.container-adAppendix {	
+	/*position: relative; // for absolutePosition/bottom of ".wrapper-banner .col.content-adAppendix" to amek it work
+	bottom: 0;
+	.adAppendix {
+		position: absolute; //made its ancestor positioned, refer w3school
+		bottom: 0;
+		transform: translate(0,50%);
+		width: 100%;
+		
+		background-color: #000;
+		color: #fff;
+	}
+	
+	//display: flex;
+	//justify-content: space-between; 	
+	*/
+	align-self: flex-end;
+
 }
 
 
@@ -197,8 +219,4 @@
 ##############     02 About Us    ##############
 ################################################*/
 .wrapper-aboutUs {
-	height: 400px;
-	width: 400px;
-	margin-top: 50px;
-	background-color: red;
 }
