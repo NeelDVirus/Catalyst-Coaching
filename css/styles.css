@@ -245,36 +245,43 @@ body {
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
+  font-size: 1.6rem;
   height: 100%;
   display: flex;
   padding-bottom: 3em; }
 
 .wrapper-banner .row.hero-image {
-  position: relative;
   flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
   background-image: url("../images/heroImage.jpg");
-  background-size: 100% 104%;
-  background-position: 0% -30px;
-  background-repeat: no-repeat; }
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black; }
 
 .wrapper-banner .col.container-adAppendix {
-  /*position: relative; // for absolutePosition/bottom of ".wrapper-banner .col.content-adAppendix" to amek it work
-  bottom: 0;
-  .adAppendix {
-  	position: absolute; //made its ancestor positioned, refer w3school
-  	bottom: 0;
-  	transform: translate(0,50%);
-  	width: 100%;
-  	
-  	background-color: #000;
-  	color: #fff;
-  }
-  
-  //display: flex;
-  //justify-content: space-between; 	
-  */
-  align-self: flex-end; }
+  margin-top: auto; }
+  .wrapper-banner .col.container-adAppendix .adAppendix {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red; }
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad {
+      transform: translate(0, 50%);
+      padding: 2em;
+      background-color: #000;
+      color: #fff; }
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > * {
+      text-align: center; }
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > .label {
+      padding-bottom: 0.7em;
+      font-weight: 600;
+      font-size: 1.2em; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > .label span {
+        display: inline-block; }
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > p {
+      line-height: 1.4;
+      font-weight: 400;
+      color: #bbb; }
 
 /*###############################################
 ##############     02 About Us    ##############

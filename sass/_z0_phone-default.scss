@@ -30,7 +30,7 @@
 ################################################*/
 
 .wrapper-header {
-	font-size: 1.6rem;
+	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 }
 
 
@@ -171,10 +171,18 @@
 	}
 }
 
+
+
+
+
+
+
+
 /*###############################################
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
+	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 	height: 100%;
 	display: flex;
 	padding-bottom: 3em;
@@ -182,35 +190,58 @@
 }
 
 .wrapper-banner .row.hero-image {
-	//position
-	position: relative;
 	//flex	
 	flex: 1 1 auto;
 	display: flex;
+	flex-direction: column;
 	//general
 	background-image: url("../images/heroImage.jpg");
-	background-size: 100% 104%;
-	background-position: 0% -30px;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-color: black;
 }
 .wrapper-banner .col.container-adAppendix {	
-	/*position: relative; // for absolutePosition/bottom of ".wrapper-banner .col.content-adAppendix" to amek it work
-	bottom: 0;
+	margin-top: auto;
 	.adAppendix {
-		position: absolute; //made its ancestor positioned, refer w3school
-		bottom: 0;
-		transform: translate(0,50%);
-		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		border: 2px solid red;
 		
-		background-color: #000;
-		color: #fff;
+		//position: absolute; //made its ancestor positioned, refer w3school
+		//bottom: 0;
+		//transform: translate(0,50%);
+		//width: 100%;
+		.ad {
+			transform: translate(0,50%);
+			//flex
+			//display: flex;
+			//align-items: center;
+			
+			//color	& padding
+			padding: 2em;		
+			background-color: #000;
+			color: #fff;
+		}
+		.ad .text > * {
+			text-align: center;
+		}
+		.ad .text> .label {
+			padding-bottom: 0.7em;			
+			font-weight: $bold-openSans;
+			font-size: 1.2em;		
+			span{
+				display: inline-block; //for transform
+				//transform: scale(1,1.4);
+			}
+		} 
+		.ad .text> p {
+			line-height: 1.4;
+			//font-size: 0.9em;
+			font-weight: $regular-openSans;
+			color: #bbb;
+		}
+		
 	}
-	
-	//display: flex;
-	//justify-content: space-between; 	
-	*/
-	align-self: flex-end;
-
 }
 
 
@@ -219,4 +250,5 @@
 ##############     02 About Us    ##############
 ################################################*/
 .wrapper-aboutUs {
+
 }
