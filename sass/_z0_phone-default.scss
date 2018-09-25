@@ -143,7 +143,7 @@
 .wrapper-header .row-nav {}
 .wrapper-header .col-nav {
 	color: white;
-	background-color: #000;
+	background-color: rgba(17,17,17,1);
 }
 .wrapper-header .col-nav ul {
 	display: flex;
@@ -167,7 +167,7 @@
 		}
 	}
 	li:hover a{
-		background-color: rgba(155,25,255,0.5);
+		background-color: rgba(155,125,55,0.5);
 	}
 }
 
@@ -202,47 +202,59 @@
 }
 .wrapper-banner .col.container-adAppendix {	
 	margin-top: auto;
+	
 	.adAppendix {
 		display: flex;
 		justify-content: space-between;
-		border: 2px solid red;
 		
-		//position: absolute; //made its ancestor positioned, refer w3school
-		//bottom: 0;
-		//transform: translate(0,50%);
-		//width: 100%;
 		.ad {
 			transform: translate(0,50%);
-			//flex
-			//display: flex;
-			//align-items: center;
-			
-			//color	& padding
-			padding: 2em;		
-			background-color: #000;
 			color: #fff;
 		}
-		.ad .text > * {
+		.ad .iconWrapper {
+			//position: relative; //for z-index's stacking context
 			text-align: center;
-		}
-		.ad .text> .label {
-			padding-bottom: 0.7em;			
-			font-weight: $bold-openSans;
-			font-size: 1.2em;		
+			border: 1px solid red;
+			.iconSubWrapper {
+				//negative margin is set in javascript
+				display: inline-block;	
+				//general
+				color: $primaryRed;
+				border: 1px solid white;		
+				background-color: rgba(33,33,33,1);
+				border-radius: 50%;
+				padding: 2em 3em;
+				//transform: translate(0, 50%);	
+				//trials
+				//position: relative;
+			}
+		} //End of ".ad .iconWrapper"
+		
+		.ad .textWrapper {
+			background-color: rgba(33,33,33,1);
+			background-color: #F00;
+			padding: 1.5em;	
+			
+			* {text-align: center;}
+			.label {
+				padding-bottom: 0.7em;			
+				font-weight: $bold-openSans;
+				font-size: 1.2em;
+			}		
 			span{
 				display: inline-block; //for transform
 				//transform: scale(1,1.4);
 			}
-		} 
-		.ad .text> p {
-			line-height: 1.4;
-			//font-size: 0.9em;
-			font-weight: $regular-openSans;
-			color: #bbb;
-		}
-		
-	}
-}
+			.text {
+				line-height: 1.4;
+				//font-size: 0.9em;
+				font-weight: $regular-openSans;
+				color: #bbb;
+			}
+
+		} //End of --> ".ad .textWrapper"
+	} //End of --> ".adAppendix"
+} //End of --> ".wrapper-banner .col.container-adAppendix"
 
 
 

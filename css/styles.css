@@ -108,6 +108,21 @@ body {
   z-index: 998;
   position: relative; }
 
+.wrapper-banner .adAppendix .ad .iconSubWrapper .icon {
+  background-color: red !important; }
+
+/* 
+.wrapper-banner .adAppendix .ad {
+	.iconSubWrapper {
+		z-index:995; 
+		position:relative;
+		.icon {
+			z-index: 997;
+			position: relative;
+		}
+	}
+	.textWrapper {z-index: 996; position: relative}
+} */
 /* Extra small device */
 /*
 	Content
@@ -221,7 +236,7 @@ body {
 *************   Nav row   ****************/
 .wrapper-header .col-nav {
   color: white;
-  background-color: #000; }
+  background-color: #111111; }
 
 .wrapper-header .col-nav ul {
   display: flex; }
@@ -239,7 +254,7 @@ body {
     margin-left: auto;
     background-color: #ff3215; }
   .wrapper-header .col-nav ul li:hover a {
-    background-color: rgba(155, 25, 255, 0.5); }
+    background-color: rgba(155, 125, 55, 0.5); }
 
 /*###############################################
 ##############     01.01 Banner    ##############
@@ -263,25 +278,36 @@ body {
   margin-top: auto; }
   .wrapper-banner .col.container-adAppendix .adAppendix {
     display: flex;
-    justify-content: space-between;
-    border: 2px solid red; }
+    justify-content: space-between; }
     .wrapper-banner .col.container-adAppendix .adAppendix .ad {
       transform: translate(0, 50%);
-      padding: 2em;
-      background-color: #000;
       color: #fff; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > * {
-      text-align: center; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > .label {
-      padding-bottom: 0.7em;
-      font-weight: 600;
-      font-size: 1.2em; }
-      .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > .label span {
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad .iconWrapper {
+      text-align: center;
+      border: 1px solid red; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .iconWrapper .iconSubWrapper {
+        display: inline-block;
+        color: #ff3215;
+        border: 1px solid white;
+        background-color: #212121;
+        border-radius: 50%;
+        padding: 2em 3em; }
+    .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper {
+      background-color: #212121;
+      background-color: #F00;
+      padding: 1.5em; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper * {
+        text-align: center; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .label {
+        padding-bottom: 0.7em;
+        font-weight: 600;
+        font-size: 1.2em; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper span {
         display: inline-block; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad .text > p {
-      line-height: 1.4;
-      font-weight: 400;
-      color: #bbb; }
+      .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .text {
+        line-height: 1.4;
+        font-weight: 400;
+        color: #bbb; }
 
 /*###############################################
 ##############     02 About Us    ##############
