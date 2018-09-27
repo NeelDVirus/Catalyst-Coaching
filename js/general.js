@@ -45,18 +45,6 @@ $(document).ready(function(){
 	/**********   (.row.hero-image)   ************** 
 	adding padding-bottom to hero-image to compensate the additonal overlapping of .adAppendix row which extent beyond the .banner-wrapper bottom end */
 
-	
-	var $ad = $bannerWrapper.find(".adAppendix .ad");
-	var $adTransformImpact = $ad.outerHeight();
-	//$adAppendixIconSubWrapperHeight is in the (adAppendix Sub-Section of BANNER Section)
-	var $textWrapperMarginTop = "-1.5em"; //from css
-
-	var $requiredPaddingBottomForHeroImage =  ($adTransformImpact + $adAppendixIconSubWrapperHeight) + "-" + ($textWrapperMarginTop)
-	$bannerWrapper.children(".row.hero-image");
-
-
-
-	console.log($bannerWrapper.children(".row.hero-image"));
 
 
 })

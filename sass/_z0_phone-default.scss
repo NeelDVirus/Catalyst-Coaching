@@ -182,24 +182,101 @@
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
+	display: flex;
+	//position: relative -- stated inn "z-index" section in genericStyles.scss 
+	//negative margin set in javascript
 	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 	height: 100%;
-	display: flex;
-	padding-bottom: 3em;
-	//negative margin set in javascript
+	padding-bottom: 2em; //maring-top of .wrapper-bannerAppendix is set negatively proportional to it
 }
 
 .wrapper-banner .row.hero-image {
-	//flex	
+	//--- flex ----	
 	flex: 1 1 auto;
 	display: flex;
 	flex-direction: column;
-	//general
+	//--- general ----
 	background-image: url("../images/heroImage.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-color: black;
 }
+
+
+
+//###########################################################################################################
+.wrapper-bannerAppendix{
+	font-size: 1.6rem;
+	margin-top: -2em;
+}
+.wrapper-bannerAppendix .col.container-adAppendix {		
+	.adAppendix {
+		display: flex;
+		justify-content: space-between;
+		//position: relative -- stated inn "z-index" section in genericStyles.scss 
+		
+		.ad {
+			transform: translate(0,-45%);
+			color: #fff;
+		}
+		.ad .iconWrapper {
+			text-align: center;
+			.iconSubWrapper {
+				//negative margin is set in javascript
+				display: inline-block;					
+				//---general----
+				color: $primaryRed;		
+				background-color: rgba(33,33,33,1);
+				border-radius: 50%;
+				padding: 2em 3em 4em 3em;
+			.icon {}			}
+		} //End of ".ad .iconWrapper"
+		
+		.ad .textWrapper {
+			background-color: rgba(33,33,33,1);
+			padding: 1.5em 2em 1.5em 2em;	
+			
+			.textSubWrapper {				
+				margin-top: -1.3em;				
+
+				* {
+					text-align: center;
+				}
+				.label {
+					padding-bottom: 0.7em;			
+					font-weight: $bold-openSans;
+					font-size: 1.2em;
+				}		
+				span{
+					display: inline-block; //for transform
+				}
+				.text {
+					line-height: 1.4;
+					font-weight: $regular-openSans;
+					color: #bbb;
+				}
+			}// End of ".textWrapper"
+		}//End of --> ".ad .textWrapper"
+	}//End of --> ".adAppendix"
+}//End of --> ".wrapper-bannerAppendix .col.container-adAppendix"
+
+//##############################################################################################################################
+
+/*###############################################
+##############     02 About Us    ##############
+################################################*/
+.wrapper-aboutUs {
+
+}
+
+
+
+
+
+
+
+
+/*
 .wrapper-banner .col.container-adAppendix {	
 	margin-top: auto;
 	
@@ -251,12 +328,4 @@
 		}//End of --> ".ad .textWrapper"
 	}//End of --> ".adAppendix"
 }//End of --> ".wrapper-banner .col.container-adAppendix"
-
-
-
-/*###############################################
-##############     02 About Us    ##############
-################################################*/
-.wrapper-aboutUs {
-
-}
+*/

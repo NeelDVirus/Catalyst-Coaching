@@ -94,8 +94,8 @@ body {
   height: 100%; }
 
 .row {
-  padding-right: 10%;
-  padding-left: 10%; }
+  padding-right: 15%;
+  padding-left: 15%; }
 
 /************************************************  
 *************       Z-INDEX         *************
@@ -106,6 +106,10 @@ body {
 
 .wrapper-banner {
   z-index: 998;
+  position: relative; }
+
+.adAppendix {
+  z-index: 999;
   position: relative; }
 
 /* Extra small device */
@@ -245,10 +249,10 @@ body {
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
+  display: flex;
   font-size: 1.6rem;
   height: 100%;
-  display: flex;
-  padding-bottom: 3em; }
+  padding-bottom: 2em; }
 
 .wrapper-banner .row.hero-image {
   flex: 1 1 auto;
@@ -259,43 +263,98 @@ body {
   background-repeat: no-repeat;
   background-color: black; }
 
-.wrapper-banner .col.container-adAppendix {
-  margin-top: auto; }
-  .wrapper-banner .col.container-adAppendix .adAppendix {
-    display: flex;
-    justify-content: space-between; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad {
-      transform: translate(0, 50%);
-      color: #fff; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad .iconWrapper {
-      text-align: center; }
-      .wrapper-banner .col.container-adAppendix .adAppendix .ad .iconWrapper .iconSubWrapper {
-        display: inline-block;
-        color: #ff3215;
-        background-color: #212121;
-        border-radius: 50%;
-        padding: 2em 3em 4em 3em; }
-    .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper {
+.wrapper-bannerAppendix {
+  font-size: 1.6rem;
+  margin-top: -2em; }
+
+.wrapper-bannerAppendix .col.container-adAppendix .adAppendix {
+  display: flex;
+  justify-content: space-between; }
+  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad {
+    transform: translate(0, -45%);
+    color: #fff; }
+  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper {
+    text-align: center; }
+    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper .iconSubWrapper {
+      display: inline-block;
+      color: #ff3215;
       background-color: #212121;
-      padding: 1.5em 2em 1.5em 2em; }
-      .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper {
-        margin-top: -1.5em; }
-        .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper * {
-          text-align: center; }
-        .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .label {
-          padding-bottom: 0.7em;
-          font-weight: 600;
-          font-size: 1.2em; }
-        .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper span {
-          display: inline-block; }
-        .wrapper-banner .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .text {
-          line-height: 1.4;
-          font-weight: 400;
-          color: #bbb; }
+      border-radius: 50%;
+      padding: 2em 3em 4em 3em; }
+  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper {
+    background-color: #212121;
+    padding: 1.5em 2em 1.5em 2em; }
+    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper {
+      margin-top: -1.3em; }
+      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper * {
+        text-align: center; }
+      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .label {
+        padding-bottom: 0.7em;
+        font-weight: 600;
+        font-size: 1.2em; }
+      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper span {
+        display: inline-block; }
+      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .text {
+        line-height: 1.4;
+        font-weight: 400;
+        color: #bbb; }
 
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
+/*
+.wrapper-banner .col.container-adAppendix {	
+	margin-top: auto;
+	
+	.adAppendix {
+		display: flex;
+		justify-content: space-between;
+		
+		.ad {
+			transform: translate(0,50%);
+			color: #fff;
+		}
+		.ad .iconWrapper {
+			text-align: center;
+			.iconSubWrapper {
+				//negative margin is set in javascript
+				display: inline-block;					
+				//---general----
+				color: $primaryRed;		
+				background-color: rgba(33,33,33,1);
+				border-radius: 50%;
+				padding: 2em 3em 4em 3em;
+			.icon {}			}
+		} //End of ".ad .iconWrapper"
+		
+		.ad .textWrapper {
+			background-color: rgba(33,33,33,1);
+			padding: 1.5em 2em 1.5em 2em;	
+			
+			.textSubWrapper {				
+				margin-top: -1.5em;				
+
+				* {
+					text-align: center;
+				}
+				.label {
+					padding-bottom: 0.7em;			
+					font-weight: $bold-openSans;
+					font-size: 1.2em;
+				}		
+				span{
+					display: inline-block; //for transform
+				}
+				.text {
+					line-height: 1.4;
+					font-weight: $regular-openSans;
+					color: #bbb;
+				}
+			}// End of ".textWrapper"
+		}//End of --> ".ad .textWrapper"
+	}//End of --> ".adAppendix"
+}//End of --> ".wrapper-banner .col.container-adAppendix"
+*/
 /*Medium devices (tablets, 768px and up)
   min width 768px = 48em */
 /*Large devices (desktops, 992px and up)
