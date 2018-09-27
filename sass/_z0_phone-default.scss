@@ -212,49 +212,45 @@
 			color: #fff;
 		}
 		.ad .iconWrapper {
-			//position: relative; //for z-index's stacking context
 			text-align: center;
-			border: 1px solid red;
 			.iconSubWrapper {
 				//negative margin is set in javascript
-				display: inline-block;	
-				//general
-				color: $primaryRed;
-				border: 1px solid white;		
+				display: inline-block;					
+				//---general----
+				color: $primaryRed;		
 				background-color: rgba(33,33,33,1);
 				border-radius: 50%;
-				padding: 2em 3em;
-				//transform: translate(0, 50%);	
-				//trials
-				//position: relative;
-			}
+				padding: 2em 3em 4em 3em;
+			.icon {}			}
 		} //End of ".ad .iconWrapper"
 		
 		.ad .textWrapper {
 			background-color: rgba(33,33,33,1);
-			background-color: #F00;
-			padding: 1.5em;	
+			padding: 1.5em 2em 1.5em 2em;	
 			
-			* {text-align: center;}
-			.label {
-				padding-bottom: 0.7em;			
-				font-weight: $bold-openSans;
-				font-size: 1.2em;
-			}		
-			span{
-				display: inline-block; //for transform
-				//transform: scale(1,1.4);
-			}
-			.text {
-				line-height: 1.4;
-				//font-size: 0.9em;
-				font-weight: $regular-openSans;
-				color: #bbb;
-			}
+			.textSubWrapper {				
+				margin-top: -1.5em;				
 
-		} //End of --> ".ad .textWrapper"
-	} //End of --> ".adAppendix"
-} //End of --> ".wrapper-banner .col.container-adAppendix"
+				* {
+					text-align: center;
+				}
+				.label {
+					padding-bottom: 0.7em;			
+					font-weight: $bold-openSans;
+					font-size: 1.2em;
+				}		
+				span{
+					display: inline-block; //for transform
+				}
+				.text {
+					line-height: 1.4;
+					font-weight: $regular-openSans;
+					color: #bbb;
+				}
+			}// End of ".textWrapper"
+		}//End of --> ".ad .textWrapper"
+	}//End of --> ".adAppendix"
+}//End of --> ".wrapper-banner .col.container-adAppendix"
 
 
 

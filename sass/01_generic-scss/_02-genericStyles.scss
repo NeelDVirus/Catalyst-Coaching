@@ -17,31 +17,8 @@ body {
 *************       Z-INDEX         *************
 *************************************************/
 
-//-- header>nav & banner -- 
+//------- (HEADER>NAV) & BANNER -- 
 .col-nav {z-index: 999; position: relative;}
 .wrapper-banner {z-index: 998; position: relative;}
 
 //-------------BANNER-------------
-.wrapper-banner .adAppendix .ad {
-	//.iconWrapper {z-index: 995;}
-	.iconSubWrapper .icon {
-			//z-index: 997;
-			//position: relative;
-			background-color: red !important; 
-	}
-	//.textWrapper {z-index: 996; position: relative}
-}
-
-
-/* 
-.wrapper-banner .adAppendix .ad {
-	.iconSubWrapper {
-		z-index:995; 
-		position:relative;
-		.icon {
-			z-index: 997;
-			position: relative;
-		}
-	}
-	.textWrapper {z-index: 996; position: relative}
-} */
