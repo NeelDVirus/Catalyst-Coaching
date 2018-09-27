@@ -259,6 +259,8 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url("../images/heroImage.jpg");
+  background: gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
+  background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url("../images/heroImage.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: black; }
