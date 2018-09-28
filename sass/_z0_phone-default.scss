@@ -6,7 +6,7 @@
 	01. Landing page
 		01.00 Header
 		01.01 Banner
-	02. About us
+	02. BannerAppendix
 	xx. Miscellaneous
 */
 
@@ -182,31 +182,79 @@
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
+	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 	display: flex;
 	//position: relative -- stated inn "z-index" section in genericStyles.scss 
 	//negative margin set in javascript
-	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 	height: 100%;
 	padding-bottom: 2em; //maring-top of .wrapper-bannerAppendix is set negatively proportional to it
 }
 
-.wrapper-banner .row.hero-image {
+.wrapper-banner .row-heroImage {
 	//--- flex ----	
 	flex: 1 1 auto;
 	display: flex;
-	flex-direction: column;
 	//--- general ----
-	background-image: url("../images/heroImage.jpg");
-	background: gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
 	background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url('../images/heroImage.jpg');
+	//background-image: url('../images/heroImage.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-color: black;
 }
+.wrapper-banner .col-heroImage {
+	display: flex;
+	align-items: center;
+	
+	.container-contentHeroImage {
+		//background-color: rgba(134,132,56,0.5);
+		padding: 9em 5em 9em 0;
+		color: white;
+		background: linear-gradient(rgba(134,132,56,0.0),rgba(134,132,56,0.6),rgba(134,132,56,0.6),rgba(134,132,56,0.0));
+		//background: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.4),rgba(0,0,0,0.4),rgba(0,0,0,0.0));		
+
+		.heading {
+			font-size: 4em;
+			font-weight: $bold-openSans;
+			line-height: 1.5;
+		}
+		.content {
+			font-size: 1.7em;
+			line-height: 1.2;
+			transform: scale(1, 0.8);
+			//font-family: $lato;
+		}
+		.links {
+			display: flex;
+			width: 70%;
+			margin-top: 2em;
+			a {
+				flex: 1 1 0;
+				//font-size: 1.2em;
+				font-family: $lato;
+				font-weight: $bold-lato;
+				text-transform: uppercase;
+				border: 2px solid $primaryRed;
+				padding: 0.8em 1.5em;	
+				text-align: center;	
+				&.performance {
+					background-color: $primaryRed;
+				}		
+			}
+			a:first-child{margin-right: 2em;}
+		}
+	}
+}
 
 
 
-//###########################################################################################################
+
+
+
+
+/*###############################################
+#############    02 BannerAppendix    ###########
+################################################*/
+
 .wrapper-bannerAppendix{
 	font-size: 1.6rem;
 	margin-top: -2em;
@@ -268,66 +316,10 @@
 ##############     02 About Us    ##############
 ################################################*/
 .wrapper-aboutUs {
-
+	
 }
 
 
 
 
 
-
-
-
-/*
-.wrapper-banner .col.container-adAppendix {	
-	margin-top: auto;
-	
-	.adAppendix {
-		display: flex;
-		justify-content: space-between;
-		
-		.ad {
-			transform: translate(0,50%);
-			color: #fff;
-		}
-		.ad .iconWrapper {
-			text-align: center;
-			.iconSubWrapper {
-				//negative margin is set in javascript
-				display: inline-block;					
-				//---general----
-				color: $primaryRed;		
-				background-color: rgba(33,33,33,1);
-				border-radius: 50%;
-				padding: 2em 3em 4em 3em;
-			.icon {}			}
-		} //End of ".ad .iconWrapper"
-		
-		.ad .textWrapper {
-			background-color: rgba(33,33,33,1);
-			padding: 1.5em 2em 1.5em 2em;	
-			
-			.textSubWrapper {				
-				margin-top: -1.5em;				
-
-				* {
-					text-align: center;
-				}
-				.label {
-					padding-bottom: 0.7em;			
-					font-weight: $bold-openSans;
-					font-size: 1.2em;
-				}		
-				span{
-					display: inline-block; //for transform
-				}
-				.text {
-					line-height: 1.4;
-					font-weight: $regular-openSans;
-					color: #bbb;
-				}
-			}// End of ".textWrapper"
-		}//End of --> ".ad .textWrapper"
-	}//End of --> ".adAppendix"
-}//End of --> ".wrapper-banner .col.container-adAppendix"
-*/

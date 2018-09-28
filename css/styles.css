@@ -94,8 +94,8 @@ body {
   height: 100%; }
 
 .row {
-  padding-right: 15%;
-  padding-left: 15%; }
+  padding-right: 19%;
+  padding-left: 19%; }
 
 /************************************************  
 *************       Z-INDEX         *************
@@ -119,7 +119,7 @@ body {
 	01. Landing page
 		01.00 Header
 		01.01 Banner
-	02. About us
+	02. BannerAppendix
 	xx. Miscellaneous
 */
 /*###############################################
@@ -249,22 +249,54 @@ body {
 ##############     01.01 Banner    ##############
 ################################################*/
 .wrapper-banner {
-  display: flex;
   font-size: 1.6rem;
+  display: flex;
   height: 100%;
   padding-bottom: 2em; }
 
-.wrapper-banner .row.hero-image {
+.wrapper-banner .row-heroImage {
   flex: 1 1 auto;
   display: flex;
-  flex-direction: column;
-  background-image: url("../images/heroImage.jpg");
-  background: gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
   background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url("../images/heroImage.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: black; }
 
+.wrapper-banner .col-heroImage {
+  display: flex;
+  align-items: center; }
+  .wrapper-banner .col-heroImage .container-contentHeroImage {
+    padding: 9em 5em 9em 0;
+    color: white;
+    background: linear-gradient(rgba(134, 132, 56, 0), rgba(134, 132, 56, 0.6), rgba(134, 132, 56, 0.6), rgba(134, 132, 56, 0)); }
+    .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
+      font-size: 4em;
+      font-weight: 600;
+      line-height: 1.5; }
+    .wrapper-banner .col-heroImage .container-contentHeroImage .content {
+      font-size: 1.7em;
+      line-height: 1.2;
+      transform: scale(1, 0.8); }
+    .wrapper-banner .col-heroImage .container-contentHeroImage .links {
+      display: flex;
+      width: 70%;
+      margin-top: 2em; }
+      .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
+        flex: 1 1 0;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        border: 2px solid #ff3215;
+        padding: 0.8em 1.5em;
+        text-align: center; }
+        .wrapper-banner .col-heroImage .container-contentHeroImage .links a.performance {
+          background-color: #ff3215; }
+      .wrapper-banner .col-heroImage .container-contentHeroImage .links a:first-child {
+        margin-right: 2em; }
+
+/*###############################################
+#############    02 BannerAppendix    ###########
+################################################*/
 .wrapper-bannerAppendix {
   font-size: 1.6rem;
   margin-top: -2em; }
@@ -304,59 +336,6 @@ body {
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
-/*
-.wrapper-banner .col.container-adAppendix {	
-	margin-top: auto;
-	
-	.adAppendix {
-		display: flex;
-		justify-content: space-between;
-		
-		.ad {
-			transform: translate(0,50%);
-			color: #fff;
-		}
-		.ad .iconWrapper {
-			text-align: center;
-			.iconSubWrapper {
-				//negative margin is set in javascript
-				display: inline-block;					
-				//---general----
-				color: $primaryRed;		
-				background-color: rgba(33,33,33,1);
-				border-radius: 50%;
-				padding: 2em 3em 4em 3em;
-			.icon {}			}
-		} //End of ".ad .iconWrapper"
-		
-		.ad .textWrapper {
-			background-color: rgba(33,33,33,1);
-			padding: 1.5em 2em 1.5em 2em;	
-			
-			.textSubWrapper {				
-				margin-top: -1.5em;				
-
-				* {
-					text-align: center;
-				}
-				.label {
-					padding-bottom: 0.7em;			
-					font-weight: $bold-openSans;
-					font-size: 1.2em;
-				}		
-				span{
-					display: inline-block; //for transform
-				}
-				.text {
-					line-height: 1.4;
-					font-weight: $regular-openSans;
-					color: #bbb;
-				}
-			}// End of ".textWrapper"
-		}//End of --> ".ad .textWrapper"
-	}//End of --> ".adAppendix"
-}//End of --> ".wrapper-banner .col.container-adAppendix"
-*/
 /*Medium devices (tablets, 768px and up)
   min width 768px = 48em */
 /*Large devices (desktops, 992px and up)
