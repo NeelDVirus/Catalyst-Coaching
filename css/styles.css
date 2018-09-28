@@ -357,5 +357,4 @@ body {
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
   .col {
-    max-width: 1200px;
-    width: 100%; } }
+    max-width: 75em; } }
