@@ -129,6 +129,9 @@ body {
   padding-right: 5%;
   padding-left: 5%; }
 
+.col {
+  width: 100%; }
+
 /*###############################################
 ##############   01. Landing page    ############
 ################################################*/
@@ -354,4 +357,5 @@ body {
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
   .col {
-    max-width: 1200px; } }
+    max-width: 1200px;
+    width: 100%; } }
