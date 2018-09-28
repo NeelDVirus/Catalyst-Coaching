@@ -2,7 +2,7 @@
 
 /*
 	Content
-	00. Wrapper-page
+	00. General for small device
 	01. Landing page
 		01.00 Header
 		01.01 Banner
@@ -13,7 +13,13 @@
 
 
 
-
+/*###############################################
+#######   00. General for small device   ########
+################################################*/
+.row {
+	padding-right: 5%;
+	padding-left: 5%;
+}
 
 
 
@@ -82,9 +88,11 @@
 .wrapper-header .row-brand {}
 .wrapper-header .col-brand {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	margin: 0 auto;
 	padding: 2em 0;
+	
 	.container-brandMain {
 		margin-right: auto;
 		display: flex;
@@ -107,15 +115,19 @@
 			text-transform: uppercase;
 		}
 	}
+
 	address {
 		display: flex;
 		align-items: center;
-		
-		>div {
+	}
+	address > div {
 			display: flex;
 			align-items: stretch;
 			padding-left: 2em;
 			
+			&:first-child{
+				padding-left: 0;
+			}		
 			.wrapper-icon {
 				display: flex;
 				align-items: center;
@@ -133,9 +145,8 @@
 					font-weight: $regular-openSans;
 					font-size: 0.9em;
 				}
-			}
-		}		
-	} //End of Address element
+			}		
+	}//End of "addess>div"
 }
 
 /*****************************************

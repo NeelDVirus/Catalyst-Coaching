@@ -1,7 +1,16 @@
 /* Extra large devices (large desktops, 1200px and up) 
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
-	.col {
-		max-width: 1800px;
+
+	.row {
+		//padding-right: 19%;
+		//padding-left: 19%;
 	}
+	.col {
+		max-width: 1200px;
+	}
+
+
+
+
 }

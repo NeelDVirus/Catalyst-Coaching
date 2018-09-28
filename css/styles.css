@@ -93,9 +93,9 @@ body {
 #wrapper-page, main {
   height: 100%; }
 
-.row {
-  padding-right: 19%;
-  padding-left: 19%; }
+.col {
+  margin-right: auto;
+  margin-left: auto; }
 
 /************************************************  
 *************       Z-INDEX         *************
@@ -115,13 +115,20 @@ body {
 /* Extra small device */
 /*
 	Content
-	00. Wrapper-page
+	00. General for small device
 	01. Landing page
 		01.00 Header
 		01.01 Banner
 	02. BannerAppendix
 	xx. Miscellaneous
 */
+/*###############################################
+#######   00. General for small device   ########
+################################################*/
+.row {
+  padding-right: 5%;
+  padding-left: 5%; }
+
 /*###############################################
 ##############   01. Landing page    ############
 ################################################*/
@@ -175,6 +182,7 @@ body {
 *************   Brand row   *************/
 .wrapper-header .col-brand {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
   padding: 2em 0; }
@@ -201,25 +209,27 @@ body {
   .wrapper-header .col-brand address {
     display: flex;
     align-items: center; }
-    .wrapper-header .col-brand address > div {
+  .wrapper-header .col-brand address > div {
+    display: flex;
+    align-items: stretch;
+    padding-left: 2em; }
+    .wrapper-header .col-brand address > div:first-child {
+      padding-left: 0; }
+    .wrapper-header .col-brand address > div .wrapper-icon {
       display: flex;
-      align-items: stretch;
-      padding-left: 2em; }
-      .wrapper-header .col-brand address > div .wrapper-icon {
-        display: flex;
-        align-items: center;
-        color: #ff3215;
-        background-color: #222;
-        padding: 0 1em;
-        border-radius: 2px; }
-      .wrapper-header .col-brand address > div p {
-        font-weight: 600;
-        font-size: 0.93em;
-        padding: 0.2em 0 0.6em 1em;
-        line-height: 1.3; }
-        .wrapper-header .col-brand address > div p span {
-          font-weight: 400;
-          font-size: 0.9em; }
+      align-items: center;
+      color: #ff3215;
+      background-color: #222;
+      padding: 0 1em;
+      border-radius: 2px; }
+    .wrapper-header .col-brand address > div p {
+      font-weight: 600;
+      font-size: 0.93em;
+      padding: 0.2em 0 0.6em 1em;
+      line-height: 1.3; }
+      .wrapper-header .col-brand address > div p span {
+        font-weight: 400;
+        font-size: 0.9em; }
 
 /*****************************************
 *************   Nav row   ****************/
@@ -344,4 +354,4 @@ body {
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
   .col {
-    max-width: 1800px; } }
+    max-width: 1200px; } }
