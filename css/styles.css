@@ -356,6 +356,10 @@ body {
   min width 768px = 48em */
 /*Large devices (desktops, 992px and up)
   min-width 992px = 62em */
+@media screen and (max-width: 75emem) and (min-width: 62em) {
+  .wrapper-bannerAppendix {
+    font-size: 1.2rem;
+    margin-top: -2em; } }
 /* Extra large devices (large desktops, 1200px and up) 
    min-width 1200px = 72em*/
 @media only screen and (min-width: 72em) {
