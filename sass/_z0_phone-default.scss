@@ -33,6 +33,10 @@
 	display: flex;
 	flex-direction: column;
 }
+
+
+
+
 /*###############################################
 ##############   01.00 Header    ################
 ################################################*/
@@ -42,6 +46,7 @@
 }
 
 
+
 /****************************************
 ************  Welcome row ***************/
 
@@ -49,7 +54,7 @@
 	background-color: #111;
 }
 
-.wrapper-header .col-welcome {
+.wrapper-header .component-welcome {
 	display: flex;
 	align-items: center;	
 	font-size: 0.9em;
@@ -88,17 +93,22 @@
 *************   Brand row   *************/
 
 .wrapper-header .row-brand {}
-.wrapper-header .col-brand {
+.wrapper-header .row-brand {}
+.wrapper-header .component-brand {
+	font-size: 1.6rem;
+	//flex
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	//general
 	margin: 0 auto;
 	padding: 2em 0;
 	
 	.container-brandMain {
-		margin-right: auto;
+		//flex
 		display: flex;
-		align-items: center;
+		align-items: center;		
+		margin-right: auto;
 		.container-logo {
 			width: 2.7em;
 			height: 2.7em;
@@ -154,11 +164,11 @@
 /*****************************************
 *************   Nav row   ****************/
 .wrapper-header .row-nav {}
-.wrapper-header .col-nav {
+.wrapper-header .component-nav {
 	color: white;
 	background-color: rgba(17,17,17,1);
 }
-.wrapper-header .col-nav ul {
+.wrapper-header .component-nav ul {
 	display: flex;
 	
 	li {display:flex;}
@@ -279,6 +289,7 @@
 		//position: relative -- stated inn "z-index" section in genericStyles.scss 
 		
 		.ad {
+			flex-grow: 1;
 			transform: translate(0,-45%);
 			color: #fff;
 			margin-right: 2em;

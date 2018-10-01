@@ -151,7 +151,7 @@ body {
 .wrapper-header .row-welcome {
   background-color: #111; }
 
-.wrapper-header .col-welcome {
+.wrapper-header .component-welcome {
   display: flex;
   align-items: center;
   font-size: 0.9em;
@@ -159,49 +159,50 @@ body {
   padding: 1em 0;
   color: #FFF;
   font-weight: 400; }
-  .wrapper-header .col-welcome .welcomeNote {
+  .wrapper-header .component-welcome .welcomeNote {
     margin-right: auto; }
-    .wrapper-header .col-welcome .welcomeNote .wrapper-welcomeIcon {
+    .wrapper-header .component-welcome .welcomeNote .wrapper-welcomeIcon {
       color: #ff3215; }
-  .wrapper-header .col-welcome .wrapper-socialIcon {
+  .wrapper-header .component-welcome .wrapper-socialIcon {
     display: flex;
     align-items: center;
     color: #aaa; }
-    .wrapper-header .col-welcome .wrapper-socialIcon .icon {
+    .wrapper-header .component-welcome .wrapper-socialIcon .icon {
       padding-right: 0.8em; }
-    .wrapper-header .col-welcome .wrapper-socialIcon .facebook {
+    .wrapper-header .component-welcome .wrapper-socialIcon .facebook {
       font-size: 1em; }
-    .wrapper-header .col-welcome .wrapper-socialIcon .twitter {
+    .wrapper-header .component-welcome .wrapper-socialIcon .twitter {
       font-size: 1.1em; }
-    .wrapper-header .col-welcome .wrapper-socialIcon .instagram {
+    .wrapper-header .component-welcome .wrapper-socialIcon .instagram {
       font-size: 1.2em; }
-    .wrapper-header .col-welcome .wrapper-socialIcon .googlePlus {
+    .wrapper-header .component-welcome .wrapper-socialIcon .googlePlus {
       font-size: 1.25em; }
-  .wrapper-header .col-welcome .register {
+  .wrapper-header .component-welcome .register {
     padding-left: 2em;
     color: #ff3215; }
 
 /*****************************************
 *************   Brand row   *************/
-.wrapper-header .col-brand {
+.wrapper-header .component-brand {
+  font-size: 1.6rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
   padding: 2em 0; }
-  .wrapper-header .col-brand .container-brandMain {
-    margin-right: auto;
+  .wrapper-header .component-brand .container-brandMain {
     display: flex;
-    align-items: center; }
-    .wrapper-header .col-brand .container-brandMain .container-logo {
+    align-items: center;
+    margin-right: auto; }
+    .wrapper-header .component-brand .container-brandMain .container-logo {
       width: 2.7em;
       height: 2.7em;
       background-color: #ccc;
       overflow: hidden; }
-      .wrapper-header .col-brand .container-brandMain .container-logo img {
+      .wrapper-header .component-brand .container-brandMain .container-logo img {
         width: auto;
         height: 100%; }
-    .wrapper-header .col-brand .container-brandMain .brand-name {
+    .wrapper-header .component-brand .container-brandMain .brand-name {
       font-family: "Lato", sans-serif;
       font-size: 2em;
       font-weight: 600;
@@ -209,53 +210,53 @@ body {
       border-radius: 2px;
       color: #000;
       text-transform: uppercase; }
-  .wrapper-header .col-brand address {
+  .wrapper-header .component-brand address {
     display: flex;
     align-items: center; }
-  .wrapper-header .col-brand address > div {
+  .wrapper-header .component-brand address > div {
     display: flex;
     align-items: stretch;
     padding-left: 2em; }
-    .wrapper-header .col-brand address > div:first-child {
+    .wrapper-header .component-brand address > div:first-child {
       padding-left: 0; }
-    .wrapper-header .col-brand address > div .wrapper-icon {
+    .wrapper-header .component-brand address > div .wrapper-icon {
       display: flex;
       align-items: center;
       color: #ff3215;
       background-color: #222;
       padding: 0 1em;
       border-radius: 2px; }
-    .wrapper-header .col-brand address > div p {
+    .wrapper-header .component-brand address > div p {
       font-weight: 600;
       font-size: 0.93em;
       padding: 0.2em 0 0.6em 1em;
       line-height: 1.3; }
-      .wrapper-header .col-brand address > div p span {
+      .wrapper-header .component-brand address > div p span {
         font-weight: 400;
         font-size: 0.9em; }
 
 /*****************************************
 *************   Nav row   ****************/
-.wrapper-header .col-nav {
+.wrapper-header .component-nav {
   color: white;
   background-color: #111111; }
 
-.wrapper-header .col-nav ul {
+.wrapper-header .component-nav ul {
   display: flex; }
-  .wrapper-header .col-nav ul li {
+  .wrapper-header .component-nav ul li {
     display: flex; }
-  .wrapper-header .col-nav ul li a {
+  .wrapper-header .component-nav ul li a {
     padding: 1.5em;
     text-transform: uppercase;
     font-weight: 400;
     transition: background-color 0.3s ease; }
-    .wrapper-header .col-nav ul li a span {
+    .wrapper-header .component-nav ul li a span {
       display: inline-block;
       transform: scaleY(0.9); }
-  .wrapper-header .col-nav ul li:last-child {
+  .wrapper-header .component-nav ul li:last-child {
     margin-left: auto;
     background-color: #ff3215; }
-  .wrapper-header .col-nav ul li:hover a {
+  .wrapper-header .component-nav ul li:hover a {
     background-color: rgba(155, 125, 55, 0.5); }
 
 /*###############################################
@@ -318,6 +319,7 @@ body {
   display: flex;
   justify-content: space-between; }
   .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad {
+    flex-grow: 1;
     transform: translate(0, -45%);
     color: #fff;
     margin-right: 2em; }
@@ -356,12 +358,13 @@ body {
   min width 768px = 48em */
 /*Large devices (desktops, 992px and up)
   min-width 992px = 62em */
-@media screen and (max-width: 75emem) and (min-width: 62em) {
+@media screen and (max-width: 75em) and (min-width: 61.9375em) {
   .wrapper-bannerAppendix {
-    font-size: 1.2rem;
-    margin-top: -2em; } }
+    font-size: 1.2rem; }
+    .wrapper-bannerAppendix .textWrapper .textSubwrapper {
+      margin-top: 1em; } }
 /* Extra large devices (large desktops, 1200px and up) 
    min-width 1200px = 72em*/
-@media only screen and (min-width: 72em) {
+@media only screen and (min-width: 75em) {
   .col {
     max-width: 75em; } }
