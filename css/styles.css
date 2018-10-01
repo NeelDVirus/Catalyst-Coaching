@@ -319,7 +319,10 @@ body {
   justify-content: space-between; }
   .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad {
     transform: translate(0, -45%);
-    color: #fff; }
+    color: #fff;
+    margin-right: 2em; }
+    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad:last-child {
+      margin-right: 0; }
   .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper {
     text-align: center; }
     .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper .iconSubWrapper {

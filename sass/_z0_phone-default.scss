@@ -281,6 +281,8 @@
 		.ad {
 			transform: translate(0,-45%);
 			color: #fff;
+			margin-right: 2em;
+			&:last-child {margin-right: 0;}
 		}
 		.ad .iconWrapper {
 			text-align: center;
