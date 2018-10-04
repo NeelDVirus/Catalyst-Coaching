@@ -1,5 +1,31 @@
 /*Medium devices (tablets, 768px and up)
   min width 768px = 48em */
+  
+/*
+	Content
+	00. General for small device
+	01. Landing page
+		01.00 Header
+		01.01 Banner
+	02. BannerAppendix
+	xx. Miscellaneous
+*/
+
+
+
  @media only screen and (min-width: 48em) {
+
+ 	/*###############################################
+	#############    02 BannerAppendix    ###########
+	################################################*/  
+	
+	.wrapper-bannerAppendix {
+		font-size: 1.4rem;
+
+		.textWrapper .textWrapper2 {
+			//margin-top: 1em;
+		}
+	}
+
  	
  } 

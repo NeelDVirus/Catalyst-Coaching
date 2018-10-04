@@ -108,7 +108,7 @@ body {
   z-index: 998;
   position: relative; }
 
-.adAppendix {
+.component-adAppendix {
   z-index: 999;
   position: relative; }
 
@@ -152,9 +152,9 @@ body {
   background-color: #111; }
 
 .wrapper-header .component-welcome {
+  font-size: 0.9em;
   display: flex;
   align-items: center;
-  font-size: 0.9em;
   margin: 0 auto;
   padding: 1em 0;
   color: #FFF;
@@ -311,42 +311,47 @@ body {
 /*###############################################
 #############    02 BannerAppendix    ###########
 ################################################*/
+/*XXXXXXXXXXXXXXXX  norForMobile XXXXXXXXXXXXXXX*/
+.wrapper-bannerAppendix .container-ad.notForMobile {
+  display: none; }
+
+/*XXXXXXXXXXXXXX  end of norForMobile XXXXXXXXXXX*/
 .wrapper-bannerAppendix {
   font-size: 1.6rem;
   margin-top: -2em; }
 
-.wrapper-bannerAppendix .col.container-adAppendix .adAppendix {
+.wrapper-bannerAppendix .component-adAppendix {
   display: flex;
   justify-content: space-between; }
-  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad {
+  .wrapper-bannerAppendix .component-adAppendix .container-ad {
     flex-grow: 1;
     transform: translate(0, -45%);
     color: #fff;
     margin-right: 2em; }
-    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad:last-child {
+    .wrapper-bannerAppendix .component-adAppendix .container-ad:last-child {
       margin-right: 0; }
-  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper {
+  .wrapper-bannerAppendix .component-adAppendix .container-ad .iconWrapper {
     text-align: center; }
-    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .iconWrapper .iconSubWrapper {
+    .wrapper-bannerAppendix .component-adAppendix .container-ad .iconWrapper .iconSubWrapper {
       display: inline-block;
       color: #ff3215;
       background-color: #212121;
       border-radius: 50%;
       padding: 2em 3em 4em 3em; }
-  .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper {
+  .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper {
     background-color: #212121;
     padding: 1.5em 2em 1.5em 2em; }
-    .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper {
+    .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 {
       margin-top: -1.3em; }
-      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper * {
+      .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 * {
         text-align: center; }
-      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .label {
+      .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 .label {
         padding-bottom: 0.7em;
         font-weight: 600;
         font-size: 1.2em; }
-      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper span {
+      .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 span {
         display: inline-block; }
-      .wrapper-bannerAppendix .col.container-adAppendix .adAppendix .ad .textWrapper .textSubWrapper .text {
+      .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 .text {
         line-height: 1.4;
         font-weight: 400;
         color: #bbb; }
@@ -354,17 +359,94 @@ body {
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
+.ad {
+  flex-grow: 1;
+  transform: translate(0, -45%);
+  color: #fff;
+  margin-right: 2em; }
+  .ad:last-child {
+    margin-right: 0; }
+
+.ad .iconWrapper {
+  text-align: center; }
+  .ad .iconWrapper .iconSubWrapper {
+    display: inline-block;
+    color: #ff3215;
+    background-color: #212121;
+    border-radius: 50%;
+    padding: 2em 3em 4em 3em; }
+
+.ad .textWrapper {
+  background-color: #212121;
+  padding: 1.5em 2em 1.5em 2em; }
+  .ad .textWrapper .textSubWrapper {
+    margin-top: -1.3em; }
+    .ad .textWrapper .textSubWrapper * {
+      text-align: center; }
+    .ad .textWrapper .textSubWrapper .label {
+      padding-bottom: 0.7em;
+      font-weight: 600;
+      font-size: 1.2em; }
+    .ad .textWrapper .textSubWrapper span {
+      display: inline-block; }
+    .ad .textWrapper .textSubWrapper .text {
+      line-height: 1.4;
+      font-weight: 400;
+      color: #bbb; }
+
 /*Medium devices (tablets, 768px and up)
   min width 768px = 48em */
+/*
+	Content
+	00. General for small device
+	01. Landing page
+		01.00 Header
+		01.01 Banner
+	02. BannerAppendix
+	xx. Miscellaneous
+*/
+@media only screen and (min-width: 48em) {
+ 	/*###############################################
+	#############    02 BannerAppendix    ###########
+	################################################*/
+  .wrapper-bannerAppendix {
+    font-size: 1.4rem; } }
 /*Large devices (desktops, 992px and up)
   min-width 992px = 62em */
+ /*
+	Content
+	00. General for small device
+	01. Landing page
+		01.00 Header
+		01.01 Banner
+	02. BannerAppendix
+	xx. Miscellaneous
+*/
+@media only screen and (min-width: 62em) {
+  /*###############################################
+  #############    02 BannerAppendix    ###########
+  ################################################*/
+  .wrapper-bannerAppendix .container-ad.notForMobile {
+    display: block; } }
 @media screen and (max-width: 75em) and (min-width: 61.9375em) {
+  /*###############################################
+  #############    02 BannerAppendix    ###########
+  ################################################*/
   .wrapper-bannerAppendix {
     font-size: 1.2rem; }
-    .wrapper-bannerAppendix .textWrapper .textSubwrapper {
-      margin-top: 1em; } }
+
+  .wrapper-bannerAppendix .component-adAppendix .container-ad.notForMobile {
+    display: block; }
+  .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 {
+    margin-top: -1em; } }
 /* Extra large devices (large desktops, 1200px and up) 
    min-width 1200px = 72em*/
 @media only screen and (min-width: 75em) {
   .col {
-    max-width: 75em; } }
+    max-width: 75em; }
+
+  /*###############################################
+  #############    02 BannerAppendix    ###########
+  ################################################*/
+  .wrapper-bannerAppendix {
+    font-size: 1.6rem; } }

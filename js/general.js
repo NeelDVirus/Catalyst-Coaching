@@ -36,7 +36,7 @@ $(document).ready(function(){
 	/* (adAppendix -- )
 	adding negative margin-top to --> 
 	(.adAppendix .ad .iconWrapper .icon) */
-    var $adAppendixIconSubWrapper = $(".adAppendix .iconSubWrapper");
+    var $adAppendixIconSubWrapper = $(".component-adAppendix .iconSubWrapper");
 	var $adAppendixIconSubWrapperHeight = $adAppendixIconSubWrapper.outerHeight();
 	$adAppendixIconSubWrapper.parent().css("margin-bottom", "-"+(0.6 * $adAppendixIconSubWrapperHeight)+"px");
 	$adAppendixIconSubWrapper.parent().next().css("padding-top", (0.4 * $adAppendixIconSubWrapperHeight)+"px");

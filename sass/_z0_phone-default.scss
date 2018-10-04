@@ -55,9 +55,10 @@
 }
 
 .wrapper-header .component-welcome {
-	display: flex;
-	align-items: center;	
 	font-size: 0.9em;
+	//flex
+	display: flex;
+	align-items: center;
 	margin: 0 auto;
 	padding: 1em 0;	
 	color: #FFF;	
@@ -274,20 +275,118 @@
 
 
 
+
+
+
 /*###############################################
 #############    02 BannerAppendix    ###########
 ################################################*/
 
-.wrapper-bannerAppendix{
+/*XXXXXXXXXXXXXXXX  norForMobile XXXXXXXXXXXXXXX*/
+
+.wrapper-bannerAppendix {
+	.container-ad.notForMobile {display: none;}
+}
+
+/*XXXXXXXXXXXXXX  end of norForMobile XXXXXXXXXXX*/
+
+
+
+
+
+
+.wrapper-bannerAppendix {
 	font-size: 1.6rem;
 	margin-top: -2em;
 }
-.wrapper-bannerAppendix .col.container-adAppendix {		
-	.adAppendix {
-		display: flex;
-		justify-content: space-between;
-		//position: relative -- stated inn "z-index" section in genericStyles.scss 
+.wrapper-bannerAppendix .component-adAppendix {		
+	display: flex;
+	justify-content: space-between;
+	//position: relative -- stated inn "z-index" section in genericStyles.scss 
+
+	.container-ad {
+		flex-grow: 1;
+		transform: translate(0,-45%);
+		color: #fff;
+		margin-right: 2em;
+		&:last-child {margin-right: 0;}
+	}
+
+	.container-ad .iconWrapper {
+		text-align: center;
+		.iconSubWrapper {
+			//negative margin is set in javascript
+			display: inline-block;					
+			//---general----
+			color: $primaryRed;		
+			background-color: rgba(33,33,33,1);
+			border-radius: 50%;
+			padding: 2em 3em 4em 3em;
+		.icon {}			}
+	} //End of ".container-ad .iconWrapper"
+	
+	.container-ad .textWrapper {
+		background-color: rgba(33,33,33,1);
+		padding: 1.5em 2em 1.5em 2em;	
 		
+		.textWrapper2 {				
+			margin-top: -1.3em;				
+
+			* {
+				text-align: center;
+			}
+			.label {
+				padding-bottom: 0.7em;			
+				font-weight: $bold-openSans;
+				font-size: 1.2em;
+			}		
+			span{
+				display: inline-block; //for transform
+			}
+			.text {
+				line-height: 1.4;
+				font-weight: $regular-openSans;
+				color: #bbb;
+			}
+		}// End of ".textWrapper"
+		
+	}//End of --> ".container-ad .textWrapper"
+	
+}//End of --> ".wrapper-bannerAppendix .col.container-adAppendix"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//##############################################################################################################################
+
+/*###############################################
+##############     02 About Us    ##############
+################################################*/
+.wrapper-aboutUs {
+	
+}
+
+
+
+
+
+
+
+
+
 		.ad {
 			flex-grow: 1;
 			transform: translate(0,-45%);
@@ -333,19 +432,3 @@
 				}
 			}// End of ".textWrapper"
 		}//End of --> ".ad .textWrapper"
-	}//End of --> ".adAppendix"
-}//End of --> ".wrapper-bannerAppendix .col.container-adAppendix"
-
-//##############################################################################################################################
-
-/*###############################################
-##############     02 About Us    ##############
-################################################*/
-.wrapper-aboutUs {
-	
-}
-
-
-
-
-
