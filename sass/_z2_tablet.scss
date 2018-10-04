@@ -1,5 +1,6 @@
 /*Medium devices (tablets, 768px and up)
-  min width 768px = 48em */
+  min width 48em = 768px
+  max-width 61.9375em = 991px */
   
 /*
 	Content
@@ -20,7 +21,7 @@
 	################################################*/  
 	
 	.wrapper-bannerAppendix {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 
 		.textWrapper .textWrapper2 {
 			//margin-top: 1em;
@@ -29,3 +30,46 @@
 
  	
  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SPECIFICS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ 
+
+
+
+@media screen and (max-width: 52.8125em) and (min-width: 48em) {
+//52.8125em = 845px
+	
+	/*###############################################
+	#############    02 BannerAppendix    ###########
+	################################################*/
+
+	.wrapper-bannerAppendix {
+		//font-size: 1.2rem;
+	}
+
+}
+
+@media screen and (max-width: 61.9375em) and (min-width: 57.5em) {
+//57.5em = 920px
+	
+	/*###############################################
+	#############    02 BannerAppendix    ###########
+	################################################*/
+
+	.wrapper-bannerAppendix {
+		font-size: 1.4rem;
+	}
+
+}

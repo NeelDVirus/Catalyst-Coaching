@@ -1,5 +1,7 @@
-/*Large devices (desktops, 992px and up)
-  min-width 992px = 62em */
+/* Large devices (desktops, 992px and up)
+   min-width 992px = 62em 
+   max-width 1199px =74.9375em */
+  
   
 
  /*
@@ -35,7 +37,24 @@
 
 
 
-@media screen and (max-width: 75em) and (min-width: 61.9375em) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SPECIFICS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+@media screen and (max-width: 74.9375em) and (min-width: 61.9375em) {
 	
 	/*###############################################
 	#############    02 BannerAppendix    ###########
@@ -53,5 +72,20 @@
 		}
 	}//End of .wrapper-bannerAppendix
 
+
+}
+
+
+
+@media screen and (max-width: 74.9375em) and (min-width: 67.8125em) {
+//67.8125em = 1085px
+	
+	/*###############################################
+	#############    02 BannerAppendix    ###########
+	################################################*/
+
+	.wrapper-bannerAppendix {
+		font-size: 1.3rem;
+	}
 
 }
