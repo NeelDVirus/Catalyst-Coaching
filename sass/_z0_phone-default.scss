@@ -221,7 +221,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	display: flex;
 	//--- general ----
 	background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url('../images/heroImage.jpg');
-	//background-image: url('../images/heroImage.jpg');
+	//background-image: url('../images/heroImage3.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-color: black;
@@ -273,6 +273,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
+	
 
 
 
@@ -313,15 +314,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		
 		&:last-child {margin-right: 0;}
 		//&:nth-last-child(2) {margin-right: 0;}
-		
-		
 	}
-	
-	.name3 {
-		@media only screen and (max-width: 36.9375em) {
+	.container-ad.name3 {
+		@media screen and (max-width: 61.9375em) and (min-width: 1em){
 			margin-right: 0;
 		}
-	}
+	} 
 	
 
 	.container-ad .iconWrapper {
@@ -375,13 +373,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
-
-
-
-
-
-
-
 //##############################################################################################################################
 
 /*###############################################
@@ -396,51 +387,3 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
-
-
-
-		.ad {
-			flex-grow: 1;
-			transform: translate(0,-45%);
-			color: #fff;
-			margin-right: 2em;
-			&:last-child {margin-right: 0;}
-		}
-		.ad .iconWrapper {
-			text-align: center;
-			.iconSubWrapper {
-				//negative margin is set in javascript
-				display: inline-block;					
-				//---general----
-				color: $primaryRed;		
-				background-color: rgba(33,33,33,1);
-				border-radius: 50%;
-				padding: 2em 3em 4em 3em;
-			.icon {}			}
-		} //End of ".ad .iconWrapper"
-		
-		.ad .textWrapper {
-			background-color: rgba(33,33,33,1);
-			padding: 1.5em 2em 1.5em 2em;	
-			
-			.textSubWrapper {				
-				margin-top: -1.3em;				
-
-				* {
-					text-align: center;
-				}
-				.label {
-					padding-bottom: 0.7em;			
-					font-weight: $bold-openSans;
-					font-size: 1.2em;
-				}		
-				span{
-					display: inline-block; //for transform
-				}
-				.text {
-					line-height: 1.4;
-					font-weight: $regular-openSans;
-					color: #bbb;
-				}
-			}// End of ".textWrapper"
-		}//End of --> ".ad .textWrapper"

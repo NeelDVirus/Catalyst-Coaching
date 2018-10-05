@@ -331,8 +331,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     margin-right: 2em; }
     .wrapper-bannerAppendix .component-adAppendix .container-ad:last-child {
       margin-right: 0; }
-  @media only screen and (max-width: 36.9375em) {
-    .wrapper-bannerAppendix .component-adAppendix .name3 {
+  @media screen and (max-width: 61.9375em) and (min-width: 1em) {
+    .wrapper-bannerAppendix .component-adAppendix .container-ad.name3 {
       margin-right: 0; } }
   .wrapper-bannerAppendix .component-adAppendix .container-ad .iconWrapper {
     text-align: center; }
@@ -363,41 +363,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
-.ad {
-  flex-grow: 1;
-  transform: translate(0, -45%);
-  color: #fff;
-  margin-right: 2em; }
-  .ad:last-child {
-    margin-right: 0; }
-
-.ad .iconWrapper {
-  text-align: center; }
-  .ad .iconWrapper .iconSubWrapper {
-    display: inline-block;
-    color: #ff3215;
-    background-color: #212121;
-    border-radius: 50%;
-    padding: 2em 3em 4em 3em; }
-
-.ad .textWrapper {
-  background-color: #212121;
-  padding: 1.5em 2em 1.5em 2em; }
-  .ad .textWrapper .textSubWrapper {
-    margin-top: -1.3em; }
-    .ad .textWrapper .textSubWrapper * {
-      text-align: center; }
-    .ad .textWrapper .textSubWrapper .label {
-      padding-bottom: 0.7em;
-      font-weight: 600;
-      font-size: 1.2em; }
-    .ad .textWrapper .textSubWrapper span {
-      display: inline-block; }
-    .ad .textWrapper .textSubWrapper .text {
-      line-height: 1.4;
-      font-weight: 400;
-      color: #bbb; }
-
 /*Medium devices (tablets, 768px and up)
   min width 48em = 768px
   max-width 61.9375em = 991px */
