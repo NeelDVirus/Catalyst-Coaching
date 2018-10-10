@@ -314,11 +314,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*###############################################
 #############    02 BannerAppendix    ###########
 ################################################*/
-/*XXXXXXXXXXXXXXXX  norForMobile XXXXXXXXXXXXXXX*/
-.wrapper-bannerAppendix .container-ad.notForMobile {
-  display: none; }
-
-/*XXXXXXXXXXXXXX  end of norForMobile XXXXXXXXXXX*/
 .wrapper-bannerAppendix {
   font-size: 1.6rem;
   margin-top: -2em; }
@@ -333,9 +328,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     margin-right: 2em; }
     .wrapper-bannerAppendix .component-adAppendix .container-ad:last-child {
       margin-right: 0; }
-  @media only screen and (max-width: 61.9375em) {
-    .wrapper-bannerAppendix .component-adAppendix .container-ad#three {
-      margin-right: 0; } }
   .wrapper-bannerAppendix .component-adAppendix .container-ad .iconWrapper {
     text-align: center; }
     .wrapper-bannerAppendix .component-adAppendix .container-ad .iconWrapper .iconSubWrapper {
@@ -362,6 +354,23 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         font-weight: 400;
         color: #bbb; }
 
+/*XXXXXXXXXXXXXXXX  Hidden elements XXXXXXXXXXXXXXX*/
+.wrapper-bannerAppendix .container-ad:last-child, .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
+  display: none; }
+.wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3), .wrapper-bannerAppendix .container-ad:nth-last-child(4) {
+  margin-right: 0; }
+@media only screen and (min-width: 48em) {
+  .wrapper-bannerAppendix .container-ad:nth-last-child(2) {
+    display: block; }
+  .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
+    margin-right: 2em; } }
+@media only screen and (min-width: 62em) {
+  .wrapper-bannerAppendix .container-ad:last-child {
+    display: block; }
+  .wrapper-bannerAppendix .container-ad:nth-last-child(2) {
+    margin-right: 2em; } }
+
+/*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
@@ -408,9 +417,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 @media only screen and (min-width: 62em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
-  ################################################*/
-  .wrapper-bannerAppendix .container-ad.notForMobile {
-    display: block; } }
+  ################################################*/ }
 @media screen and (max-width: 74.9375em) and (min-width: 61.9375em) {
   /*###############################################
   #############    02 BannerAppendix    ###########

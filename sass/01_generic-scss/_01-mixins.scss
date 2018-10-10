@@ -5,10 +5,10 @@
 
 //map of breakpoints for min-width
 $breakpoints: (
-	"phone-landscape" : $smBp-min,
-	"tablet" : $mdBp-min,
-	"desktop" : $lgBp-min,
-	"large-desktop" : $xlBp-min 
+	"phoneLandscape-min" : $smBp-min,
+	"tablet-min" : $mdBp-min,
+	"desktop-min" : $lgBp-min,
+	"desktopLarge-min" : $xlBp-min 
 	
 );
 
