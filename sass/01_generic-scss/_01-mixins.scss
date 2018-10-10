@@ -2,8 +2,25 @@
 #############    02 Media Querry    ###########
 ################################################*/
 
-//---- min-width media querry ----
 
-@mixin breakpoint($point) {
+//map of breakpoints for min-width
+$breakpoints: (
+	"phone-landscape" : $smBp-min,
+	"tablet" : $mdBp-min,
+	"desktop" : $lgBp-min,
+	"large-desktop" : $xlBp-min 
 	
+);
+
+//mixin for media query of min-max width
+@mixin mq($width, $type:min) {
+	@if map-has-key($breakpoints, $width){
+		$width: map-get($breakpoints, $width);
+		@if $type == max {
+			$width : ((($width * 16)  - 1)/16); //sass operator condition and "em to px and then back to em"
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}//End of "if map-has-kay"
 }
