@@ -357,18 +357,26 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*XXXXXXXXXXXXXXXX  Hidden elements XXXXXXXXXXXXXXX*/
 .wrapper-bannerAppendix .container-ad:last-child, .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
   display: none; }
-.wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3), .wrapper-bannerAppendix .container-ad:nth-last-child(4) {
-  margin-right: 0; }
-@media only screen and (min-width: 48em) {
-  .wrapper-bannerAppendix .container-ad:nth-last-child(2) {
-    display: block; }
+@media only screen and (max-width: 35.9375em) {
+  .wrapper-bannerAppendix .container-ad:nth-last-child(4) {
+    margin-right: 0;
+    padding: 2em; } }
+@media only screen and (min-width: 36em) and (max-width: 48em) {
   .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
-    margin-right: 2em; } }
-@media only screen and (min-width: 62em) {
-  .wrapper-bannerAppendix .container-ad:last-child {
+    display: block;
+    margin-right: 0; } }
+@media only screen and (min-width: 48em) and (max-width: 62em) {
+  .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
     display: block; }
   .wrapper-bannerAppendix .container-ad:nth-last-child(2) {
-    margin-right: 2em; } }
+    display: block;
+    margin-right: 0; } }
+@media only screen and (min-width: 62em) {
+  .wrapper-bannerAppendix .container-ad:last-child .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
+    display: block; }
+  .wrapper-bannerAppendix .container-ad:last-child {
+    display: block;
+    margin-right: 0; } }
 
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
@@ -392,7 +400,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	################################################*/
   .wrapper-bannerAppendix {
     font-size: 1.3rem; } }
-@media screen and (max-width: 52.8125em) and (min-width: 48em) {
+@media screen and (min-width: 48em) and (max-width: 52.8125em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
   ################################################*/ }
@@ -418,7 +426,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   /*###############################################
   #############    02 BannerAppendix    ###########
   ################################################*/ }
-@media screen and (max-width: 74.9375em) and (min-width: 61.9375em) {
+@media screen and (min-width: 61.9375em) and (max-width: 74.9375em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
   ################################################*/
@@ -429,7 +437,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     display: block; }
   .wrapper-bannerAppendix .component-adAppendix .container-ad .textWrapper .textWrapper2 {
     margin-top: -1em; } }
-@media screen and (max-width: 74.9375em) and (min-width: 67.8125em) {
+@media screen and (min-width: 67.8125em) and (max-width: 74.9375em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
   ################################################*/

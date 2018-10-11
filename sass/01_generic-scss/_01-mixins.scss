@@ -19,8 +19,15 @@ $breakpoints: (
 		@if $type == max {
 			$width : ((($width * 16)  - 1)/16); //sass operator condition and "em to px and then back to em"
 		}
-		@media only screen and (#{$type}-width: $width) {
-			@content;
-		}
+		@media only screen and (#{$type}-width: $width) {@content;}
 	}//End of "if map-has-kay"
+}
+@mixin mq_min-max($minWidth, $maxWidth) {
+	@if map-has-key($breakpoints, $minWidth) and map-has-key($breakpoints, $maxWidth) {
+		$minWidth: map-get($breakpoints, $minWidth);
+		$maxWidth: map-get($breakpoints, $maxWidth);
+		
+		@media only screen and (min-width: $minWidth) and (max-width: $maxWidth) { @content; }
+	}
+
 }
