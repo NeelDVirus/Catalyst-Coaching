@@ -359,10 +359,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 .wrapper-bannerAppendix {
 	.container-ad {
-		&:last-child, &:nth-last-child(2), &:nth-last-child(3) {display: none;}
+		//&:last-child, &:nth-last-child(2), &:nth-last-child(3) {display: none;}
+		&:last-child, &:nth-last-child(2) {display: none;}
 
 		@include mq('phoneLandscape-min', max) {
-			&:nth-last-child(4) {margin-right: 0; padding: 2em; font-size: 0.8em;}
+			//&:nth-last-child(4) {margin-right: 0; padding: 2em; font-size: 0.8em;}
+			&:nth-last-child(3) {margin-right: 0; font-size: 0.8em;}
 		}
 		@include mq_min-max('phoneLandscape-min', 'tablet-min') {	
 			&:nth-last-child(3) {display: block; margin-right: 0;}
