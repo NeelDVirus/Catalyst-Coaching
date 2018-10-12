@@ -360,7 +360,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 @media only screen and (max-width: 35.9375em) {
   .wrapper-bannerAppendix .container-ad:nth-last-child(4) {
     margin-right: 0;
-    padding: 2em; } }
+    padding: 2em;
+    font-size: 0.8em; } }
 @media only screen and (min-width: 36em) and (max-width: 48em) {
   .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
     display: block;
