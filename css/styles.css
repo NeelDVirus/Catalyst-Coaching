@@ -277,8 +277,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   display: flex;
   background-image: url("../images/heroImage3.jpg");
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-color: black; }
+  background-repeat: no-repeat; }
 
 .wrapper-banner .col-heroImage {
   display: flex;
@@ -287,9 +286,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     padding: 9em 5em 9em 0;
     color: white; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-      font-size: 4em;
+      display: flex;
+      font-size: 2em;
       font-weight: 600;
-      line-height: 1.5; }
+      line-height: 1.5;
+      margin-bottom: 0.5em; }
+      .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
+        display: inline-block;
+        padding: 0.1em 0.5em;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        text-align: center; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .content {
       font-size: 1.7em;
       line-height: 1.2;
