@@ -3,14 +3,7 @@
 ################################################*/
 
 
-//map of breakpoints for min-width
-$breakpoints: (
-	"phoneLandscape-min" : $smBp-min,
-	"tablet-min" : $mdBp-min,
-	"desktop-min" : $lgBp-min,
-	"desktopLarge-min" : $xlBp-min 
-	
-);
+
 
 //mixin for media query of min-max width
 @mixin mq($width, $type:min) {
@@ -22,6 +15,7 @@ $breakpoints: (
 		@media only screen and (#{$type}-width: $width) {@content;}
 	}//End of "if map-has-kay"
 }
+
 @mixin mq_min-max($minWidth, $maxWidth) {
 	@if map-has-key($breakpoints, $minWidth) and map-has-key($breakpoints, $maxWidth) {
 		$minWidth: map-get($breakpoints, $minWidth);

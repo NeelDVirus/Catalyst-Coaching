@@ -21,10 +21,27 @@ $(document).ready(function(){
 	Overlapping(vertically) the half height 
 	of Nav section over the banner section*/
 
+
+
+	/**********  mobilemenu  ******************/
+
 	var $navSectionHeight = $(".col-nav").outerHeight();
 	$(".wrapper-banner").css("margin-top", "-"+(0.5 * $navSectionHeight) +"px");
 	$(".wrapper-banner .row-heroImage").css("padding-top", (0.5 * $navSectionHeight)+"px");
 
+	
+	var Closed = false;
+    $('.hamburger').click(function () {
+        if (Closed == true) {
+          	$(this).removeClass('open');
+          	$(this).addClass('closed');
+          	Closed = false;
+        } else {               
+          	$(this).removeClass('closed');
+          	$(this).addClass('open');
+          	Closed = true;
+        }
+    });
 
 	/*######################################################
 	###                                               ######

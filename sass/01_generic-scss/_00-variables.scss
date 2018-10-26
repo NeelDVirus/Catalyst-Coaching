@@ -56,3 +56,11 @@ $lgBp-max : 74.9375em;  //1199px
 $xlBp-max : 100em;      //1600px  
 
 
+//map of breakpoints for min-width media query mixins 
+$breakpoints: (
+	"phoneLandscape-min" : $smBp-min,
+	"tablet-min" : $mdBp-min,
+	"desktop-min" : $lgBp-min,
+	"desktopLarge-min" : $xlBp-min 
+	
+);

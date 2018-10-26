@@ -48,8 +48,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
-/****************************************
-************  Welcome row ***************/
+/*******************************************
+*** First row (Welcome row/ mobilemenu) ***/
 
 .wrapper-header .row-welcome {
 	background-color: #111;
@@ -90,6 +90,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		color: $primaryRed;
 	}
 }
+
+.wrapper-header .component-mobilemenu {
+	//background-color: black;
+	//display: none;
+	@media only screen and (max-width: map-get($breakpoints, tablet-min) ) {
+		//display: block;
+		//@import "mobilemenu/mobilemenu" 
+	}
+}
+@import "mobilemenu/mobilemenu" ;
 
 /*****************************************
 *************   Brand row   *************/
@@ -168,7 +178,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-header .row-nav {}
 .wrapper-header .component-nav {
 	color: white;
-	background-color: rgba(17,17,17,1);
+	//background-color: rgba(17,17,17,1);
 }
 .wrapper-header .component-nav ul {
 	display: flex;
