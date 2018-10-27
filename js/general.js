@@ -22,12 +22,7 @@ $(document).ready(function(){
 	of Nav section over the banner section*/
 
 
-
 	/**********  mobilemenu  ******************/
-
-	var $navSectionHeight = $(".col-nav").outerHeight();
-	$(".wrapper-banner").css("margin-top", "-"+(0.5 * $navSectionHeight) +"px");
-	$(".wrapper-banner .row-heroImage").css("padding-top", (0.5 * $navSectionHeight)+"px");
 
 	
 	var Closed = false;
@@ -48,7 +43,27 @@ $(document).ready(function(){
 	###                BANNER                         ######
 	###                                               ######  
 	#######################################################*/
+
 	var $bannerWrapper = $(".wrapper-banner");
+
+	/*********   Incorporate with : (nav section)   **************
+	Overlapping(vertically) the half height 
+	of Nav section over the banner section*/ 
+
+	
+
+	function negativeTopMargin_banner() {
+		var $navSectionHeight = $(".col-nav").outerHeight();
+		$bannerWrapper.css("margin-top", "-"+(0.5 * $navSectionHeight) +"px");
+		$(".wrapper-banner .row-heroImage").css("padding-top", (0.5 * $navSectionHeight)+"px");
+	}
+	negativeTopMargin_banner();
+
+
+
+
+
+
 
 	/* (adAppendix -- )
 	adding negative margin-top to --> 
@@ -62,6 +77,44 @@ $(document).ready(function(){
 	/**********   (.row.hero-image)   ************** 
 	adding padding-bottom to hero-image to compensate the additonal overlapping of .adAppendix row which extent beyond the .banner-wrapper bottom end */
 
+
+
+
+
+
+
+
+
+
+
+	/*###########################################################
+	#############################################################
+	#############################################################
+	########                                             ########
+	########                MOBILE VERSION               ########
+	########                                             ########
+	#############################################################
+	#############################################################  
+	############################################################*/
+
+	function screenTest(e) {
+		if(e.matches) {
+			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
+			//console.log(shiftingTopRowElements);
+			var toAppend = document.createDocumentFragment();
+			shiftingTopRowElements.forEach(function(x){
+				toAppend.appendChild(x);
+				negativeTopMargin_banner();				
+			});
+			document.querySelector(".wrapper-header .col-nav").appendChild(toAppend);
+
+		}
+	}
+
+	var mql = window.matchMedia('(max-width: 62em)');
+	screenTest(mql);
+	mql.addListener(screenTest);
+ 
 
 
 })

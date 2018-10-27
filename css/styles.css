@@ -194,7 +194,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   width: 68px;
   height: 68px;
   background: #973BE8;
-  background: transparent;
+  background: #111;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -505,7 +505,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*****************************************
 *************   Nav row   ****************/
 .wrapper-header .component-nav {
-  color: white; }
+  color: white;
+  background-color: #111111; }
 
 .wrapper-header .component-nav ul {
   display: flex; }
@@ -525,6 +526,15 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   .wrapper-header .component-nav ul li:hover a {
     background-color: rgba(155, 125, 55, 0.5); }
 
+/*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
+.wrapper-header .col-nav {
+  background-color: #111111; }
+
+@media only screen and (max-width: 47.9375em) {
+  .wrapper-header .component-nav {
+    display: none; } }
+
+/*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############
 ################################################*/
