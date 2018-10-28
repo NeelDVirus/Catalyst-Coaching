@@ -213,9 +213,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 
 .wrapper-header .col-nav {background-color: rgba(17,17,17,1);}
-.wrapper-header .component-nav{ 
-	@include mq("tablet-min", max) {
-		display: none;
+.wrapper-header {
+	.component-nav { 
+		@include mq("tablet-min", max) {
+			display: none;
+		}
+	}
+	.component-welcome .wrapper-socialIcon {
+		@include mq("tablet-min", max) {
+			display: none;
+		}
 	}
 }
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
