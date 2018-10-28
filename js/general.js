@@ -103,10 +103,10 @@ $(document).ready(function(){
 			//console.log(shiftingTopRowElements);
 			var toAppend = document.createDocumentFragment();
 			shiftingTopRowElements.forEach(function(x){
-				toAppend.appendChild(x);
-				negativeTopMargin_banner();				
+				toAppend.appendChild(x);			
 			});
 			document.querySelector(".wrapper-header .col-nav").appendChild(toAppend);
+			negativeTopMargin_banner();	
 
 		}
 	}
