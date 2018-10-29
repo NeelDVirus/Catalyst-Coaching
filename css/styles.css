@@ -192,6 +192,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   width: 56px;
   height: 42px; }
 
+.pushed .bar:nth-of-type(1) {
+  display: none; }
+
 /*############################
 ####  End of self edit    ####
 #############################*/
@@ -248,9 +251,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   transform: rotate(-180deg); }
 
 /*pushed*/
-.pushed .toggle-icon {
-  margin: -3.2em 0 0 0.7em; }
-
 .pushed .bar:nth-of-type(1) {
   opacity: 0; }
 
