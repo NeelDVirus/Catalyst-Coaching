@@ -212,7 +212,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 
-.wrapper-header .col-nav {background-color: rgba(17,17,17,1);}
+//row-topmost
 .wrapper-header {
 	.component-nav { 
 		@include mq("tablet-min", max) {
@@ -225,10 +225,28 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		}
 	}
 }
+
+
+
+//for fixed top-row header (Title and hamburger-row)
+.wrapper-header .row-welcome {
+	@include mq("tablet-min", max) {
+		width: 100%;
+	}
+}
+//row-brand 
+.wrapper-header .row-brand {
+	@include mq("tablet-min", max) {
+		position: relative;
+		//top: set in javascript
+	}
+}
+
+//
+.wrapper-header .col-nav {background-color: rgba(17,17,17,1);}
+
+
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
-
-
-
 
 
 
