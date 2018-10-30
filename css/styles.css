@@ -361,12 +361,13 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 @media only screen and (max-width: 47.9375em) {
+  .wrapper-header .wrapper-header .row.mVersion {
+    position: fixed;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%; }
   .wrapper-header .component-nav, .wrapper-header .component-welcome .wrapper-socialIcon {
     display: none; }
-
-  .wrapper-header .row-topmost {
-    position: fixed;
-    width: 100%; }
 
   .wrapper-header .col-nav {
     background-color: #111111; } }
