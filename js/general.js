@@ -90,35 +90,33 @@ $(document).ready(function(){
 	############################################################*/
 
 
-	/*------------------------------------------
-	----------     HEADER     ------------------
-	--------------------------------------------*/
-
-
-	//top-absolute-position of row-brand = height of row-topmost row
-	var topmostRowHeight = document.querySelector(".wrapper-header .row-topmost").offsetHeight;
-	document.querySelector(".wrapper-header .row-brand").style.marginTop = ""+ topmostRowHeight;
-	console.log(topmostRowHeight);
-
-
-
-
-	//Shifting of Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
-
 	function screenTest(e) {
 		if(e.matches) {
+
+			/*------------------------------------------
+			----------     HEADER     ------------------
+			--------------------------------------------*/
+
+			// header.topmost-row 
+			// (1) top-absolute-position of row-brand = height of row-topmost row
+			var topmostRowHeight = document.querySelector(".wrapper-header .row-topmost").offsetHeight;
+			document.querySelector(".wrapper-header .row-brand").style.marginTop = topmostRowHeight + "px";
+			//------------- End of (1) --------------------
+
+
+			// header.topmost-row &&& header.row-nav
+			// (2) Shifting of Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
 			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
-			//console.log(shiftingTopRowElements);
 			var toAppend = document.createDocumentFragment();
 			shiftingTopRowElements.forEach(function(x){
 				toAppend.appendChild(x);			
 			});
 			document.querySelector(".wrapper-header .col-nav").appendChild(toAppend);
 			negativeTopMargin_banner();	//From banner section 
+			//------------- End of (2) --------------------
 
 		}
 	}
-
 	var mql = window.matchMedia('(max-width: 62em)');
 	screenTest(mql);
 	mql.addListener(screenTest);

@@ -212,40 +212,33 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 
-//row-topmost
-.wrapper-header {
-	.component-nav { 
-		@include mq("tablet-min", max) {
+@include mq("tablet-min", max) {
+	
+	//row-topmost
+	.wrapper-header {
+		.component-nav, .component-welcome .wrapper-socialIcon { 
 			display: none;
 		}
 	}
-	.component-welcome .wrapper-socialIcon {
-		@include mq("tablet-min", max) {
-			display: none;
-		}
-	}
-}
 
-
-
-//for fixed top-row header (Title and hamburger-row)
-.wrapper-header .row-topmost {
-	@include mq("tablet-min", max) {
+	//for fixed top-row header (Title and hamburger-row)
+	.wrapper-header .row-topmost {
 		position: fixed;
 		width: 100%;
 	}
-}
-//row-brand 
-.wrapper-header .row-brand {
-	@include mq("tablet-min", max) {
-		//position: relative;
-		//margin-top: 71px;
+
+
+	//row-brand 
+	.wrapper-header .row-brand {
 		//top: set in javascript
 	}
+	
+	//.row-nav .col-nav
+	.wrapper-header .col-nav {background-color: rgba(17,17,17,1);}
+
+
 }
 
-//
-.wrapper-header .col-nav {background-color: rgba(17,17,17,1);}
 
 
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
