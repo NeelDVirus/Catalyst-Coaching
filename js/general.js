@@ -97,7 +97,8 @@ $(document).ready(function(){
 
 	//top-absolute-position of row-brand = height of row-topmost row
 	var topmostRowHeight = document.querySelector(".wrapper-header .row-topmost").offsetHeight;
-	document.querySelector(".wrapper-header .row-brand").style.top = topmostRowHeight;
+	document.querySelector(".wrapper-header .row-brand").style.marginTop = ""+ topmostRowHeight;
+	console.log(topmostRowHeight);
 
 
 

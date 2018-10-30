@@ -229,15 +229,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 //for fixed top-row header (Title and hamburger-row)
-.wrapper-header .row-welcome {
+.wrapper-header .row-topmost {
 	@include mq("tablet-min", max) {
+		position: fixed;
 		width: 100%;
 	}
 }
 //row-brand 
 .wrapper-header .row-brand {
 	@include mq("tablet-min", max) {
-		position: relative;
+		//position: relative;
+		//margin-top: 71px;
 		//top: set in javascript
 	}
 }
