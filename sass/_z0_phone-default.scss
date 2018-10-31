@@ -220,10 +220,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			position: fixed;
 			width: 100%;
 			height: 56.375/16 * 1em;
+			height: 4em;
 			padding-left: 2%;
 			padding-right: 2%;
+			.col {height: 100%;}
+			.col .component-mTopBar{height: 100%;}
 		}
-		//resizing .component-brand
 		.container-brandMain{			
 			//flex
 			display: flex;
