@@ -219,15 +219,40 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.row-topmost {
 			position: fixed;
 			width: 100%;
+			height: 56.375/16 * 1em;
 			padding-left: 2%;
 			padding-right: 2%;
+		}
+		//resizing .component-brand
+		.container-brandMain{			
+			//flex
+			display: flex;
+			align-items: center;		
+			margin-right: auto;
+			height: 100%;
+			.container-logo {
+				display: none;
+				height: 42/14.4 * 1em; //42px is the height of """hamburgerIcon + .topmostRow'Padding(top and bottom padding"""
+				background-color: #ccc;
+				overflow: hidden;
+				img {width: auto; height: 100%;}
+			}			
+			.brand-name {
+				font-family: $lato;
+				font-size: 2em;
+				font-weight: $bold-openSans;
+				margin-left: 0.2em;
+				//border-radius: 2px;
+				//padding: 0.1em 0.15em;
+				color: white;
+				text-transform: uppercase;
+			}
 		}		
 		.component-welcome {
 			padding: 0.5em 0;
 		}
 		//hiding welcome-note && socialIcons
-		.component-nav, .component-welcome.wrapper-socialIcon { 
-				display: none;
+		.component-nav, .component-welcome.wrapper-socialIcon { display: none;
 		}
 		.component-nav, .component-welcome {
 			padding: 0.5em 0;
@@ -243,7 +268,40 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.col-nav {background-color: rgba(17,17,17,1);}
 	}
 }
-
+/* .wrapper-header .component-brand {
+	font-size: 1.6rem;
+	//flex
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	//general
+	margin: 0 auto;
+	padding: 2em 0;
+	
+	.container-brandMain {
+		//flex
+		display: flex;
+		align-items: center;		
+		margin-right: auto;
+		.container-logo {
+			width: 2.7em;
+			height: 2.7em;
+			background-color: #ccc;
+			overflow: hidden;
+			img {width: auto; height: 100%;}
+		}
+		.brand-name {
+			font-family: $lato;
+			font-size: 2em;
+			font-weight: $bold-openSans;
+			margin-left: 0.2em;
+			border-radius: 2px;
+			//padding: 0.1em 0.15em;
+			color: #000;
+			text-transform: uppercase;
+		}
+	}
+ */
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 
 

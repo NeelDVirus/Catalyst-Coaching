@@ -97,14 +97,15 @@ $(document).ready(function(){
 			----------     HEADER     ------------------
 			--------------------------------------------*/
 
-			// header.topmost-row 
+			// .topmost-row 
 			// (1) top-absolute-position of row-brand = height of row-topmost row
-			var topmostRowHeight = document.querySelector(".wrapper-header .row-topmost").offsetHeight;
+			var topmostRow = document.querySelector(".wrapper-header .row-topmost");
+			var topmostRowHeight = topmostRow.offsetHeight;
 			document.querySelector(".wrapper-header .row-brand").style.marginTop = topmostRowHeight + "px";
 			//------------- End of (1) --------------------
 
 
-			// header.topmost-row &&& header.row-nav
+			// .topmost-row &&& .row-nav
 			// (2) Shifting of Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
 			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
 			var toAppend = document.createDocumentFragment();
@@ -115,6 +116,15 @@ $(document).ready(function(){
 			negativeTopMargin_banner();	//From banner section 
 			//------------- End of (2) --------------------
 
+
+			// .topmost-row ---&&&--- .row-brand .container-brandMain
+			let containerBrandMain = document.querySelector(".wrapper-header .row-brand .container-brandMain ");
+			let component_mTopBar = topmostRow.querySelector(".col .component-mTopBar");
+			component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
+
+			/*------------------------------------------
+			----------     HEADER     ------------------
+			--------------------------------------------*/
 		}
 	}
 	var mql = window.matchMedia('(max-width: 62em)');

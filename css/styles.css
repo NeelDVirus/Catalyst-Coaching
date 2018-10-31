@@ -406,8 +406,33 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   .wrapper-header .row-topmost {
     position: fixed;
     width: 100%;
+    height: 3.5234375em;
     padding-left: 2%;
     padding-right: 2%; }
+  .wrapper-header .container-brandMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: auto;
+    height: 100%; }
+    .wrapper-header .container-brandMain .container-logo {
+      display: none;
+      height: 2.9166666667em;
+      background-color: #ccc;
+      overflow: hidden; }
+      .wrapper-header .container-brandMain .container-logo img {
+        width: auto;
+        height: 100%; }
+    .wrapper-header .container-brandMain .brand-name {
+      font-family: "Lato", sans-serif;
+      font-size: 2em;
+      font-weight: 600;
+      margin-left: 0.2em;
+      color: white;
+      text-transform: uppercase; }
   .wrapper-header .component-welcome {
     padding: 0.5em 0; }
   .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
@@ -422,6 +447,40 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     /*top: set in javascript*/ }
   .wrapper-header .col-nav {
     background-color: #111111; } }
+/* .wrapper-header .component-brand {
+	font-size: 1.6rem;
+	//flex
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	//general
+	margin: 0 auto;
+	padding: 2em 0;
+	
+	.container-brandMain {
+		//flex
+		display: flex;
+		align-items: center;		
+		margin-right: auto;
+		.container-logo {
+			width: 2.7em;
+			height: 2.7em;
+			background-color: #ccc;
+			overflow: hidden;
+			img {width: auto; height: 100%;}
+		}
+		.brand-name {
+			font-family: $lato;
+			font-size: 2em;
+			font-weight: $bold-openSans;
+			margin-left: 0.2em;
+			border-radius: 2px;
+			//padding: 0.1em 0.15em;
+			color: #000;
+			text-transform: uppercase;
+		}
+	}
+ */
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############
