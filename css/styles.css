@@ -298,6 +298,58 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*****************************************
 *************   Brand row   *************/
+.wrapper-header .container-brandMain .logo-complement {
+  /* 129 = ellipse.getTotalLength() */
+  /* 129 = ellipse.getTotalLength() */ }
+  .wrapper-header .container-brandMain .logo-complement .atom path {
+    stroke-width: 2.06; }
+  .wrapper-header .container-brandMain .logo-complement .container-atom {
+    width: 100%;
+    height: 100%; }
+  .wrapper-header .container-brandMain .logo-complement svg.atom {
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: visible; }
+  .wrapper-header .container-brandMain .logo-complement svg circle.kern {
+    fill: #FFEA00;
+    stroke: none;
+    -webkit-filter: drop-shadow(0px 0px 4px #aeea00);
+            filter: drop-shadow(0px 0px 4px #aeea00); }
+  .wrapper-header .container-brandMain .logo-complement .atom path {
+    fill: none;
+    stroke: #000;
+    stroke-width: .06; }
+  .wrapper-header .container-brandMain .logo-complement path.tail {
+    stroke: #bda800;
+    fill: none;
+    -webkit-animation: atom 1.5s infinite linear;
+            animation: atom 1.5s infinite linear;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 20,44.5;
+    stroke-width: .6; }
+  .wrapper-header .container-brandMain .logo-complement path.electron {
+    stroke: #FFEA00;
+    fill: none;
+    -webkit-animation: atom 1.5s infinite linear;
+            animation: atom 1.5s infinite linear;
+    stroke-dashoffset: 0;
+    stroke-dasharray: .1,64.4;
+    stroke-width: 2;
+    stroke-linecap: round; }
+  .wrapper-header .container-brandMain .logo-complement path.tail1,
+  .wrapper-header .container-brandMain .logo-complement path.electron1 {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+  .wrapper-header .container-brandMain .logo-complement path.tail2,
+  .wrapper-header .container-brandMain .logo-complement path.electron2 {
+    -webkit-animation-delay: -1.4s;
+            animation-delay: -1.4s; }
+@-webkit-keyframes atom {
+  to {
+    stroke-dashoffset: 129; } }
+@keyframes atom {
+  to {
+    stroke-dashoffset: 129; } }
 .wrapper-header .component-brand {
   font-size: 1.6rem;
   display: -webkit-box;
@@ -319,21 +371,20 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             align-items: center;
     margin-right: auto; }
     .wrapper-header .component-brand .container-brandMain .container-logo {
-      width: 2.7em;
-      height: 2.7em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 20.7em;
+      height: 3.5em;
       overflow: hidden; }
-      .wrapper-header .component-brand .container-brandMain .container-logo img {
-        width: auto;
-        height: 100%; }
     .wrapper-header .component-brand .container-brandMain .brand-name {
       font-family: "Lato", sans-serif;
       font-size: 2em;
       font-weight: 600;
-      margin-left: 0.2em;
       border-radius: 2px;
       color: #000;
       text-transform: uppercase;
-      margin: -999px; }
+      text-indent: -9999px; }
   .wrapper-header .component-brand address {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -403,90 +454,93 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 @media only screen and (max-width: 47.9375em) {
-  .wrapper-header .row-topmost {
-    position: fixed;
-    width: 100%;
-    height: 3.5234375em;
-    height: 4em;
-    padding-left: 3%;
-    padding-right: 3%; }
-    .wrapper-header .row-topmost .col {
-      height: 100%; }
-    .wrapper-header .row-topmost .col .component-mTopBar {
-      height: 100%; }
-  .wrapper-header .container-brandMain {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: auto;
-    height: 100%; }
-    .wrapper-header .container-brandMain .container-logo {
-      margin-left: 0.6em;
-      width: 13.1944444444em;
-      height: 2.9166666667em;
-      overflow: hidden; }
-      .wrapper-header .container-brandMain .container-logo img {
-        width: 100%;
+  .wrapper-header {
+    		/*
+    		
+    .container-brandMain {
+    	width: 40% !important;
+    }
+    .container-logo {	
+    	width: 100% !important;
+    	.logo-complement {
+    		width: 100px !important;
+    		height: 100px !important;
+    		//background: rgb(85,85,85);
+    		//background: radial-gradient(circle, rgba(85,85,85,1) 20%, rgba(200,200,200,1) 40%);
+    		position: absolute;
+    		overflow: visible !important;
+    		margin-top: -22px;
+    	}
+    	img{
+    		margin-left: 100px !important;
+    		width: 80%;
+    	}
+    }
+    
+    
+    		*/ }
+    .wrapper-header .row-topmost {
+      position: fixed;
+      width: 100%;
+      height: 3.5234375em;
+      height: 4em;
+      padding-left: 3%;
+      padding-right: 3%; }
+      .wrapper-header .row-topmost .col {
         height: 100%; }
-    .wrapper-header .container-brandMain .brand-name {
-      font-family: "Lato", sans-serif;
-      font-size: 2em;
-      font-weight: 600;
-      margin-left: 0.2em;
-      color: white;
-      text-transform: uppercase;
-      margin: -999px; }
-  .wrapper-header .component-welcome {
-    padding: 0.5em 0; }
-  .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
-    display: none; }
-  .wrapper-header .component-nav, .wrapper-header .component-welcome {
-    padding: 0.5em 0; }
-    .wrapper-header .component-nav .wrapper-socialIcon, .wrapper-header .component-welcome .wrapper-socialIcon {
+      .wrapper-header .row-topmost .col .component-mTopBar {
+        height: 100%; }
+    .wrapper-header .container-brandMain {
+      font-size: 1.6rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-right: auto;
+      height: 100%; }
+      .wrapper-header .container-brandMain .container-logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 20.7em;
+        height: 3.5em;
+        overflow: hidden; }
+      .wrapper-header .container-brandMain .brand-name {
+        font-family: "Lato", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        border-radius: 2px;
+        color: #000;
+        text-transform: uppercase;
+        text-indent: -9999px; }
+      .wrapper-header .container-brandMain .container-logo {
+        width: 13.1944444444em;
+        height: 2.9166666667em; }
+        .wrapper-header .container-brandMain .container-logo .logo-complement {
+          margin-top: calc(-0.5 * (4em - 42px));
+          width: 4em;
+          height: 4em;
+          overflow: visible; }
+        .wrapper-header .container-brandMain .container-logo img {
+          width: calc(100% - 4em); }
+      .wrapper-header .container-brandMain .brand-name {
+        color: white; }
+    .wrapper-header .component-welcome {
+      padding: 0.5em 0; }
+    .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
       display: none; }
-  .wrapper-header .container-hamburger {
-    margin-left: auto; }
-  .wrapper-header .row-brand {
-    /*top: set in javascript*/ }
-  .wrapper-header .col-nav {
-    background-color: #111111; } }
-/* .wrapper-header .component-brand {
-	font-size: 1.6rem;
-	//flex
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	//general
-	margin: 0 auto;
-	padding: 2em 0;
-	
-	.container-brandMain {
-		//flex
-		display: flex;
-		align-items: center;		
-		margin-right: auto;
-		.container-logo {
-			width: 2.7em;
-			height: 2.7em;
-			background-color: #ccc;
-			overflow: hidden;
-			img {width: auto; height: 100%;}
-		}
-		.brand-name {
-			font-family: $lato;
-			font-size: 2em;
-			font-weight: $bold-openSans;
-			margin-left: 0.2em;
-			border-radius: 2px;
-			//padding: 0.1em 0.15em;
-			color: #000;
-			text-transform: uppercase;
-		}
-	}
- */
+    .wrapper-header .component-nav, .wrapper-header .component-welcome {
+      padding: 0.5em 0; }
+      .wrapper-header .component-nav .wrapper-socialIcon, .wrapper-header .component-welcome .wrapper-socialIcon {
+        display: none; }
+    .wrapper-header .container-hamburger {
+      margin-left: auto; }
+    .wrapper-header .row-brand {
+      /*top: set in javascript*/ }
+    .wrapper-header .col-nav {
+      background-color: #111111; } }
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############

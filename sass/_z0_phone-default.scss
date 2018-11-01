@@ -102,9 +102,45 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 }
 @import "mobilemenu/mobilemenu" ;
 
+
+
+
 /*****************************************
 *************   Brand row   *************/
 
+//========= IMPORT ========
+.wrapper-header .container-brandMain .logo-complement {
+	@import "02_thirdParty/atomAnimation1";
+}
+//========= MIXIN ========
+@mixin container-brandMain {
+	//flex
+	display: flex;
+	align-items: center;		
+	margin-right: auto;
+	.container-logo {	
+		display: flex;
+		width: 20.7em;
+		height: 3.5em;
+		//background-color: #ccc;
+		overflow: hidden;
+		//img {width: 100%; height: 100%;}
+	}
+	.brand-name {
+		font-family: $lato;
+		font-size: 2em;
+		font-weight: $bold-openSans;
+		//margin-left: 0.2em;
+		border-radius: 2px;
+		//padding: 0.1em 0.15em;
+		color: #000;
+		text-transform: uppercase;
+		text-indent: -9999px;
+	}
+}//End of mixin container-brandMain
+
+
+//============= Rules ============
 .wrapper-header .row-brand {}
 .wrapper-header .row-brand {}
 .wrapper-header .component-brand {
@@ -116,32 +152,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	//general
 	margin: 0 auto;
 	padding: 2em 0;
-	
 	.container-brandMain {
-		//flex
-		display: flex;
-		align-items: center;		
-		margin-right: auto;
-		.container-logo {
-			width: 2.7em;
-			height: 2.7em;
-			//background-color: #ccc;
-			overflow: hidden;
-			img {width: auto; height: 100%;}
-		}
-		.brand-name {
-			font-family: $lato;
-			font-size: 2em;
-			font-weight: $bold-openSans;
-			margin-left: 0.2em;
-			border-radius: 2px;
-			//padding: 0.1em 0.15em;
-			color: #000;
-			text-transform: uppercase;
-			margin: -999px;
-		}
+		@include container-brandMain();
 	}
-
 	address {
 		display: flex;
 		align-items: center;
@@ -227,32 +240,54 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			.col {height: 100%;}
 			.col .component-mTopBar{height: 100%;}
 		}
-		.container-brandMain{			
-			//flex
-			display: flex;
-			align-items: center;		
-			margin-right: auto;
+		.container-brandMain {
+			font-size: 1.6rem;
+			@include container-brandMain();		
 			height: 100%;
 			.container-logo {
-				margin-left: 0.6em;
+				//margin-left: 0.6em;
 				width: 190/14.4 * 1em;
-				height: 42/14.4 * 1em; //42px is the height of """hamburgerIcon + .topmostRow'Padding(top and bottom padding"""
-				//background-color: #ccc;
-				overflow: hidden;
-				img {width: 100%; height: 100%;}
+				height: 42/14.4 * 1em;
+				.logo-complement {
+					margin-top: calc(-0.5 * (4em - 42px)); //.container-logo height =42, .row-topmost height= 4em;
+					width: 4em; //equals to height
+					height: 4em; //equals to the height of .row-topmost
+					overflow: visible;
+				}
+				img{
+					width: calc(100% - 4em); 
+					//margin-left: 100px;
+				}
 			}			
 			.brand-name {
-				font-family: $lato;
-				font-size: 2em;
-				font-weight: $bold-openSans;
-				margin-left: 0.2em;
-				//border-radius: 2px;
-				//padding: 0.1em 0.15em;
 				color: white;
-				text-transform: uppercase;
-				margin: -999px;
 			}
 		}		
+
+		/*
+		
+.container-brandMain {
+	width: 40% !important;
+}
+.container-logo {	
+	width: 100% !important;
+	.logo-complement {
+		width: 100px !important;
+		height: 100px !important;
+		//background: rgb(85,85,85);
+		//background: radial-gradient(circle, rgba(85,85,85,1) 20%, rgba(200,200,200,1) 40%);
+		position: absolute;
+		overflow: visible !important;
+		margin-top: -22px;
+	}
+	img{
+		margin-left: 100px !important;
+		width: 80%;
+	}
+}
+
+
+		*/
 		.component-welcome {
 			padding: 0.5em 0;
 		}
@@ -273,40 +308,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.col-nav {background-color: rgba(17,17,17,1);}
 	}
 }
-/* .wrapper-header .component-brand {
-	font-size: 1.6rem;
-	//flex
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	//general
-	margin: 0 auto;
-	padding: 2em 0;
-	
-	.container-brandMain {
-		//flex
-		display: flex;
-		align-items: center;		
-		margin-right: auto;
-		.container-logo {
-			width: 2.7em;
-			height: 2.7em;
-			background-color: #ccc;
-			overflow: hidden;
-			img {width: auto; height: 100%;}
-		}
-		.brand-name {
-			font-family: $lato;
-			font-size: 2em;
-			font-weight: $bold-openSans;
-			margin-left: 0.2em;
-			border-radius: 2px;
-			//padding: 0.1em 0.15em;
-			color: #000;
-			text-transform: uppercase;
-		}
-	}
- */
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 
 
