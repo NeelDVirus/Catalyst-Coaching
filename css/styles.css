@@ -301,8 +301,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-header .container-brandMain .logo-complement {
   /* 129 = ellipse.getTotalLength() */
   /* 129 = ellipse.getTotalLength() */ }
-  .wrapper-header .container-brandMain .logo-complement .atom path {
-    stroke-width: 2.06; }
   .wrapper-header .container-brandMain .logo-complement .container-atom {
     width: 100%;
     height: 100%; }
@@ -317,8 +315,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             filter: drop-shadow(0px 0px 4px #aeea00); }
   .wrapper-header .container-brandMain .logo-complement .atom path {
     fill: none;
-    stroke: #000;
-    stroke-width: .06; }
+    stroke: #fff;
+    stroke-width: .06;
+    stroke-width: .09; }
   .wrapper-header .container-brandMain .logo-complement path.tail {
     stroke: #bda800;
     fill: none;

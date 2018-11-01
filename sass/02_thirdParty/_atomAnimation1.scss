@@ -1,9 +1,3 @@
-//=========== SELF EDIT ==============
-.atom path {
-  stroke-width: 2.06;
-}  
-//====================================
-
 
 
 
@@ -31,8 +25,9 @@ svg circle.kern {
 }
 .atom path {
   fill: none;
-  stroke: #000;
+  stroke: #fff;
   stroke-width: .06;
+  stroke-width: .09;
 }
 /* 129 = ellipse.getTotalLength() */
 path.tail {
