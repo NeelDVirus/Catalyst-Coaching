@@ -93,6 +93,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 }
 
 .wrapper-header .container-hamburger {
+	display: none;
 	@import "mobilemenu/mobilemenu" ;
 }
 
@@ -186,6 +187,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 *************   Nav row   ****************/
 .wrapper-header .row-nav {}
 .wrapper-header .component-nav {
+	font-size: 1.6rem;
+	@media only screen and (max-width: 65.625em) {font-size: 1.4rem;} //65.625em =1050px
+	@media only screen and (max-width: 70.625em) {font-size: 1.5rem;} //68.75em =1100px
 	color: white;
 	background-color: rgba(17,17,17,1);
 }
@@ -233,6 +237,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			padding-right: 4%;
 			.col {height: 100%;}
 			.col .component-mTopBar{height: 100%;}
+			.container-hamburger {display: block;}
 		}
 		.container-brandMain {
 			font-size: 1.6rem;
