@@ -524,11 +524,14 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           height: 4em;
           overflow: visible; }
         .wrapper-header .container-brandMain .container-logo img {
+          display: inline-block;
           width: calc(100% - 4em);
           height: 43px;
-          margin-top: -1px; }
+          padding: 7px 0;
+          margin-top: 1px; }
       .wrapper-header .container-brandMain .brand-name {
-        color: white; }
+        color: white;
+        height: 42px; }
     .wrapper-header .component-welcome {
       padding: 0.5em 0; }
     .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
