@@ -25,9 +25,6 @@ $(document).ready(function(){
 	/**********  mobilemenu  ******************/
 
 	
-	$(".toggle-icon").click(function() {
-  		$('#nav-container').toggleClass("pushed");
-	});
 
 
 	/*######################################################
@@ -122,6 +119,13 @@ $(document).ready(function(){
 			let component_mTopBar = topmostRow.querySelector(".col .component-mTopBar");
 			component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
 
+			//mobilemenu
+			//(4) Hambuger icon
+			$(document).ready(function(){
+				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+					$(this).toggleClass('open');
+				});
+			});
 			/*------------------------------------------
 			----------     HEADER     ------------------
 			--------------------------------------------*/

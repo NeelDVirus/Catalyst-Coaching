@@ -92,15 +92,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	}
 }
 
-.wrapper-header .component-mobilemenu {
-	//background-color: black;
-	//display: none;
-	@media only screen and (max-width: map-get($breakpoints, tablet-min) ) {
-		//display: block;
-		//@import "mobilemenu/mobilemenu" 
-	}
+.wrapper-header .container-hamburger {
+	@import "mobilemenu/mobilemenu" ;
 }
-@import "mobilemenu/mobilemenu" ;
 
 
 
@@ -235,8 +229,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			width: 100%;
 			height: 56.375/16 * 1em;
 			height: 4em;
-			padding-left: 2%;
-			padding-right: 2%;
+			padding-left: 4%;
+			padding-right: 4%;
 			.col {height: 100%;}
 			.col .component-mTopBar{height: 100%;}
 		}
@@ -249,7 +243,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				width: 210/14.4 * 1em;
 				height: 42/14.4 * 1em;
 				.logo-complement {					
-					margin-left: -5px;
+					margin-left: -12px;
 					margin-top: calc(-0.5 * (4em - 42px)); //.container-logo height =42, .row-topmost height= 4em;
 					width: 4em; //equals to height
 					height: 4em; //equals to the height of .row-topmost
@@ -267,32 +261,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				color: white;
 				height: 42px;
 			}
-		}		
-
-		/*
+		}//End of .container-brandMain
 		
-.container-brandMain {
-	width: 40% !important;
-}
-.container-logo {	
-	width: 100% !important;
-	.logo-complement {
-		width: 100px !important;
-		height: 100px !important;
-		//background: rgb(85,85,85);
-		//background: radial-gradient(circle, rgba(85,85,85,1) 20%, rgba(200,200,200,1) 40%);
-		position: absolute;
-		overflow: visible !important;
-		margin-top: -22px;
-	}
-	img{
-		margin-left: 100px !important;
-		width: 80%;
-	}
-}
 
-
-		*/
 		.component-welcome {
 			padding: 0.5em 0;
 		}

@@ -200,101 +200,57 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     padding-left: 2em;
     color: #ff3215; }
 
-/*####################################
-#######   Self addition AND EDIT  ####
-######################################*/
-.container-hamburger {
-  width: 56px;
-  height: 42px; }
-
-.pushed .bar:nth-of-type(1) {
-  margin-bottom: -1.1em; }
-
-.toggle-icon .bar:nth-of-type(1) {
-  -webkit-transition: opacity 1s;
-  -webkit-transition: opacity 0.3s ease-in .2s;
-  transition: opacity 0.3s ease-in .2s; }
-
-.pushed .bar:nth-of-type(1) {
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms; }
-
-/*############################
-####  End of self edit    ####
-#############################*/
-.container-hamburger {
-  font-size: 10px;
-  /*increase me to scale toogle-icon*/
-  width: 56px;
-  height: 42px; }
-
-/*
-#nav-container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin:-3em;
-}*/
-/*toggle-icon*/
-.toggle-icon {
-  display: block;
-  position: relative;
-  width: 100%;
-  -webkit-transition: margin 600ms;
-  transition: margin 600ms;
-  cursor: pointer; }
-
-.toggle-icon .bar {
-  display: block;
-  width: 3.8em;
-  height: 0.2em;
-  margin: 0.9em;
-  border-right: 2.8em solid #fff;
-  border-left: 0.6em solid #d6d6d6;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
-  -webkit-transition-property: margin, border-right-color, -webkit-transform, -webkit-box-shadow;
-  transition-property: margin, border-right-color, -webkit-transform, -webkit-box-shadow;
-  transition-property: transform, margin, border-right-color, box-shadow;
-  transition-property: transform, margin, border-right-color, box-shadow, -webkit-transform, -webkit-box-shadow;
-  -webkit-transition-duration: 600ms;
-  transition-duration: 600ms; }
-
-/*  ---EDITED IN SELF-ADDITION AND EDITION--- 
-  .toggle-icon .bar:nth-of-type(1) {
-    -webkit-transition: opacity 300ms;
-    -moz-transition: opacity 300ms;
-    transition: opacity 300ms;
-  }
-*/
-.toggle-icon .bar:nth-of-type(2) {
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg); }
-
-/*pushed*/
-.pushed .bar:nth-of-type(1) {
-  opacity: 0; }
-
-.pushed .bar:nth-of-type(2) {
-  margin-left: 1.4em;
-  -webkit-transform: rotate(-137deg) translateY(-1.5em);
-  transform: rotate(-137deg) translateY(-1.5em); }
-
-.pushed .bar:nth-of-type(3) {
-  margin-left: 0.5em;
-  -webkit-transform: rotate(-42deg);
-  transform: rotate(-42deg); }
-
-.pushed .toggle-icon:hover .bar:nth-of-type(2) {
-  border-right-color: #e9b8b9;
-  -webkit-box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
-          box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75); }
-
-.pushed .toggle-icon:hover .bar:nth-of-type(3) {
-  border-right-color: #ddf1da;
-  -webkit-box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
-          box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65); }
+.wrapper-header .container-hamburger {
+  /*####################################
+  #######   Self addition AND EDIT  ####
+  ######################################*/
+  /*############################
+  ####  End of self edit    ####
+  #############################*/
+  /* Icon 1 */ }
+  .wrapper-header .container-hamburger * {
+    margin: 0;
+    padding: 0; }
+  .wrapper-header .container-hamburger #nav-icon1, .wrapper-header .container-hamburger #nav-icon2, .wrapper-header .container-hamburger #nav-icon3, .wrapper-header .container-hamburger #nav-icon4 {
+    width: 40px;
+    height: 26px;
+    position: relative;
+    margin: 0 auto;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer; }
+  .wrapper-header .container-hamburger #nav-icon1 span, .wrapper-header .container-hamburger #nav-icon3 span, .wrapper-header .container-hamburger #nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out; }
+  .wrapper-header .container-hamburger #nav-icon1 span:nth-child(1) {
+    top: 0px; }
+  .wrapper-header .container-hamburger #nav-icon1 span:nth-child(2) {
+    top: 11px; }
+  .wrapper-header .container-hamburger #nav-icon1 span:nth-child(3) {
+    top: 22px; }
+  .wrapper-header .container-hamburger #nav-icon1.open span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .wrapper-header .container-hamburger #nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px; }
+  .wrapper-header .container-hamburger #nav-icon1.open span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
 
 /*****************************************
 *************   Brand row   *************/
@@ -453,98 +409,73 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 @media only screen and (max-width: 47.9375em) {
-  .wrapper-header {
-    		/*
-    		
-    .container-brandMain {
-    	width: 40% !important;
-    }
-    .container-logo {	
-    	width: 100% !important;
-    	.logo-complement {
-    		width: 100px !important;
-    		height: 100px !important;
-    		//background: rgb(85,85,85);
-    		//background: radial-gradient(circle, rgba(85,85,85,1) 20%, rgba(200,200,200,1) 40%);
-    		position: absolute;
-    		overflow: visible !important;
-    		margin-top: -22px;
-    	}
-    	img{
-    		margin-left: 100px !important;
-    		width: 80%;
-    	}
-    }
-    
-    
-    		*/ }
-    .wrapper-header .row-topmost {
-      position: fixed;
-      width: 100%;
-      height: 3.5234375em;
-      height: 4em;
-      padding-left: 2%;
-      padding-right: 2%; }
-      .wrapper-header .row-topmost .col {
-        height: 100%; }
-      .wrapper-header .row-topmost .col .component-mTopBar {
-        height: 100%; }
-    .wrapper-header .container-brandMain {
-      font-size: 1.6rem;
+  .wrapper-header .row-topmost {
+    position: fixed;
+    width: 100%;
+    height: 3.5234375em;
+    height: 4em;
+    padding-left: 4%;
+    padding-right: 4%; }
+    .wrapper-header .row-topmost .col {
+      height: 100%; }
+    .wrapper-header .row-topmost .col .component-mTopBar {
+      height: 100%; }
+  .wrapper-header .container-brandMain {
+    font-size: 1.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: auto;
+    height: 100%; }
+    .wrapper-header .container-brandMain .container-logo {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin-right: auto;
-      height: 100%; }
-      .wrapper-header .container-brandMain .container-logo {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        width: 20.7em;
-        height: 3.5em;
-        overflow: hidden; }
-      .wrapper-header .container-brandMain .brand-name {
-        font-family: "Lato", sans-serif;
-        font-size: 2em;
-        font-weight: 600;
-        border-radius: 2px;
-        color: #000;
-        text-transform: uppercase;
-        text-indent: -9999px; }
-      .wrapper-header .container-brandMain .container-logo {
-        width: 14.5833333333em;
-        height: 2.9166666667em; }
-        .wrapper-header .container-brandMain .container-logo .logo-complement {
-          margin-left: -5px;
-          margin-top: calc(-0.5 * (4em - 42px));
-          width: 4em;
-          height: 4em;
-          overflow: visible; }
-        .wrapper-header .container-brandMain .container-logo img {
-          display: inline-block;
-          width: calc(100% - 4em);
-          height: 43px;
-          padding: 7px 0; }
-      .wrapper-header .container-brandMain .brand-name {
-        color: white;
-        height: 42px; }
-    .wrapper-header .component-welcome {
-      padding: 0.5em 0; }
-    .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
+      width: 20.7em;
+      height: 3.5em;
+      overflow: hidden; }
+    .wrapper-header .container-brandMain .brand-name {
+      font-family: "Lato", sans-serif;
+      font-size: 2em;
+      font-weight: 600;
+      border-radius: 2px;
+      color: #000;
+      text-transform: uppercase;
+      text-indent: -9999px; }
+    .wrapper-header .container-brandMain .container-logo {
+      width: 14.5833333333em;
+      height: 2.9166666667em; }
+      .wrapper-header .container-brandMain .container-logo .logo-complement {
+        margin-left: -12px;
+        margin-top: calc(-0.5 * (4em - 42px));
+        width: 4em;
+        height: 4em;
+        overflow: visible; }
+      .wrapper-header .container-brandMain .container-logo img {
+        display: inline-block;
+        width: calc(100% - 4em);
+        height: 43px;
+        padding: 7px 0; }
+    .wrapper-header .container-brandMain .brand-name {
+      color: white;
+      height: 42px; }
+  .wrapper-header .component-welcome {
+    padding: 0.5em 0; }
+  .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
+    display: none; }
+  .wrapper-header .component-nav, .wrapper-header .component-welcome {
+    padding: 0.5em 0; }
+    .wrapper-header .component-nav .wrapper-socialIcon, .wrapper-header .component-welcome .wrapper-socialIcon {
       display: none; }
-    .wrapper-header .component-nav, .wrapper-header .component-welcome {
-      padding: 0.5em 0; }
-      .wrapper-header .component-nav .wrapper-socialIcon, .wrapper-header .component-welcome .wrapper-socialIcon {
-        display: none; }
-    .wrapper-header .container-hamburger {
-      margin-left: auto; }
-    .wrapper-header .row-brand {
-      /*top: set in javascript*/ }
-    .wrapper-header .col-nav {
-      background-color: #111111; } }
+  .wrapper-header .container-hamburger {
+    margin-left: auto; }
+  .wrapper-header .row-brand {
+    /*top: set in javascript*/ }
+  .wrapper-header .col-nav {
+    background-color: #111111; } }
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############
