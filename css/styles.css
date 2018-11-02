@@ -317,7 +317,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     fill: none;
     stroke: #fff;
     stroke-width: .06;
-    stroke-width: .18; }
+    stroke-width: .12; }
   .wrapper-header .container-brandMain .logo-complement path.tail {
     stroke: #bda800;
     fill: none;
@@ -515,7 +515,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         text-transform: uppercase;
         text-indent: -9999px; }
       .wrapper-header .container-brandMain .container-logo {
-        width: 13.1944444444em;
+        width: 14.5833333333em;
         height: 2.9166666667em; }
         .wrapper-header .container-brandMain .container-logo .logo-complement {
           margin-left: -5px;
