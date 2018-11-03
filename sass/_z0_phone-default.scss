@@ -187,9 +187,11 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 *************   Nav row   ****************/
 .wrapper-header .row-nav {}
 .wrapper-header .component-nav {
-	font-size: 1.6rem;
-	@media only screen and (max-width: 65.625em) {font-size: 1.4rem;} //65.625em =1050px
-	@media only screen and (max-width: 70.625em) {font-size: 1.5rem;} //68.75em =1100px
+	font-size: 1.4rem;	
+	@media only screen and (min-width: 65.625em) {font-size: 1.45rem;} //65.625em =1050px/16
+	@media only screen and (min-width: 67.5em) {font-size: 1.5rem;} //67.5em =1080px/16
+	@media only screen and (min-width: 73.125em) {font-size: 1.6rem;} //73.125 = 1170px/16
+	
 	color: white;
 	background-color: rgba(17,17,17,1);
 }
