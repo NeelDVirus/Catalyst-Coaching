@@ -131,7 +131,7 @@ $(document).ready(function(){
 			--------------------------------------------*/
 		}
 	}
-	var mql = window.matchMedia('(max-width: 48em)');
+	var mql = window.matchMedia('(max-width: 62em)'); //62em = desktop-min
 	screenTest(mql);
 	mql.addListener(screenTest);
  
