@@ -227,9 +227,11 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 @include mq("desktop-min", max) {
 
-	//-------   row-topmost  ------------
+	
 	.wrapper-header {
-		//for fixed top-row header (Title and hamburger-row)
+		/*================================================== 
+		=============       row-topmost      ===============
+		===================================================*/
 		.row-topmost {
 			position: fixed;
 			width: 100%;
@@ -277,37 +279,47 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		} 
 		
 
-		//========= 2nd row: .component-brand: brand-adresses ====
+		/*================================================== 
+		== 	2nd row (.component-brand: brand-adresses)   ====
+		===================================================*/
 		.row-brand { 
 			//marginTop: set in javascript
 		}			
 		.component-brand {
+			display: flex;
 			flex-direction: column;
-			//align-items: stretch;
+			align-items: stretch;
 			address {
-				//width: 100%;
-				//display: flex;
-				//justify-content: space-between; 
-			}
-			address .location {
-				@media only screen and (max-width: 790px) {display:none;}
+				display: flex; 
+				justify-content: space-between;
+				
+				.location {
+					@media only screen and (max-width: 790px) {display:none;}
+				}
+				.phoneNumber {padding-left: 0;}
 			}
 		}
 
-
-		//============ mV Welcome row =========
+		/*================================================== 
+		==============   	mV Welcome row     =============
+		===================================================*/
 		.col-mV-welcome {background-color: rgba(17,17,17,1);}		
 		.component-nav {display: none;}
 		.component-mV-welcome {
 			font-size: 1.6rem;
 			display: flex; 
 			flex-direction: column;
+			align-items: center;
 			padding: 0.7em 0;
 			color: #fff; 
 			.welcomeNote {
+				margin-bottom: 0.4em;
 				.wrapper-welcomeIcon {color: $primaryRed;}
 			}
-			.register {color: $primaryRed;}
+			.register {
+				color: $primaryRed;
+				span{text-decoration: underline;}
+			}
 		}
 	}//End of .wrapper-header
 }//End of media query
