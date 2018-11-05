@@ -433,62 +433,82 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       height: 100%; }
     .wrapper-header .row-topmost .container-hamburger {
       display: block; }
-  .wrapper-header .container-brandMain {
+  .wrapper-header .component-mTopBar {
+    padding: 0.5em 0; }
+    .wrapper-header .component-mTopBar .wrapper-socialIcon {
+      display: none; }
+    .wrapper-header .component-mTopBar .container-brandMain {
+      font-size: 1.6rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-right: auto;
+      height: 100%; }
+      .wrapper-header .component-mTopBar .container-brandMain .container-logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 20.7em;
+        height: 3.5em;
+        overflow: hidden; }
+      .wrapper-header .component-mTopBar .container-brandMain .brand-name {
+        font-family: "Lato", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        border-radius: 2px;
+        color: #000;
+        text-transform: uppercase;
+        text-indent: -9999px; }
+      .wrapper-header .component-mTopBar .container-brandMain .container-logo {
+        width: 14.5833333333em;
+        height: 2.9166666667em; }
+        .wrapper-header .component-mTopBar .container-brandMain .container-logo .logo-complement {
+          margin-left: -12px;
+          margin-top: calc(-0.5 * (4em - 42px));
+          width: 4em;
+          height: 4em;
+          overflow: visible; }
+        .wrapper-header .component-mTopBar .container-brandMain .container-logo img {
+          display: inline-block;
+          width: calc(100% - 4em);
+          height: 43px;
+          padding: 7px 0; }
+      .wrapper-header .component-mTopBar .container-brandMain .brand-name {
+        color: white;
+        height: 42px; }
+    .wrapper-header .component-mTopBar .container-hamburger {
+      margin-left: auto; }
+  .wrapper-header .component-brand {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+  @media only screen and (max-width: 61.9375em) and (max-width: 790px) {
+    .wrapper-header .component-brand address .location {
+      display: none; } }
+@media only screen and (max-width: 61.9375em) {
+  .wrapper-header .col-mV-welcome {
+    background-color: #111111; }
+  .wrapper-header .component-nav {
+    display: none; }
+  .wrapper-header .component-mV-welcome {
     font-size: 1.6rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: auto;
-    height: 100%; }
-    .wrapper-header .container-brandMain .container-logo {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 20.7em;
-      height: 3.5em;
-      overflow: hidden; }
-    .wrapper-header .container-brandMain .brand-name {
-      font-family: "Lato", sans-serif;
-      font-size: 2em;
-      font-weight: 600;
-      border-radius: 2px;
-      color: #000;
-      text-transform: uppercase;
-      text-indent: -9999px; }
-    .wrapper-header .container-brandMain .container-logo {
-      width: 14.5833333333em;
-      height: 2.9166666667em; }
-      .wrapper-header .container-brandMain .container-logo .logo-complement {
-        margin-left: -12px;
-        margin-top: calc(-0.5 * (4em - 42px));
-        width: 4em;
-        height: 4em;
-        overflow: visible; }
-      .wrapper-header .container-brandMain .container-logo img {
-        display: inline-block;
-        width: calc(100% - 4em);
-        height: 43px;
-        padding: 7px 0; }
-    .wrapper-header .container-brandMain .brand-name {
-      color: white;
-      height: 42px; }
-  .wrapper-header .component-welcome {
-    padding: 0.5em 0; }
-  .wrapper-header .component-nav, .wrapper-header .component-welcome.wrapper-socialIcon {
-    display: none; }
-  .wrapper-header .component-nav, .wrapper-header .component-welcome {
-    padding: 0.5em 0; }
-    .wrapper-header .component-nav .wrapper-socialIcon, .wrapper-header .component-welcome .wrapper-socialIcon {
-      display: none; }
-  .wrapper-header .container-hamburger {
-    margin-left: auto; }
-  .wrapper-header .row-brand {
-    /*top: set in javascript*/ }
-  .wrapper-header .col-nav {
-    background-color: #111111; } }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0.7em 0;
+    color: #fff; }
+    .wrapper-header .component-mV-welcome .welcomeNote .wrapper-welcomeIcon {
+      color: #ff3215; }
+    .wrapper-header .component-mV-welcome .register {
+      color: #ff3215; } }
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############

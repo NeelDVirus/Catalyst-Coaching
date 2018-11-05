@@ -241,57 +241,85 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			.col .component-mTopBar{height: 100%;}
 			.container-hamburger {display: block;}
 		}
-		.container-brandMain {
-			font-size: 1.6rem;
-			@include container-brandMain();		
-			height: 100%;
-			.container-logo {
-				//margin-left: 0.6em;
-				width: 210/14.4 * 1em;
-				height: 42/14.4 * 1em;
-				.logo-complement {					
-					margin-left: -12px;
-					margin-top: calc(-0.5 * (4em - 42px)); //.container-logo height =42, .row-topmost height= 4em;
-					width: 4em; //equals to height
-					height: 4em; //equals to the height of .row-topmost
-					overflow: visible;
-				}
-				img{
-					display: inline-block;
-					width: calc(100% - 4em); 
-					height: 43px;
-					padding: 7px 0;
-					//margin-top: 1px;
+
+		.component-mTopBar {
+			padding: 0.5em 0;
+			.wrapper-socialIcon {display: none;}		
+			.container-brandMain {
+				font-size: 1.6rem;
+				@include container-brandMain();		
+				height: 100%;
+				.container-logo {
+					//margin-left: 0.6em;
+					width: 210/14.4 * 1em;
+					height: 42/14.4 * 1em;
+					.logo-complement {					
+						margin-left: -12px;
+						margin-top: calc(-0.5 * (4em - 42px)); //.container-logo height =42, .row-topmost height= 4em;
+						width: 4em; //equals to height
+						height: 4em; //equals to the height of .row-topmost
+						overflow: visible;
+					}
+					img{
+						display: inline-block;
+						width: calc(100% - 4em); 
+						height: 43px;
+						padding: 7px 0;
+						//margin-top: 1px;
+					}
+				}			
+				.brand-name {
+					color: white;
+					height: 42px;
 				}
 			}			
-			.brand-name {
-				color: white;
-				height: 42px;
-			}
-		}//End of .container-brandMain
+			.container-hamburger {margin-left: auto;}	
+		} 
 		
 
-		.component-welcome {
-			padding: 0.5em 0;
-		}
-		//hiding welcome-note && socialIcons
-		.component-nav, .component-welcome.wrapper-socialIcon { display: none;
-		}
-		.component-nav, .component-welcome {
-			padding: 0.5em 0;
-			.wrapper-socialIcon { 
-				display: none;
+		//========= 2nd row: .component-brand: brand-adresses ====
+		.row-brand { 
+			//marginTop: set in javascript
+		}			
+		.component-brand {
+			flex-direction: column;
+			//align-items: stretch;
+			address {
+				//width: 100%;
+				//display: flex;
+				//justify-content: space-between; 
+			}
+			address .location {
+				@media only screen and (max-width: 790px) {display:none;}
 			}
 		}
-		.container-hamburger {margin-left: auto;}
 
-		//row-brand 
-		.row-brand {/*top: set in javascript*/}	
-		//.row-nav .col-nav
-		.col-nav {background-color: rgba(17,17,17,1);}
-	}
-}
+
+		//============ mV Welcome row =========
+		.col-mV-welcome {background-color: rgba(17,17,17,1);}		
+		.component-nav {display: none;}
+		.component-mV-welcome {
+			font-size: 1.6rem;
+			display: flex; 
+			flex-direction: column;
+			padding: 0.7em 0;
+			color: #fff; 
+			.welcomeNote {
+				.wrapper-welcomeIcon {color: $primaryRed;}
+			}
+			.register {color: $primaryRed;}
+		}
+	}//End of .wrapper-header
+}//End of media query
+
 /*XXXXXXXXXXXXXX  end of Hidden elements XXXXXXXXXXX*/
+
+
+
+
+
+
+
 
 
 

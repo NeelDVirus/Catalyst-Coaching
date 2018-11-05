@@ -12,18 +12,9 @@ $(document).ready(function(){
 	Making the address.wrapper-icon square (making width same as height) */
 
 	var $targetBrandIcon = $(".row-brand .wrapper-icon");
-	var $targetBrandIconHeight = $targetBrandIcon.outerHeight();
-	$targetBrandIcon.css("width", $targetBrandIconHeight +"");
-
-
-
-	/*********   (nav --)   **************
-	Overlapping(vertically) the half height 
-	of Nav section over the banner section*/
-
-
-	/**********  mobilemenu  ******************/
-
+	$targetBrandIcon.each(function(){
+		this.style.width = this.offsetHeight;
+	})
 	
 
 
@@ -35,11 +26,10 @@ $(document).ready(function(){
 
 	var $bannerWrapper = $(".wrapper-banner");
 
+
 	/*********   Incorporate with : (nav section)   **************
 	Overlapping(vertically) the half height 
-	of Nav section over the banner section*/ 
-
-	
+	of Nav section over the banner section*/ 	
 
 	function negativeTopMargin_banner() {
 		var $navSectionHeight = $(".col-nav").outerHeight();
@@ -51,9 +41,6 @@ $(document).ready(function(){
 
 
 
-
-
-
 	/* (adAppendix -- )
 	adding negative margin-top to --> 
 	(.adAppendix .ad .iconWrapper .icon) */
@@ -61,6 +48,7 @@ $(document).ready(function(){
 	var $adAppendixIconSubWrapperHeight = $adAppendixIconSubWrapper.outerHeight();
 	$adAppendixIconSubWrapper.parent().css("margin-bottom", "-"+(0.6 * $adAppendixIconSubWrapperHeight)+"px");
 	$adAppendixIconSubWrapper.parent().next().css("padding-top", (0.4 * $adAppendixIconSubWrapperHeight)+"px");
+
 
 
 	/**********   (.row.hero-image)   ************** 
@@ -90,42 +78,66 @@ $(document).ready(function(){
 	function screenTest(e) {
 		if(e.matches) {
 
-			/*------------------------------------------
-			----------     HEADER     ------------------
-			--------------------------------------------*/
-
-			// .topmost-row 
-			// (1) top-absolute-position of row-brand = height of row-topmost row
+			/*=============================================================================
+			===================     HEADER     ============================================
+			==============================================================================*/
 			var topmostRow = document.querySelector(".wrapper-header .row-topmost");
-			var topmostRowHeight = topmostRow.offsetHeight;
-			document.querySelector(".wrapper-header .row-brand").style.marginTop = topmostRowHeight + "px";
-			//------------- End of (1) --------------------
-
-
-			// .topmost-row &&& .row-nav
-			// (2) Shifting of Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
-			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
-			var toAppend = document.createDocumentFragment();
-			shiftingTopRowElements.forEach(function(x){
-				toAppend.appendChild(x);			
-			});
-			document.querySelector(".wrapper-header .col-nav").appendChild(toAppend);
-			negativeTopMargin_banner();	//From banner section 
-			//------------- End of (2) --------------------
-
-
-			// .topmost-row ---&&&--- .row-brand .container-brandMain
+			let colMVWelcome = document.querySelector(".wrapper-header .col-mV-welcome");
 			let containerBrandMain = document.querySelector(".wrapper-header .row-brand .container-brandMain ");
 			let component_mTopBar = topmostRow.querySelector(".col .component-mTopBar");
+
+
+			/*===(1)====================================================
+			(.topmost-row)
+
+			-->Setting: top-absolute-position: 
+							 = height of row-topmost row
+			=========================================================*/
+			var topmostRowHeight = topmostRow.offsetHeight;
+			document.querySelector(".wrapper-header .row-brand").style.marginTop = topmostRowHeight + "px";
+
+
+			/*===(2)====================================================
+			(.topmost-row &&& .row-mV-welcome)
+
+			-->create : componentMVWelcome
+			-->Shifting: Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
+			=========================================================*/
+			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
+			
+			var frag = document.createDocumentFragment();			
+			var createComponentMVWelcome = document.createElement("div");
+
+			createComponentMVWelcome.className = "component-mV-welcome";
+			shiftingTopRowElements.forEach(function(x){
+				frag.appendChild(x);			
+			});
+			createComponentMVWelcome.appendChild(frag);
+			colMVWelcome.appendChild(createComponentMVWelcome);
+			negativeTopMargin_banner();	//From banner section 
+
+
+			/*===(3)====================================================
+			(.topmost-row ---&&&--- .row-brand .container-brandMain)
+			Shifting of .row-brand's .container-brandMain to .component-mTopBar
+			=========================================================*/
+			
 			component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
 
-			//mobilemenu
-			//(4) Hambuger icon
+
+
+			/*===(4)====================================================
+			mobilemenu
+			Hambuger icon
+			=========================================================*/
 			$(document).ready(function(){
 				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 					$(this).toggleClass('open');
 				});
 			});
+
+
+
 			/*------------------------------------------
 			----------     HEADER     ------------------
 			--------------------------------------------*/
