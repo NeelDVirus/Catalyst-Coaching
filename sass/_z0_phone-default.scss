@@ -296,8 +296,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 					flex-direction: column;	
 					align-items: stretch;
 					.email {padding-left: 0; margin-top: 0.5em;}
-					> div {
-						background-color: #eee;
+					> div p {
+						width: 100%;
+						//background: linear-gradient(-90deg, #ccc, #fff);
 					}
 				}
 
