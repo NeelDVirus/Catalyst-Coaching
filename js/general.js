@@ -138,7 +138,8 @@ $(document).ready(function(){
 			});
 
 			//sidemenu 
-			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+			//var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+			var menuRight = document.querySelector( '.component-nav' ),
 				showRight = document.querySelector(".showRight");
 			showRight.onclick = function() {
 				menuRight.classList.toggle("cbp-spmenu-open");

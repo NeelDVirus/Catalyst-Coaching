@@ -260,11 +260,29 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   transform: rotate(-135deg); }
 
 /* General styles for all menus */
-.cbp-spmenu {
+/*.cbp-spmenu {
+	background: #47a3da;
+	position: fixed;
+}*/
+.wrapper-header .component-nav ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .wrapper-header .component-nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.component-nav {
   background: #47a3da;
   position: fixed; }
 
-.cbp-spmenu h3 {
+.cbp-spmenu .nav-label {
   color: #afdefa;
   font-size: 1.9em;
   padding: 20px;
@@ -286,21 +304,21 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   color: #47a3da; }
 
 /* Orientation-dependent styles for the content of the menu */
-.cbp-spmenu-vertical {
+.component-nav {
   width: 240px;
   height: 100%;
   top: 0;
-  z-index: 1000; }
+  z-index: 1001; }
 
 .cbp-spmenu-vertical a {
   border-bottom: 1px solid #258ecd;
   padding: 1em; }
 
 /* Vertical menu that slides from the left or right */
-.cbp-spmenu-right {
+.component-nav {
   right: -240px; }
 
-.cbp-spmenu-right.cbp-spmenu-open {
+.component-nav.cbp-spmenu-open {
   right: 0px; }
 
 /* Push classes applied to the body */
@@ -316,7 +334,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   left: -240px; }
 
 /* Transitions */
-.cbp-spmenu,
+.component-nav,
 .cbp-spmenu-push {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
