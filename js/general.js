@@ -121,22 +121,28 @@ $(document).ready(function(){
 			(.topmost-row ---&&&--- .row-brand .container-brandMain)
 			Shifting of .row-brand's .container-brandMain to .component-mTopBar
 			=========================================================*/
-			
 			component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
 
 
-
 			/*===(4)====================================================
-			mobilemenu
-			Hambuger icon
+			(mobilemenu)
+			--> Hambuger icon
+			--> sidemenu
 			=========================================================*/
+
+			//hambrger icon
 			$(document).ready(function(){
 				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 					$(this).toggleClass('open');
 				});
 			});
 
-
+			//sidemenu 
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+				showRight = document.querySelector(".showRight");
+			showRight.onclick = function() {
+				menuRight.classList.toggle("cbp-spmenu-open");
+			};
 
 			/*------------------------------------------
 			----------     HEADER     ------------------
