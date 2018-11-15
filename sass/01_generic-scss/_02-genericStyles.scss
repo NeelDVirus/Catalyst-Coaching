@@ -18,7 +18,13 @@ body {
 *************************************************/
 
 //------- (HEADER>NAV) & BANNER -- 
-.row-topmost {z-index: 1000;} //position already set in phone-default.scss
+.row-topmost {
+	z-index: 1000; //position already set in phone-default.scss
+	.container-hamburger {
+		position: relative;
+		z-index: 1001;
+	}
+} 
 .col-nav {z-index: 999; position: relative;}
 .wrapper-banner {z-index: 998; position: relative;}
 .component-adAppendix {z-index: 999; position: relative;}

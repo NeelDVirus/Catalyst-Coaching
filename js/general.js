@@ -100,9 +100,14 @@ $(document).ready(function(){
 			/*===(2)====================================================
 			(.topmost-row &&& .row-mV-welcome)
 
-			-->create : componentMVWelcome
-			-->Shifting: Welcome column(.welcome-Note, .register in .wrapper-header) in nav-column 
-			=========================================================*/
+			-->2.1 create : componentMVWelcome
+			-->2.2 Shifting: 
+				2.2.1 ==> .topmost-row to .row-mV-welcome 
+					Welcome column(.welcome-Note, .register in .wrapper-header) in ".nav-column .component-mV-welcome"
+				2.2.2 ==> .component-nav (from .row-mV-Welcome) to .topmost-row 
+			=============================================================*/
+
+			//---- 2.1 + 2.2.1 ----
 			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
 			
 			var frag = document.createDocumentFragment();			
@@ -115,6 +120,10 @@ $(document).ready(function(){
 			createComponentMVWelcome.appendChild(frag);
 			colMVWelcome.appendChild(createComponentMVWelcome);
 			negativeTopMargin_banner();	//From banner section 
+
+			//---- 2.2.2 ----
+			var componentNav = document.querySelector(".row-mV-welcome .component-nav");
+			component_mTopBar.insertBefore(componentNav, null);
 
 
 			/*===(3)====================================================
@@ -138,8 +147,7 @@ $(document).ready(function(){
 			});
 
 			//sidemenu 
-			//var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-			var menuRight = document.querySelector( '.component-nav' ),
+			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
 				showRight = document.querySelector(".showRight");
 			showRight.onclick = function() {
 				menuRight.classList.toggle("cbp-spmenu-open");
