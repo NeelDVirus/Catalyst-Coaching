@@ -280,6 +280,10 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 					text-transform: uppercase;
 					//font-weight: $regular-openSans;
 					transition: background-color 0.3s ease;
+					span {
+						display: inline-block; //for transform to work;
+						transform: scaleY(0.95);
+					}	
 				} 			
 				li:last-child {
 					margin-left: auto;
