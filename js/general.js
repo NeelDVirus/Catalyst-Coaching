@@ -85,7 +85,7 @@ $(document).ready(function(){
 			let colMVWelcome = document.querySelector(".wrapper-header .col-mV-welcome");
 			let containerBrandMain = document.querySelector(".wrapper-header .row-brand .container-brandMain ");
 			let component_mTopBar = topmostRow.querySelector(".col .component-mTopBar");
-
+			const bodyElm = document.querySelector("body");
 
 			/*===(1)====================================================
 			(.topmost-row)
@@ -134,24 +134,32 @@ $(document).ready(function(){
 
 
 			/*===(4)====================================================
-			(mobilemenu)
-			--> Hambuger icon
-			--> sidemenu
+			(mobilemenu)	
+				-->4.1 Hambuger icon
+				-->4.2 sidemenu
+				-->4.2.1 disable body scrolling when menu is open
 			=========================================================*/
 
-			//hambrger icon
-			$(document).ready(function(){
-				$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-					$(this).toggleClass('open');
-				});
+			//4.1 hambrger icon			
+			$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+				$(this).toggleClass('open');
 			});
 
-			//sidemenu 
+			//4.2 sidemenu +			
+			//4.2.1 disable body scrolling when menu is open
 			var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
 				showRight = document.querySelector(".showRight");
 			showRight.onclick = function() {
 				menuRight.classList.toggle("cbp-spmenu-open");
+				//4.2.1
+				if (menuRight.classList.contains("cbp-spmenu-open")) {
+					bodyElm.classList.add("disableScroll"); // .disableScroll rules is in _mobilemenu.scss
+				} else {
+					bodyElm.classList.remove("disableScroll");
+				}
 			};
+
+
 
 			/*------------------------------------------
 			----------     HEADER     ------------------

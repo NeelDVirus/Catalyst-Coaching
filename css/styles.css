@@ -369,143 +369,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     background-color: rgba(155, 125, 55, 0.5); }
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
-/*####################################
-#######   Self addition AND EDIT  ####
-######################################*/
-/*############################
-####  End of self edit    ####
-#############################*/
-* {
-  margin: 0;
-  padding: 0; }
-
-/* Icon 1 */
-#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
-  width: 40px;
-  height: 26px;
-  position: relative;
-  margin: 0 auto;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer; }
-
-#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #d3531a;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out; }
-
-#nav-icon1 span:nth-child(1) {
-  top: 0px; }
-
-#nav-icon1 span:nth-child(2) {
-  top: 11px; }
-
-#nav-icon1 span:nth-child(3) {
-  top: 22px; }
-
-#nav-icon1.open span:nth-child(1) {
-  top: 11px;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg); }
-
-#nav-icon1.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px; }
-
-#nav-icon1.open span:nth-child(3) {
-  top: 11px;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg); }
-
-/* General styles for all menus */
-.wrapper-header .component-nav ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .wrapper-header .component-nav ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-
-.cbp-spmenu {
-  background: #fff;
-  background-color: rgba(0, 0, 0, 0.85) !important;
-  position: fixed; }
-
-.cbp-spmenu .nav-label {
-  color: #afdefa;
-  font-size: 1.9em;
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-  background: #0d77b6; }
-
-.cbp-spmenu a {
-  display: block;
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: 300; }
-
-.cbp-spmenu a:hover {
-  background: #258ecd !important; }
-
-.cbp-spmenu a:active {
-  background: #afdefa;
-  color: #47a3da; }
-
-/* Orientation-dependent styles for the content of the menu */
-.cbp-spmenu-vertical {
-  width: 240px;
-  height: 100%;
-  top: 0;
-  z-index: 1000; }
-
-.cbp-spmenu-vertical a {
-  border-bottom: 1px solid #258ecd;
-  border-bottom: 1px solid #333;
-  padding: 1em; }
-
-/* Vertical menu that slides from the left or right */
-.cbp-spmenu-right {
-  right: -240px; }
-
-.cbp-spmenu-right.cbp-spmenu-open {
-  right: 0px; }
-
-/* Push classes applied to the body */
-.cbp-spmenu-push {
-  overflow-x: hidden;
-  position: relative;
-  left: 0; }
-
-.cbp-spmenu-push-toright {
-  left: 240px; }
-
-.cbp-spmenu-push-toleft {
-  left: -240px; }
-
-/* Transitions */
-.cbp-spmenu,
-.cbp-spmenu-push {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
 @media only screen and (max-width: 61.9375em) {
   .wrapper-header {
     /*================================================== 
@@ -638,6 +501,145 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         color: #ff3215; }
         .wrapper-header .component-mV-welcome .register span {
           text-decoration: underline; } }
+/*####################################
+#######   Self addition AND EDIT  ####
+######################################*/
+/*############################
+####  End of self edit    ####
+#############################*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Icon 1 */
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 40px;
+  height: 26px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer; }
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon1 span:nth-child(2) {
+  top: 11px; }
+
+#nav-icon1 span:nth-child(3) {
+  top: 22px; }
+
+#nav-icon1.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px; }
+
+#nav-icon1.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
+/* General styles for all menus */
+.wrapper-header .component-nav ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .wrapper-header .component-nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.cbp-spmenu {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  position: fixed; }
+
+.cbp-spmenu .nav-label {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #0d77b6; }
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300; }
+
+.cbp-spmenu a:hover {
+  background: #555 !important; }
+
+.cbp-spmenu a:active {
+  background: #afdefa;
+  color: #47a3da; }
+
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000; }
+
+.cbp-spmenu-vertical a {
+  border-bottom: 1px solid #258ecd;
+  border-bottom: 1px solid #333;
+  padding: 1em; }
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-right {
+  right: -240px; }
+
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px; }
+
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+.cbp-spmenu-push-toright {
+  left: 240px; }
+
+.cbp-spmenu-push-toleft {
+  left: -240px; }
+
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.disableScroll {
+  overflow: hidden; }
+
 /*XXXXXXXXXXXXXX  end of "Only mobile specific" XXXXXXXXXXX*/
 /*###############################################
 ##############     01.01 Banner    ##############

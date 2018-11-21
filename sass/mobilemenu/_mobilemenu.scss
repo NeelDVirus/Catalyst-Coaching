@@ -1,2 +1,7 @@
 @import "hamburger";
 @import "sidemenu";
+
+//class for disable body scrolling when the menu is open
+.disableScroll {
+	overflow: hidden;
+}
