@@ -123,6 +123,8 @@ $(document).ready(function(){
 
 			//---- 2.2.2 ----
 			var componentNav = document.querySelector(".row-mV-welcome .component-nav");
+			componentNav.classList.remove("component-nav");
+			componentNav.classList.add("component-mV-nav");
 			component_mTopBar.insertBefore(componentNav, null);
 
 
@@ -137,7 +139,8 @@ $(document).ready(function(){
 			(mobilemenu)	
 				-->4.1 Hambuger icon
 				-->4.2 sidemenu
-				-->4.2.1 disable body scrolling when menu is open
+					-->4.2.1 disable body scrolling when menu is open
+					-->4.2.2 making the background grey when menu is open
 			=========================================================*/
 
 			//4.1 hambrger icon			
@@ -154,9 +157,13 @@ $(document).ready(function(){
 				//4.2.1
 				if (menuRight.classList.contains("cbp-spmenu-open")) {
 					bodyElm.classList.add("disableScroll"); // .disableScroll rules is in _mobilemenu.scss
+					var componentMVNav = document.querySelector(".component-mV-nav");
+					componentMVNav.classList.add("bgOverlayForMenu")
 				} else {
 					bodyElm.classList.remove("disableScroll");
+					document.querySelector(".component-mV-nav").classList.remove("bgOverlayForMenu");
 				}
+
 			};
 
 

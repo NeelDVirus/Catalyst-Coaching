@@ -439,6 +439,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           height: 42px; }
       .wrapper-header .component-mTopBar .container-hamburger {
         margin-left: auto; }
+      .wrapper-header .component-mTopBar .component-mV-nav li a {
+        padding: 1.5em;
+        text-transform: uppercase;
+        -webkit-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease; }
+      .wrapper-header .component-mTopBar .component-mV-nav li:last-child {
+        margin-left: auto;
+        background-color: #ff3215; }
+      .wrapper-header .component-mTopBar .component-mV-nav li:hover a {
+        background-color: rgba(155, 125, 55, 0.5); }
     .wrapper-header .component-brand {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -561,12 +571,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   transform: rotate(-135deg); }
 
 /* General styles for all menus */
-.wrapper-header .component-nav ul {
+.wrapper-header .component-mV-nav ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .wrapper-header .component-nav ul li {
+  .wrapper-header .component-mV-nav ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -576,7 +586,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             flex-direction: column; }
 
 .cbp-spmenu {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(0, 0, 0, 0.82) !important;
   position: fixed; }
 
 .cbp-spmenu .nav-label {
@@ -594,11 +604,11 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   font-weight: 300; }
 
 .cbp-spmenu a:hover {
-  background: #555 !important; }
+  background: #258ecd !important; }
 
 .cbp-spmenu a:active {
-  background: #afdefa;
-  color: #47a3da; }
+  background: #afdefa !important;
+  color: #47a3da !important; }
 
 /* Orientation-dependent styles for the content of the menu */
 .cbp-spmenu-vertical {
@@ -639,6 +649,18 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 .disableScroll {
   overflow: hidden; }
+
+.bgOverlayForMenu {
+  position: fixed;
+  width: 100vh;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6) !important; }
+
+.component-mV-nav {
+  -webkit-transition: background-color 300ms !important;
+  transition: background-color 300ms !important; }
 
 /*XXXXXXXXXXXXXX  end of "Only mobile specific" XXXXXXXXXXX*/
 /*###############################################

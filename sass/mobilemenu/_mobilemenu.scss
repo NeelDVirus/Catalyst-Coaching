@@ -5,3 +5,15 @@
 .disableScroll {
 	overflow: hidden;
 }
+//class for making the background grey when menu is open
+.bgOverlayForMenu {
+	position: fixed;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6) !important;
+}
+.component-mV-nav {	
+    transition: background-color 300ms !important;
+}
