@@ -37,6 +37,7 @@ $(document).ready(function(){
 		$(".wrapper-banner .row-heroImage").css("padding-top", (0.5 * $navSectionHeight)+"px");
 	}
 	negativeTopMargin_banner();
+	window.onresize = negativeTopMargin_banner;
 
 
 
@@ -44,11 +45,14 @@ $(document).ready(function(){
 	/* (adAppendix -- )
 	adding negative margin-top to --> 
 	(.adAppendix .ad .iconWrapper .icon) */
-    var $adAppendixIconSubWrapper = $(".component-adAppendix .iconSubWrapper");
-	var $adAppendixIconSubWrapperHeight = $adAppendixIconSubWrapper.outerHeight();
-	$adAppendixIconSubWrapper.parent().css("margin-bottom", "-"+(0.6 * $adAppendixIconSubWrapperHeight)+"px");
-	$adAppendixIconSubWrapper.parent().next().css("padding-top", (0.4 * $adAppendixIconSubWrapperHeight)+"px");
-
+	function windowResize() {
+    	var $adAppendixIconSubWrapper = $(".component-adAppendix .iconSubWrapper");
+		var $adAppendixIconSubWrapperHeight = $adAppendixIconSubWrapper.outerHeight();
+		$adAppendixIconSubWrapper.parent().css("margin-bottom", "-"+(0.6 * $adAppendixIconSubWrapperHeight)+"px");
+		$adAppendixIconSubWrapper.parent().next().css("padding-top", (0.4 * $adAppendixIconSubWrapperHeight)+"px");
+	};	
+	windowResize();	//initial exucution at page load
+	window.onresize = windowResize; //execution during scrolling
 
 
 	/**********   (.row.hero-image)   ************** 
