@@ -283,6 +283,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       width: 20.7em;
       height: 3.5em;
       overflow: hidden; }
+      .wrapper-header .component-brand .container-brandMain .container-logo img {
+        width: 100%; }
     .wrapper-header .component-brand .container-brandMain .brand-name {
       font-family: "Lato", sans-serif;
       font-size: 2em;
@@ -412,6 +414,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           width: 20.7em;
           height: 3.5em;
           overflow: hidden; }
+          .wrapper-header .component-mTopBar .container-brandMain .container-logo img {
+            width: 100%; }
         .wrapper-header .component-mTopBar .container-brandMain .brand-name {
           font-family: "Lato", sans-serif;
           font-size: 2em;
@@ -861,6 +865,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 @media only screen and (min-width: 62em) {
   /*****************************************
   *************   Nav row   ****************/
+  .wrapper-header .component-welcome .container-hamburger {
+    display: none; }
   .wrapper-header .component-nav p {
     display: none; } }
 @media screen and (min-width: 61.9375em) and (max-width: 74.9375em) {

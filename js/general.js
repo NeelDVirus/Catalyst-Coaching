@@ -91,6 +91,8 @@ $(document).ready(function(){
 			let component_mTopBar = topmostRow.querySelector(".col .component-mTopBar");
 			const bodyElm = document.querySelector("body");
 
+
+
 			/*===(1)====================================================
 			(.topmost-row)
 
@@ -177,7 +179,7 @@ $(document).ready(function(){
 			--------------------------------------------*/
 		}
 	}
-	var mql = window.matchMedia('(max-width: 62em)'); //62em = desktop-min
+	var mql = window.matchMedia('(max-width: 61.9375em)'); //62em = desktop-min
 	screenTest(mql);
 	mql.addListener(screenTest);
  

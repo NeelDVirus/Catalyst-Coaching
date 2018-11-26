@@ -23,7 +23,10 @@
 	/*****************************************
 	*************   Nav row   ****************/
 
-	.wrapper-header .component-nav p {display: none;}
+	.wrapper-header { 
+		.component-welcome .container-hamburger {display: none;}
+		.component-nav p {display: none;}
+	}
 
 
  }
