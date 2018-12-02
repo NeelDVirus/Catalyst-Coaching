@@ -104,7 +104,7 @@ $(document).ready(function(){
 
 
 			/*===(2)====================================================
-			(.topmost-row &&& .row-mV-welcome)
+			(.topmost-row &&& .row-mV-welcome &&& .row-nav)
 
 			-->2.1 create : componentMVWelcome
 			-->2.2 Shifting: 
@@ -113,41 +113,41 @@ $(document).ready(function(){
 				2.2.2 ==> .component-nav (from .row-mV-Welcome) to .topmost-row 
 			=============================================================*/
 
-			//---- 2.1 + 2.2.1 ----
-			let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
-			
-			var frag = document.createDocumentFragment();			
-			var createComponentMVWelcome = document.createElement("div");
+			phoneResize2();
+			window.onresize(phoneResize2);
+			function phoneResize2() {
+				//---- 2.1 + 2.2.1 ----
+				let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
+				
+				var frag = document.createDocumentFragment();			
+				var createComponentMVWelcome = document.createElement("div");
 
-			createComponentMVWelcome.className = "component-mV-welcome";
-			shiftingTopRowElements.forEach(function(x){
-				frag.appendChild(x);			
-			});
-			createComponentMVWelcome.appendChild(frag);
-			colMVWelcome.appendChild(createComponentMVWelcome);
-			negativeTopMargin_banner();	//From banner section 
+				createComponentMVWelcome.className = "component-mV-welcome";
+				shiftingTopRowElements.forEach(function(x){
+					frag.appendChild(x);			
+				});
+				createComponentMVWelcome.appendChild(frag);
+				colMVWelcome.appendChild(createComponentMVWelcome);
+				negativeTopMargin_banner();	//From banner section 
 
-			//---- 2.2.2 ----
-			var componentNav = document.querySelector(".row-mV-welcome .component-nav");
-			componentNav.classList.remove("component-nav");
-			componentNav.classList.add("component-mV-nav");
-			component_mTopBar.insertBefore(componentNav, null);
-
+				//---- 2.2.2 ----
+				var componentNav = document.querySelector(".row-mV-welcome .component-nav");
+				if (componentNav.classList.contains("component-nav")) {
+					componentNav.classList.remove("component-nav");
+				}
+				componentNav.classList.add("component-mV-nav");
+				component_mTopBar.insertBefore(componentNav, null);
+			}
 
 			/*===(3)====================================================
 			(.topmost-row ---&&&--- .row-brand .container-brandMain)
 			Shifting of .row-brand's .container-brandMain to .component-mTopBar
 			=========================================================*/
-			component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
-
-
-			/*===(4)====================================================
-			(mobilemenu)	
-				-->4.1 Hambuger icon
-				-->4.2 sidemenu
-					-->4.2.1 disable body scrolling when menu is open
-					-->4.2.2 making the background grey when menu is open
-			=========================================================*/
+			shiftingBrand();
+			//window.onresize = shiftingBrand;
+			function shiftingBrand() {
+				component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
+			}
 
 			//4.1 hambrger icon			
 			$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
@@ -179,7 +179,7 @@ $(document).ready(function(){
 			--------------------------------------------*/
 		}
 	}
-	var mql = window.matchMedia('(max-width: 61.9375em)'); //62em = desktop-min
+	var mql = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
 	screenTest(mql);
 	mql.addListener(screenTest);
  

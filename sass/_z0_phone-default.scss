@@ -111,13 +111,20 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	display: flex;
 	align-items: center;		
 	margin-right: auto;
+	//being flex-item
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	//flex-basis: (387/16) *1em;
 	.container-logo {	
 		display: flex;
-		width: 20.7em;
+		//width: 20.7em;
+		max-width: 24.1875em;
 		height: 3.5em;
+		padding-right: 3.4875em;
 		//background-color: #ccc;
 		overflow: hidden;
-		img {width: 100%;}
+		img {max-width: 100%;}
 	}
 	.brand-name {
 		font-family: $lato;
@@ -138,19 +145,21 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-header .row-brand {}
 .wrapper-header .component-brand {
 	font-size: 1.6rem;
-	//flex
+	//====flex=====
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
-	//general
+	//===general===
 	margin: 0 auto;
 	padding: 2em 0;
 	.container-brandMain {
 		@include container-brandMain();
 	}
 	address {
+		//flex
 		display: flex;
 		align-items: center;
+		//being flex-item
+		flex: 0 0 auto;
 	}
 	address > div {
 			display: flex;
@@ -243,8 +252,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		}
 
 		.component-mTopBar {
-			padding: 0.5em 0;
-			.wrapper-socialIcon {display: none;}		
+			padding: 0.5em 0;	
+			.wrapper-socialIcon{display: none;}				
 			.container-brandMain {
 				font-size: 1.6rem;
 				@include container-brandMain();		
@@ -253,6 +262,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 					//margin-left: 0.6em;
 					width: 210/14.4 * 1em;
 					height: 42/14.4 * 1em;
+					padding-right: 0;
 					.logo-complement {					
 						margin-left: -12px;
 						margin-top: calc(-0.5 * (4em - 42px)); //.container-logo height =42, .row-topmost height= 4em;
@@ -315,17 +325,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				@media only screen and (max-width: 540px) {
 					flex-direction: column;	
 					align-items: stretch;
-					.email {padding-left: 0; margin-top: 0.5em;}
+					.email { margin-top: 0.5em;}
 					> div p {
 						width: 100%;
 						//background: linear-gradient(-90deg, #ccc, #fff);
 					}
 				}
-
+				div {padding-left: 0;}
 				.location {
 					@media only screen and (max-width: 790px) {display:none;}
 				}
-				.phoneNumber {padding-left: 0;}
 			}
 		}
 
@@ -385,7 +394,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	display: flex;
 	//--- general ----
 	//background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url('../images/heroImage3.jpg');
-	background-image: url('../images/heroImage3.jpg');
+	background-image: url('../images/jake123.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	//background-color: black;

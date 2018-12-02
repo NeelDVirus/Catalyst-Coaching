@@ -1,95 +1,102 @@
-/* General styles for all menus */
 
-//=======================================
-.wrapper-header .component-mV-nav ul {
-	flex-direction: column;
-	//align-items: stretch;	
-	li {
-		display: flex;
+@include mq("desktop-min", max) {
+
+	/* General styles for all menus */
+
+	//=======================================
+	.wrapper-header .component-mV-nav ul {
 		flex-direction: column;
+		//align-items: stretch;	
+		li {
+			display: flex;
+			flex-direction: column;
+		}
 	}
-}
+	//========================================
 
 
 
-//========================================
-.cbp-spmenu {
-	//background: #fff;
-	background-color: rgba(0,0,0,0.82) !important;
-	position: fixed;
-}
-.cbp-spmenu .nav-label {
-	color: #afdefa;
-	font-size: 1.9em;
-	padding: 20px;
-	margin: 0;
-	font-weight: 300;
-	background: #0d77b6;
-}
+	.cbp-spmenu {
+		//background: #fff;
+		background-color: rgba(0,0,0,0.82) !important;
+		position: fixed;
+	}
+	.cbp-spmenu .nav-label {
+		color: #afdefa;
+		font-size: 1.9em;
+		padding: 20px;
+		margin: 0;
+		font-weight: 300;
+		background: #0d77b6;
+	}
 
-.cbp-spmenu a {
-	display: block;
-	color: #fff;
-	font-size: 1.1em;
-	font-weight: 300;
-}
+	.cbp-spmenu a {
+		display: block;
+		color: #fff;
+		font-size: 1.1em;
+		font-weight: 300;
+	}
 
-.cbp-spmenu a:hover {
-	background: #258ecd !important;
-	//background: #555 !important;
-}
+	.cbp-spmenu a:hover {
+		background: #258ecd !important;
+		//background: #555 !important;
+	}
 
-.cbp-spmenu a:active {
-	background: #afdefa !important;
-	color: #47a3da !important;
-}
+	.cbp-spmenu a:active {
+		background: #afdefa !important;
+		color: #47a3da !important;
+	}
 
-/* Orientation-dependent styles for the content of the menu */
+	/* Orientation-dependent styles for the content of the menu */
 
-.cbp-spmenu-vertical {
-	width: 240px;
-	height: 100%;
-	top: 0;
-	z-index: 1000;
-}
+	.cbp-spmenu-vertical {
+		width: 240px;
+		height: 100%;
+		top: 0;
+		z-index: 1000;
+	}
 
-.cbp-spmenu-vertical a {
-	border-bottom: 1px solid #258ecd;
-	border-bottom: 1px solid #333;
-	padding: 1em;
-}
-/* Vertical menu that slides from the left or right */
+	.cbp-spmenu-vertical a {
+		border-bottom: 1px solid #258ecd;
+		border-bottom: 1px solid #333;
+		padding: 1em;
+	}
+	/* Vertical menu that slides from the left or right */
 
 
-.cbp-spmenu-right {
-	right: -240px;
-}
+	.cbp-spmenu-right {
+		right: -240px;
+	}
 
-.cbp-spmenu-right.cbp-spmenu-open {
-	right: 0px;
-}
+	.cbp-spmenu-right.cbp-spmenu-open {
+		right: 0px;
+	}
 
-/* Push classes applied to the body */
+	/* Push classes applied to the body */
 
-.cbp-spmenu-push {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
+	.cbp-spmenu-push {
+		overflow-x: hidden;
+		position: relative;
+		left: 0;
+	}
 
-.cbp-spmenu-push-toright {
-	left: 240px;
-}
+	.cbp-spmenu-push-toright {
+		left: 240px;
+	}
 
-.cbp-spmenu-push-toleft {
-	left: -240px;
-}
+	.cbp-spmenu-push-toleft {
+		left: -240px;
+	}
 
-/* Transitions */
+	/* Transitions */
 
-.cbp-spmenu,
-.cbp-spmenu-push {
-	-webkit-transition: all 0.5s ease-out;
-	-moz-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
-}
+	.cbp-spmenu,
+	.cbp-spmenu-push {
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+	}
+
+
+
+}// end of media query
