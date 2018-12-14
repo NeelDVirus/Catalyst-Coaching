@@ -207,24 +207,47 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	
 	li {display:flex;}
 	li a {
-		padding: 1.5em;
+		color: #eee;
+		padding: 1.5em 1.8em;
+		position: relative; //for a:after
+		//border-left: 1px solid #111;
+		//border-right: 1px solid #111;
 		text-transform: uppercase;
-		font-weight: $regular-openSans;
-		transition: background-color 0.3s ease;
+		//font-weight: $regular-openSans;
+		transition: all 0.5s ease;
 		span {
 			display: inline-block; //for transform to work;
 			transform: scaleY(0.9);
 		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 30%;
+			right: 0;
+			width: 2px;
+			//height: 50%;
+			bottom: 30%;
+			background: #222;
+			
+		}
+		//&:last-child:after {content: none;}
 	}
 	li:last-child {
 		margin-left: auto;
 		background-color: $primaryRed;
-		a span {
-			//transform: scale(1,1);
+		a {
+			border-right: 0;
 		}
 	}
 	li:hover a{
-		background-color: rgba(155,125,55,0.5);
+		//background-color: rgba(131, 7, 190,0.7);
+		//background-color: rgba(255, 7, 190,0.7);
+		background-color: #C266D3;
+		color: #000;
+
+		&:after {
+			content: none;
+		}
 	}
 }
 

@@ -364,20 +364,34 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     display: -ms-flexbox;
     display: flex; }
   .wrapper-header .component-nav ul li a {
-    padding: 1.5em;
+    color: #eee;
+    padding: 1.5em 1.8em;
+    position: relative;
     text-transform: uppercase;
-    font-weight: 400;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease; }
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
     .wrapper-header .component-nav ul li a span {
       display: inline-block;
       -webkit-transform: scaleY(0.9);
               transform: scaleY(0.9); }
+    .wrapper-header .component-nav ul li a:after {
+      content: "";
+      position: absolute;
+      top: 30%;
+      right: 0;
+      width: 2px;
+      bottom: 30%;
+      background: #222; }
   .wrapper-header .component-nav ul li:last-child {
     margin-left: auto;
     background-color: #ff3215; }
+    .wrapper-header .component-nav ul li:last-child a {
+      border-right: 0; }
   .wrapper-header .component-nav ul li:hover a {
-    background-color: rgba(155, 125, 55, 0.5); }
+    background-color: #C266D3;
+    color: #000; }
+    .wrapper-header .component-nav ul li:hover a:after {
+      content: none; }
 
 /*XXXXXXXXXXXXXXXX  Only mobile specific XXXXXXXXXXXXXXX*/
 @media only screen and (max-width: 61.9375em) {

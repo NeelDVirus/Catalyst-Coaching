@@ -6,6 +6,9 @@ $(document).ready(function(){
 	###               HEADER                           #####
 	###                                                #####
 	#######################################################*/
+	let componentNav = document.querySelector(".wrapper-pageHeader .row-nav .component-nav");
+
+
 
 
 	/**********  (brand -- address.wrapper-icon)   ***********************
@@ -15,7 +18,20 @@ $(document).ready(function(){
 	$targetBrandIcon.each(function(){
 		this.style.width = this.offsetHeight;
 	})
+
+
+		
+	/**********  Navigation **************************/
 	
+	//====== hover effect ======== 
+
+
+
+
+
+
+
+
 
 
 	/*######################################################
@@ -183,7 +199,6 @@ $(document).ready(function(){
 	screenTest(mql);
 	mql.addListener(screenTest);
  
-
 
 })
 

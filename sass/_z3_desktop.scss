@@ -22,15 +22,18 @@
 
 	/*****************************************
 	*************   Nav row   ****************/
-
 	.wrapper-header { 
 		.component-welcome .container-hamburger {display: none;}
 		//.component-brand .container-brandMain .container-logo {}
-		.component-nav p {display: none;}
-	}
+		.component-nav {
+			@import "02_supersetPartials/desktop/nav/00_hoverEffect";
+			
+			p {display: none;}
+		}
+	}//End of .wrapper-header
 
 
- }
+ }//End of media query
 
 
 
