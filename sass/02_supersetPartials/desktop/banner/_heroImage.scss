@@ -1,0 +1,65 @@
+.wrapper-banner .row-heroImage {
+    background-size: 100% 100%;
+    //background-position: center;
+
+    background-image: url('../images/heroImage/mobile360-640/heroImage360-322@1x.jpg');
+    background-image: -webkit-image-set(
+        url('../images/heroImage/mobile360-640/heroImage360-322@1x.jpg') 1x,
+        url('../images/heroImage/mobile360-640/heroImage360-322@2x.jpg') 2x
+    );
+    background-image: image-set(
+        url('../images/heroImage/mobile360-640/heroImage360-322@1x.jpg') 1x,
+        url('../images/heroImage/mobile360-640/heroImage360-322@2x.jpg') 2x
+
+    );
+    
+    //for 360*640 < screen-size< 360*720
+    //min width and height: 360*650(540+10)
+    @media screen and (min-width: 22.5em) and (min-height: 40.625em) {
+        background-image: url('../images/heroImage/mobile360-720/heroImage360-322@1x.jpg');
+        background-image: -webkit-image-set(
+            url('../images/heroImage/mobile360-720/heroImage360-400@1x.jpg') 1x,
+            url('../images/heroImage/mobile360-720/heroImage360-400@2x.jpg') 2x
+        );
+        background-image: image-set(
+            url('../images/heroImage/mobile360-720/heroImage360-400@1x.jpg') 1x,
+            url('../images/heroImage/mobile360-720/heroImage360-400@2x.jpg') 2x
+
+        );
+    }
+    //for 360*7200 < screen-size< 375*812
+    //min width and height: 360*730(360+10 * 720+10)
+    @media screen and (min-width: 22.5em) and (min-height: 45.625em) {
+        background-image: url('../images/heroImage/mobile375-812/heroImage375-500@1x.jpg');
+        background-image: -webkit-image-set(
+            url('../images/heroImage/mobile375-812/heroImage375-500@1x.jpg') 1x,
+            url('../images/heroImage/mobile375-812/heroImage375-500@2x.jpg') 2x
+        );
+        background-image: image-set(
+            url('../images/heroImage/mobile375-812/heroImage375-500@1x.jpg') 1x,
+            url('../images/heroImage/mobile375-812/heroImage375-500@2x.jpg') 2x
+        );        
+    }
+
+
+
+    //for 375*812 < screen-size< 720*1280
+    //min width and height: 390*820(375+5 * 812+8) .... 5125em
+    @media screen and (min-width: 24.375em) and (max-height: 80em) {
+        background-image: url('../images/heroImage/desktop/720-1080.jpg');
+    }
+
+    //for screen-width > 720
+    //min width 720px
+    @media screen and (min-width: 45em) and (orientation: landscape){
+        background-image: url('../images/heroImage/desktop/366-520.jpg');
+    }
+
+    //for 1366 < screen-width < 1920
+    //min width 1370px
+    @media screen and (min-width: 86.625em) {
+        background-image: url('../images/heroImage/desktop/1920-830.jpg');
+
+    }
+
+}

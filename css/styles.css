@@ -705,10 +705,32 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  background-image: url("../images/jake123.jpg");
+  display: flex; }
+
+.wrapper-banner .row-heroImage {
   background-size: 100% 100%;
-  background-repeat: no-repeat; }
+  background-image: url("../images/heroImage/mobile360-640/heroImage360-322@1x.jpg");
+  background-image: -webkit-image-set(url("../images/heroImage/mobile360-640/heroImage360-322@1x.jpg") 1x, url("../images/heroImage/mobile360-640/heroImage360-322@2x.jpg") 2x);
+  background-image: image-set(url("../images/heroImage/mobile360-640/heroImage360-322@1x.jpg") 1x, url("../images/heroImage/mobile360-640/heroImage360-322@2x.jpg") 2x); }
+  @media screen and (min-width: 22.5em) and (min-height: 40.625em) {
+    .wrapper-banner .row-heroImage {
+      background-image: url("../images/heroImage/mobile360-720/heroImage360-322@1x.jpg");
+      background-image: -webkit-image-set(url("../images/heroImage/mobile360-720/heroImage360-400@1x.jpg") 1x, url("../images/heroImage/mobile360-720/heroImage360-400@2x.jpg") 2x);
+      background-image: image-set(url("../images/heroImage/mobile360-720/heroImage360-400@1x.jpg") 1x, url("../images/heroImage/mobile360-720/heroImage360-400@2x.jpg") 2x); } }
+  @media screen and (min-width: 22.5em) and (min-height: 45.625em) {
+    .wrapper-banner .row-heroImage {
+      background-image: url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg");
+      background-image: -webkit-image-set(url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg") 1x, url("../images/heroImage/mobile375-812/heroImage375-500@2x.jpg") 2x);
+      background-image: image-set(url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg") 1x, url("../images/heroImage/mobile375-812/heroImage375-500@2x.jpg") 2x); } }
+  @media screen and (min-width: 24.375em) and (max-height: 80em) {
+    .wrapper-banner .row-heroImage {
+      background-image: url("../images/heroImage/desktop/720-1080.jpg"); } }
+  @media screen and (min-width: 45em) and (orientation: landscape) {
+    .wrapper-banner .row-heroImage {
+      background-image: url("../images/heroImage/desktop/366-520.jpg"); } }
+  @media screen and (min-width: 86.625em) {
+    .wrapper-banner .row-heroImage {
+      background-image: url("../images/heroImage/desktop/1920-830.jpg"); } }
 
 .wrapper-banner .col-heroImage {
   display: -webkit-box;

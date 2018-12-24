@@ -141,8 +141,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 //============= Rules ============
-.wrapper-header .row-brand {}
-.wrapper-header .row-brand {}
 .wrapper-header .component-brand {
 	font-size: 1.6rem;
 	//====flex=====
@@ -416,14 +414,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	flex: 1 1 auto;
 	display: flex;
 	//--- general ----
-	//background: radial-gradient(rgba(87, 87, 87, 0.6), rgba(0, 0, 0, 0.2)), url('../images/heroImage3.jpg');
-	background-image: url('../images/jake123.jpg');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	//background-color: black;
-	//background: linear-gradient(to right, #8e44ad, #AA3E67); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ #c0392b */ 
-
+	//background-image: url('../images/jake123.jpg');
+	//background-size: 100% 100%;
+	//background-repeat: no-repeat;
 }
+@import "02_supersetPartials/desktop/banner/heroImage"; 
+
 .wrapper-banner .col-heroImage {
 	display: flex;
 	align-items: center;
