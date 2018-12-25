@@ -428,7 +428,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.heading {
 			//display: flex;
 			//font-size: 2.5em;
-			@include mq("desktopL-min") {font-size: 2em;}
+			@include mq("desktopL-min") {font-size: 1.7em;}
 			@include mq("desktopXL-min") {font-size: 2.5em;}
 			font-weight: $bold-openSans;
 			line-height: 1.2;
