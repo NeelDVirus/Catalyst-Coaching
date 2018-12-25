@@ -419,6 +419,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-banner .col-heroImage {
 	display: flex;
 	align-items: center;
+	padding-bottom: 8em;
 	
 	.container-contentHeroImage {
 		padding: 9em 5em 9em 0;
@@ -439,7 +440,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				//background-color: rgba(255,255,255,0.5);
 				color: #fff;
 				text-transform: uppercase;
-				text-shadow: 2px 3px 11px #333;
+				text-shadow: 2px 3px 10px #333;
 			}
 		}
 		.content {
