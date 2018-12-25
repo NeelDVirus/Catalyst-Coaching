@@ -722,7 +722,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       background-image: url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg");
       background-image: -webkit-image-set(url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg") 1x, url("../images/heroImage/mobile375-812/heroImage375-500@2x.jpg") 2x);
       background-image: image-set(url("../images/heroImage/mobile375-812/heroImage375-500@1x.jpg") 1x, url("../images/heroImage/mobile375-812/heroImage375-500@2x.jpg") 2x); } }
-  @media screen and (min-width: 24.375em) and (max-height: 80em) {
+  @media screen and (min-width: 24.375em) and (min-height: 51.25em) and (orientation: portrait) {
     .wrapper-banner .row-heroImage {
       background-image: url("../images/heroImage/desktop/720-1080.jpg"); } }
   @media screen and (min-width: 45em) and (orientation: landscape) {
@@ -746,21 +746,21 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      font-size: 2em;
+      font-size: 2.5em;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.2;
       margin-bottom: 0.5em; }
       .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
         display: inline-block;
-        padding: 0.1em 0.5em;
-        background-color: rgba(255, 255, 255, 0.5);
-        color: black;
-        text-align: center; }
+        font-family: "Lato", sans-serif;
+        -webkit-transform: scale(1, 1.2);
+                transform: scale(1, 1.2);
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 2px 3px 11px #333; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .content {
-      font-size: 1.7em;
-      line-height: 1.2;
-      -webkit-transform: scale(1, 0.8);
-              transform: scale(1, 0.8); }
+      font-size: 1.2em;
+      line-height: 1.2; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .links {
       display: -webkit-box;
       display: -ms-flexbox;
