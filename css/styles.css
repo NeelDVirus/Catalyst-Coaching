@@ -178,7 +178,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   color: #FFF;
   font-weight: 400; }
   .wrapper-header .component-welcome .welcomeNote {
-    margin-right: auto; }
+    margin-right: auto;
+    color: #bbb;
+    font-weight: 400; }
     .wrapper-header .component-welcome .welcomeNote .wrapper-welcomeIcon {
       color: #ff3215; }
   .wrapper-header .component-welcome .wrapper-socialIcon {
@@ -188,7 +190,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: #aaa; }
+    color: #888; }
     .wrapper-header .component-welcome .wrapper-socialIcon .icon {
       padding-right: 0.8em; }
     .wrapper-header .component-welcome .wrapper-socialIcon .facebook {
@@ -364,7 +366,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     display: -ms-flexbox;
     display: flex; }
   .wrapper-header .component-nav ul li a {
-    color: #eee;
+    color: #ddd;
     padding: 1.5em 1.8em;
     position: relative;
     text-transform: uppercase;
@@ -372,8 +374,10 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     transition: all 0.5s ease; }
     .wrapper-header .component-nav ul li a span {
       display: inline-block;
-      -webkit-transform: scaleY(0.9);
-              transform: scaleY(0.9); }
+      font-size: 0.9em;
+      font-weight: 600;
+      -webkit-transform: scaleX(1.1);
+              transform: scaleX(1.1); }
     .wrapper-header .component-nav ul li a:after {
       content: "";
       position: absolute;
@@ -735,14 +739,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-banner .col-heroImage {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .wrapper-banner .col-heroImage .container-contentHeroImage {
-    position: relative;
-    top: 20%;
-    color: white; }
+    color: white;
+    padding-bottom: 10%; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
       font-weight: 600;
-      line-height: 1.2;
+      line-height: 1.3;
       margin-bottom: 0.5em; }
       @media only screen and (min-width: 75em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
@@ -758,9 +764,15 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         color: #fff;
         text-transform: uppercase;
         text-shadow: 2px 3px 10px #333; }
-    .wrapper-banner .col-heroImage .container-contentHeroImage .content {
-      font-size: 1.2em;
-      line-height: 1.2; }
+    .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent {
+      font-size: 0.95em;
+      text-shadow: 1px 3px 10px #333;
+      font-weight: 400;
+      line-height: 1.8;
+      -webkit-transform: scale(1.1, 0.85);
+              transform: scale(1.1, 0.85);
+      -webkit-transform-origin: left;
+              transform-origin: left; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .links {
       display: -webkit-box;
       display: -ms-flexbox;

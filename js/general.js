@@ -95,6 +95,10 @@ $(document).ready(function(){
 	############################################################*/
 
 
+	let mql = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
+	screenTest(mql);
+	mql.addListener(screenTest); 
+
 	function screenTest(e) {
 		if(e.matches) {
 
@@ -144,7 +148,9 @@ $(document).ready(function(){
 				});
 				createComponentMVWelcome.appendChild(frag);
 				colMVWelcome.appendChild(createComponentMVWelcome);
-				negativeTopMargin_banner();	//From banner section 
+
+				//Supplement: From banner section: negative margin
+				negativeTopMargin_banner();	 
 
 				//---- 2.2.2 ----
 				var componentNav = document.querySelector(".row-mV-welcome .component-nav");
@@ -195,10 +201,23 @@ $(document).ready(function(){
 			--------------------------------------------*/
 		}
 	}
-	var mql = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
-	screenTest(mql);
-	mql.addListener(screenTest);
- 
+
+
+	/*###########################################################
+	#############################################################
+	#############################################################
+	########                                             ########
+	########                DESKTOP VERSION              ########
+	########                                             ########
+	#############################################################
+	#############################################################  
+	############################################################*/
+
+	let mql_desktopVersion = window.matchMedia("(max-width: )")
+
+
+
+
 
 })
 
