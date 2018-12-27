@@ -44,6 +44,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 .wrapper-header {
 	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
+	@include mq("desktop-min") {font-size: 1.4rem;}
 }
 
 
@@ -155,7 +156,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 //============= Rules ============
 .wrapper-header .component-brand {
-	font-size: 1.6rem;
+	font-size: 1em;
 	//====flex=====
 	display: flex;
 	align-items: center;
@@ -205,10 +206,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 *************   Nav row   ****************/
 .wrapper-header .row-nav {}
 .wrapper-header .component-nav {
-	font-size: 1.4rem;	
-	@media only screen and (min-width: 65.625em) {font-size: 1.45rem;} //65.625em =1050px/16
-	@media only screen and (min-width: 67.5em) {font-size: 1.5rem;} //67.5em =1080px/16
-	@media only screen and (min-width: 73.125em) {font-size: 1.6rem;} //73.125 = 1170px/16
+	//font-size: 1.4rem;
+	//font-size: 14px;	
+	font-size: 0.875em;
+	@media only screen and (min-width: 65.625em) {font-size: 0.90625em;} //65.625em =1050px/16
+	@media only screen and (min-width: 67.5em) {font-size: 0.9375em;} //67.5em =1080px/16
+	@media only screen and (min-width: 73.125em) {font-size: 1em;} //73.125 = 1170px/16
 	
 	color: white;
 	background-color: rgba(17,17,17,1);

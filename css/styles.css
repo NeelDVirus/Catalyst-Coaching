@@ -159,6 +159,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 ################################################*/
 .wrapper-header {
   font-size: 1.6rem; }
+  @media only screen and (min-width: 62em) {
+    .wrapper-header {
+      font-size: 1.4rem; } }
 
 /*******************************************
 *** First row (Welcome row/ mobilemenu) ***/
@@ -259,7 +262,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   to {
     stroke-dashoffset: 129; } }
 .wrapper-header .component-brand {
-  font-size: 1.6rem;
+  font-size: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,18 +347,18 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*****************************************
 *************   Nav row   ****************/
 .wrapper-header .component-nav {
-  font-size: 1.4rem;
+  font-size: 0.875em;
   color: white;
   background-color: #111111; }
   @media only screen and (min-width: 65.625em) {
     .wrapper-header .component-nav {
-      font-size: 1.45rem; } }
+      font-size: 0.90625em; } }
   @media only screen and (min-width: 67.5em) {
     .wrapper-header .component-nav {
-      font-size: 1.5rem; } }
+      font-size: 0.9375em; } }
   @media only screen and (min-width: 73.125em) {
     .wrapper-header .component-nav {
-      font-size: 1.6rem; } }
+      font-size: 1em; } }
 
 .wrapper-header .component-nav ul {
   display: -webkit-box;
