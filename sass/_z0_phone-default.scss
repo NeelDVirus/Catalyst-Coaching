@@ -45,6 +45,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .wrapper-header {
 	font-size: 1.6rem; //16px, 1.6 *10px (body=10px)
 	@include mq("desktop-min") {font-size: 1.4rem;}
+	@include mq("desktopXL-min") {font-size: 1.6rem;}
 }
 
 

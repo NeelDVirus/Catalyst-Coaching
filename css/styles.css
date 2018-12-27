@@ -162,6 +162,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   @media only screen and (min-width: 62em) {
     .wrapper-header {
       font-size: 1.4rem; } }
+  @media only screen and (min-width: 100em) {
+    .wrapper-header {
+      font-size: 1.6rem; } }
 
 /*******************************************
 *** First row (Welcome row/ mobilemenu) ***/
