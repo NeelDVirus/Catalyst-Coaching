@@ -761,12 +761,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       font-weight: 600;
       line-height: 1.3;
       margin-bottom: 0.5em; }
-      @media only screen and (min-width: 75em) {
-        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-          font-size: 1.5em; } }
-      @media only screen and (min-width: 100em) {
-        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-          font-size: 2.5em; } }
       .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
         display: inline-block;
         font-family: "Lato", sans-serif;
