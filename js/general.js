@@ -43,14 +43,18 @@ $(document).ready(function(){
 	var $bannerWrapper = $(".wrapper-banner");
 
 
-	/*********   Incorporate with : (nav section)   **************
-	Overlapping(vertically) the half height 
-	of Nav section over the banner section*/ 	
+	/*********   Incorporate with : (nav section)   *****************
+	1- Overlapping(vertically) the half height 
+		of Nav section over the banner section
+	2- adding padding-top to .hero-image == overlapped nav section 	
+	*****************************************************************/ 	
 
 	function negativeTopMargin_banner() {
 		var $navSectionHeight = $(".col-nav").outerHeight();
 		$bannerWrapper.css("margin-top", "-"+(0.5 * $navSectionHeight) +"px");
-		$(".wrapper-banner .row-heroImage").css("padding-top", (0.5 * $navSectionHeight)+"px");
+
+		let rowHeroImage = $(".wrapper-banner .row-heroImage")
+		rowHeroImage.css("padding-top", (0.5 * $navSectionHeight)+"px");
 	}
 	negativeTopMargin_banner();
 	window.onresize = negativeTopMargin_banner;
@@ -71,8 +75,19 @@ $(document).ready(function(){
 	window.onresize = windowResize; //execution during scrolling
 
 
+	
+
 	/**********   (.row.hero-image)   ************** 
-	adding padding-bottom to hero-image to compensate the additonal overlapping of .adAppendix row which extent beyond the .banner-wrapper bottom end */
+	adding padding-bottom to hero-image 
+		:- Reason: to compensate the additonal overlapping of .adAppendix row which extent beyond the .banner-wrapper bottom end 
+	*************************************************/
+	let compAdName1 = document.querySelector(".container-ad.name1");
+	let requiredPadding = compAdName1.offsetHeight * 0.35;
+
+	let rowHeroImage = document.querySelector(".wrapper-banner .row-heroImage");
+	rowHeroImage.style.paddingBottom = requiredPadding + "px";
+
+	
 
 
 

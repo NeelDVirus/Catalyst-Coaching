@@ -159,7 +159,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 ################################################*/
 .wrapper-header {
   font-size: 1.6rem; }
-  @media only screen and (min-width: 62em) {
+  @media only screen and (min-width: 75em) {
     .wrapper-header {
       font-size: 1.4rem; } }
   @media only screen and (min-width: 100em) {
@@ -757,12 +757,33 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           align-items: center; }
   .wrapper-banner .col-heroImage .container-contentHeroImage {
     color: white; }
+    @media only screen and (max-width: 47.9375em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage {
+        font-size: 0.8em;
+        background-color: rgba(0, 0, 0, 0.3); } }
+    @media only screen and (min-width: 48em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage {
+        width: 50%; } }
+    @media only screen and (max-width: 47.9375em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage > * {
+        margin-left: 5%;
+        margin-right: 5%; }
+        .wrapper-banner .col-heroImage .container-contentHeroImage > *:last-child {
+          margin-bottom: 2em; } }
     .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-      font-size: 2.5em;
       font-weight: 600;
-      line-height: 1.3;
       margin-bottom: 0.5em; }
-      @media only screen and (min-width: 75em) {
+      @media only screen and (max-width: 47.9375em) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
+          font-size: 1.4em;
+          text-align: center;
+          margin: 0.5em; }
+          .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
+            display: none; } }
+      @media screen and (min-width: 48em) and (orientation: portrait) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
+          font-size: 1.5em; } }
+      @media screen and (min-width: 62em) and (max-width: 87em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
           font-size: 2em; } }
       @media only screen and (min-width: 100em) {
@@ -778,35 +799,64 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         color: #fff;
         text-transform: uppercase;
         text-shadow: 2px 2px 10px #333; }
+        @media only screen and (max-width: 47.9375em) {
+          .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 auto;
+                    flex: 1 1 auto; } }
+        .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
+          padding-bottom: .6em; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent {
-      font-size: 0.95em;
-      text-shadow: 1px 3px 10px #333;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      font-size: 1em;
+      margin-right: 10%;
+      text-shadow: 2px 2px 10px #333;
       font-weight: 400;
       line-height: 1.8;
       -webkit-transform: scale(1.1, 0.85);
               transform: scale(1.1, 0.85);
       -webkit-transform-origin: left;
               transform-origin: left; }
+      @media only screen and (max-width: 47.9375em) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span {
+          display: none; } }
     .wrapper-banner .col-heroImage .container-contentHeroImage .links {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       width: 70%;
       margin-top: 2em; }
+      @media only screen and (max-width: 47.9375em) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .links {
+          font-size: 0.8em;
+          width: calc(100% - 5% - 5%); } }
       .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 0px;
                 flex: 1 1 0;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-size: 1.2em;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
         text-transform: uppercase;
         border: 2px solid #ff3215;
         padding: 0.8em 1.5em;
         text-align: center; }
+        @media only screen and (max-width: 47.9375em) {
+          .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
+            padding: 0.8em 0.5em; } }
         .wrapper-banner .col-heroImage .container-contentHeroImage .links a.performance {
           background-color: #ff3215; }
       .wrapper-banner .col-heroImage .container-contentHeroImage .links a:first-child {
         margin-right: 2em; }
+        @media only screen and (max-width: 47.9375em) {
+          .wrapper-banner .col-heroImage .container-contentHeroImage .links a:first-child {
+            margin-right: 5%; } }
 
 /*###############################################
 #############    02 BannerAppendix    ###########
@@ -864,7 +914,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 @media only screen and (max-width: 35.9375em) {
   .wrapper-bannerAppendix .container-ad:nth-last-child(4) {
     margin-right: 0;
-    padding: 2em;
+    padding: 0 2em;
     font-size: 0.8em; } }
 @media only screen and (min-width: 36em) and (max-width: 48em) {
   .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
