@@ -444,23 +444,24 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	align-items: center;
 
 	.container-contentHeroImage {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		color: white;
+		height: 70%;
+		//margin: 15% 0;
 		//==== media query ====
 		@include mq("tablet-min", max) {
 			font-size: 0.8em;
 			background-color: rgba(0,0,0,0.3);
-			//padding: 10% 5%;
+
 		}
 		@include mq("tablet-min") {width: 50%;}
 		//==== general ====
-		color: white;
 		
 		>* {
-			@include mq("tablet-min", max) {
-				margin-left: 5%;
-				margin-right: 5%;
-				//&:first-child {margin-top: 10%;}
-				&:last-child {margin-bottom: 2em;}
-			}
+			//flex: 1 1 auto;
+			@include mq("tablet-min", max) {margin: 0 5%;}
 		}
 		.heading {
 			//===general rules===			
@@ -472,7 +473,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				font-size: 1.4em;
 				text-align: center;	
 				span:first-child {display: none;}	
-				margin: 0.5em;		
+				margin-top: 0;
+				margin-bottom: 0;		
 			}
 			@media screen and (min-width: 48em) and (orientation: portrait) {font-size: 1.5em; } //48em = 768px;
 			@media screen and (min-width: 62em) and (max-width: 87em) {font-size: 2em;}
@@ -495,6 +497,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.headingContent {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			font-size: 1em;
 			margin-right: 10%;
 			text-shadow: 2px 2px 10px #333;
@@ -508,10 +511,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		}
 		.links {
 			display: flex;
+			align-items: center;
 			width: 70%;
 			margin-top: 2em;
 			@include mq("tablet-min", max) {
 				font-size: 0.8em;
+				margin-top: 0;
 				width: calc(100% - 5% - 5%); //since margin-left = margin-right = 5 % 
 			}
 			a {
