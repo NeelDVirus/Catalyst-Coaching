@@ -783,6 +783,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       @media only screen and (min-width: 100em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
           font-size: 2.6em; } }
+      @media screen and (max-width: 22.25em) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
+          font-size: 1em; } }
       .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
         display: inline-block;
         font-family: "Lato", sans-serif;
@@ -839,9 +842,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     @media only screen and (max-width: 47.9375em) {
       .wrapper-banner .col-heroImage .container-contentHeroImage {
         font-size: 0.8em;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        height: 69.6192%;
+        max-height: 14.2em;
+        padding: 1.5em 0;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         background-color: rgba(0, 0, 0, 0.3); }
         .wrapper-banner .col-heroImage .container-contentHeroImage > * {
           margin: 0 5%; }
@@ -850,12 +856,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           text-align: justify;
           margin-top: 0;
           margin-bottom: 0; }
-          .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
-            display: none; }
           .wrapper-banner .col-heroImage .container-contentHeroImage .heading .span {
             -webkit-box-flex: 1;
                 -ms-flex: 1 1 auto;
                     flex: 1 1 auto; }
+          .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
+            display: none; }
         .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span:first-child {
           padding-bottom: 0.8em; }
         .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span:last-child {
@@ -870,6 +876,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             padding: 0.8em 0.5em; }
           .wrapper-banner .col-heroImage .container-contentHeroImage .links a:first-child {
             margin-right: 5%; } }
+    @media screen and (max-width: 48em) and (max-height: 38.125em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span:first-child {
+        display: none; } }
+    @media screen and (max-width: 48em) and (max-height: 36.875em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage {
+        height: 80%;
+        margin-bottom: 1em;
+        padding: 1.4em 0; } }
+    @media screen and (max-width: 48em) and (max-height: 35em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
+        padding: 0.7em 0.5em; } }
 
 /*###############################################
 #############    02 BannerAppendix    ###########

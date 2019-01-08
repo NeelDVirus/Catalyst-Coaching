@@ -454,8 +454,11 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			font-weight: $bold-openSans;
 			margin-bottom: 0.5em;
 			@media screen and (min-width: 48em) and (orientation: portrait) {font-size: 1.5em; } //48em = 768px;
-			@media screen and (min-width: 62em) and (max-width: 87em) {font-size: 2em;}
+			@media screen and (min-width: 62em) and (max-width: 87em) {font-size: 2em;} //
 			@include mq("desktopXL-min") {font-size: 2.6em;}
+			@media screen and (max-width: 22.25em) {font-size: 1em;}
+
+
 			//===================================================================
 
 
@@ -505,20 +508,21 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				&.performance {background-color: $primaryRed;}		
 			}
 		}
-		@media screen (max-width: 48em),  {
+		@include mq("tablet-min", max)  {
 			font-size: 0.8em;
-			//padding-top: 1.5em;
-			//padding-bottom: 1.5em;
-			justify-content: space-evenly;
+			height: 69.6192%;
+			max-height: 14.2em;
+			padding: 1.5em 0;
+			justify-content: space-between;
 			background-color: rgba(0,0,0,0.3);
 			>* {margin: 0 5%;}
 			.heading {				
 				font-size: 1.4em;
 				text-align: justify;	
-				span:first-child {display: none;}	
 				margin-top: 0;
 				margin-bottom: 0;	
 				.span {flex: 1 1 auto;}	
+				span:first-child {display: none;}	
 			}
 			.headingContent {
 				span:first-child{padding-bottom: 0.8em;}
@@ -533,7 +537,21 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				a:first-child {margin-right: 5%;}
 			}
 		}
-		@media screen (max-width: )
+		@media screen and (max-width: 48em) and (max-height: 38.125em) {
+			//3821.125em = 610px 
+			.headingContent span:first-child {display: none;}
+		}
+		@media screen and (max-width: 48em) and (max-height: 36.875em) {
+			//36.875em = 590px
+			height: 80%;
+			margin-bottom: 1em;
+			padding: 1.4em 0;
+		}
+		@media screen and (max-width: 48em) and (max-height: 35em) {
+			// 35em= 560px;
+			.links a {padding: 0.7em 0.5em;}
+		}
+
 	}
 }
 
