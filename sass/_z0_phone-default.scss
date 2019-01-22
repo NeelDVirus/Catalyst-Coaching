@@ -495,6 +495,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			font-size: 0.95em;
 			.headingContent {line-height: 1.8;}
 			.headingContent span:first-child {line-height: 1.8}
+			.links a {border-width: 2px}
 			.links a:first-child {margin-right: 2em}
 		}
 		@include mq("tablet-min", max)  {
@@ -660,7 +661,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			&:nth-last-child(2) {display: block; margin-right: 0;}
 		}
 		@include mq('desktop-min') {
-			&:last-child &:nth-last-child(2), &:nth-last-child(3) {display: block;}
+			&:last-child, &:nth-last-child(2), &:nth-last-child(3) {display: block;}
 			&:last-child {display: block; margin-right: 0;}
 		}
 	}
