@@ -445,12 +445,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 	.container-contentHeroImage {
 		color: white;
-		@include mq("tablet-min") {width: 50%;}	
 		.heading {
 			font-weight: $bold-openSans;
 			margin-bottom: 0.5em;
 			@media screen and (min-width: 48em) and (orientation: portrait) {font-size: 1.5em; } //48em = 768px;
 			@media screen and (min-width: 62em) and (max-width: 87em) {font-size: 2em;} //
+			@media screen and (min-width: 87.0625em) {font-size: 2.4em;} //
 			@include mq("desktopXL-min") {font-size: 2.6em;}
 			
 			
@@ -476,23 +476,24 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			transform-origin: left;
 		}
 		.links {
-				display: flex;
-				align-items: center;
-				width: 70%;
-				margin-top: 2em;
-				a {
-					flex: 1 1 0;
-					font-family: $raleway;
-					font-weight: $light-raleway;
-					text-transform: uppercase;
-					border: 1px solid $primaryRed;
-					padding: 0.8em 1.5em;	
-					text-align: center;	
-					&.performance {background-color: $primaryRed;}		
-				}
+			display: flex;
+			align-items: center;
+			width: 70%;
+			margin-top: 2em;
+			a {
+				flex: 1 1 0;
+				font-family: $raleway;
+				font-weight: $light-raleway;
+				text-transform: uppercase;
+				border: 1px solid $primaryRed;
+				padding: 0.8em 1.5em;	
+				text-align: center;	
+				&.performance {background-color: $primaryRed;}		
+			}
 		}
 		@include mq("tablet-min") {
 			font-size: 0.95em;
+			width: 50%;
 			.headingContent {line-height: 1.8;}
 			.headingContent span:first-child {line-height: 1.8}
 			.links a {border-width: 2px}
