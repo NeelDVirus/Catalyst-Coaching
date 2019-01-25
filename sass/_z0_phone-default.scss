@@ -459,7 +459,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			
 			span {
 				// @include mq("tablet-min", max) {flex: 1 1 auto;}
-				display: inline-block;	
+				display: inline-block;
+				display: block;	
 				font-family: $lato;		
 				transform: scale(1,1.3);	
 				transform-origin: left;	
@@ -499,6 +500,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			.links a {border-width: 2px}
 			.links a:first-child {margin-right: 2em}
 		}
+		@media screen and (min-width: 48em) and (orientation: portrait) {width: 55%;}
 		@include mq("tablet-min", max)  {
 				flex: 1 1 auto;
 				display: flex;
@@ -542,17 +544,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		@media screen and (max-width: 22.25em) {
 			.heading {font-size: 1.2em;}
 		}
-		@media screen and (max-width: 48em) and (max-height: 38.125em) {
+		@media screen and (max-width: 47.9375em) and (max-height: 38.125em) {
 			//3821.125em = 610px 
 			.headingContent span:first-child {display: none;}
 		}
-		@media screen and (max-width: 48em) and (max-height: 36.875em) {
+		@media screen and (max-width: 47.9375em) and (max-height: 36.875em) {
 			//36.875em = 590px
 			height: 80%;
 			margin-bottom: 1em;
 			padding: 1.4em 0;
 		}
-		@media screen and (max-width: 48em) and (max-height: 35em) {
+		@media screen and (max-width: 47.9375em) and (max-height: 35em) {
 			// 35em= 560px;
 			.links a {padding: 0.7em 0.5em;}
 		}
@@ -654,10 +656,10 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		@include mq('phoneLandscape-min', max) {
 			&:nth-last-child(4) {margin-right: 0; padding: 0 2em; font-size: 0.8em;}
 		}
-		@include mq_min-max('phoneLandscape-min', 'tablet-min') {	
+		@include mq_min-max('phoneLandscape-min', 'phonelandscape-max') {	
 			&:nth-last-child(3) {display: block; margin-right: 0;}
 		}
-		@include mq_min-max('tablet-min','desktop-min') {
+		@include mq_min-max('tablet-min','tablet-max') {
 			&:nth-last-child(2), &:nth-last-child(3) {display: block;}
 			&:nth-last-child(2) {display: block; margin-right: 0;}
 		}
