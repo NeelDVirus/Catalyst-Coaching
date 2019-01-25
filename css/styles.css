@@ -903,6 +903,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     @media screen and (max-width: 47.9375em) and (max-height: 35em) {
       .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
         padding: 0.7em 0.5em; } }
+    @media only screen and (min-width: 75em) and (max-width: 99.9375em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent {
+        padding-right: 10%; } }
 
 /*###############################################
 #############    02 BannerAppendix    ###########
@@ -962,6 +965,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     margin-right: 0;
     padding: 0 2em;
     font-size: 0.8em; } }
+@media only screen and (min-width: 48em) and (max-width: 61.9375em) {
+  .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
+    display: block; }
+  .wrapper-bannerAppendix .container-ad:nth-last-child(2) {
+    display: block;
+    margin-right: 0; } }
 @media only screen and (min-width: 62em) {
   .wrapper-bannerAppendix .container-ad:last-child, .wrapper-bannerAppendix .container-ad:nth-last-child(2), .wrapper-bannerAppendix .container-ad:nth-last-child(3) {
     display: block; }

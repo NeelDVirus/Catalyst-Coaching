@@ -58,7 +58,7 @@ $xsBp-max : 36.9375em;  //575px
 $smBp-max : 47.9375em;  //767px   
 $mdBp-max : 61.9375em;  //991px   
 $lgBp-max : 74.9375em;  //1199px  
-$xlBp-max : 100em;      //1600px  
+$xlBp-max : 99.9375em;  //1599px  
 
 
 //map of breakpoints for min-width media query mixins 
@@ -67,5 +67,9 @@ $breakpoints: (
 	"tablet-min" : $mdBp-min,
 	"desktop-min" : $lgBp-min,
 	"desktopL-min" : $xlBp-min,
-	"desktopXL-min" : $xxlBp-min,	
+	"desktopXL-min" : $xxlBp-min,
+	
+	"phoneLandscape-max": $smBp-max,
+	"tablet-max": $mdBp-max,
+	"desktopL-max": $xlBp-max
 );
