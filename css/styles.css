@@ -853,6 +853,56 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
+.wrapper-aboutUs {
+  padding-bottom: 3em; }
+
+.component-aboutUs .container-heading .heading {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: scaleX(0.8);
+  transform-origin: left;
+  margin-bottom: 10px; }
+.component-aboutUs .container-heading .m_subHeading {
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 15px; }
+.component-aboutUs .container-heading .g_subHeading {
+  display: none; }
+.component-aboutUs .container-heading .underline {
+  height: 2px;
+  background-color: red;
+  width: 100px; }
+.component-aboutUs .container-mainImage {
+  width: 100%;
+  height: 200px;
+  border: 5px solid #000;
+  margin: 25px 0; }
+.component-aboutUs .container-description .description {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.2;
+  margin-bottom: 25px; }
+.component-aboutUs .container-designation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .component-aboutUs .container-designation .name {
+    font-size: 1.1em;
+    font-weight: 700;
+    transform: scaleX(0.8);
+    transform-origin: left; }
+  .component-aboutUs .container-designation .designation {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #444;
+    margin-top: 0.5em; }
+  .component-aboutUs .container-designation .signature {
+    font-weight: 600;
+    transform: rotate(350deg); }
+
 /*Medium devices (tablets, 768px and up)
   min width 48em = 768px
   max-width 61.9375em = 991px */
