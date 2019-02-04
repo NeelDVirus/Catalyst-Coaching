@@ -708,13 +708,14 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			height: 2px;
 			background-color: red;
 			width: 100px;
+			margin-bottom: 25px;
 		}
 	}
 	.container-mainImage {
 		width: 100%;
 		height:200px;
 		border: 5px solid #000;
-		margin: 25px 0;
+		margin-bottom: 25px;
 	}
 	.container-description .description {
 		font-size: 0.85em;
