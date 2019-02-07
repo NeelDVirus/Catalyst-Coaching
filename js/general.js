@@ -111,10 +111,10 @@ $(document).ready(function(){
 
 
 	let mql = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
-	screenTest(mql);
-	mql.addListener(screenTest); 
+	screenTest1(mql);
+	mql.addListener(screenTest1); 
 
-	function screenTest(e) {
+	function screenTest1(e) {
 		if(e.matches) {
 
 			/*=============================================================================
@@ -211,9 +211,30 @@ $(document).ready(function(){
 
 
 
-			/*------------------------------------------
-			----------     HEADER     ------------------
-			--------------------------------------------*/
+			/*=============================================================================
+			===================     About US     ==========================================
+			==============================================================================*/
+
+			/*===(1)====================================================
+			(.component-aboutUs)
+
+			-->Layout change: mobile and not-mobile screen
+					--> .container-mainImage: render direction: 
+								 <= mobile: column along with other
+								 > mobile: shift to right half of the screen: 
+										 : moved from flexItem1
+										 : relocated to: flexItem2  
+			=========================================================*/			
+			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2 .container-mainImage");
+			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1"); 
+
+			if(originalLocation_mainImage != null) {
+				let nextShiblingOfMainImage = newLocation_mainImage.querySelector(".container-designation");
+				newLocation_mainImage.insertBefore(originalLocation_mainImage, nextShiblingOfMainImage);
+			}
+
+
+
 		}
 	}
 
@@ -222,13 +243,45 @@ $(document).ready(function(){
 	#############################################################
 	#############################################################
 	########                                             ########
-	########                DESKTOP VERSION              ########
+	########                Tablet VERSION               ########
 	########                                             ########
 	#############################################################
 	#############################################################  
 	############################################################*/
 
-	let mql_desktopVersion = window.matchMedia("(max-width: )")
+	let mql_startFromTablet = window.matchMedia("(min-width: 48em)");
+	screenTest2(mql_startFromTablet);
+	mql_startFromTablet.addListener(screenTest2);
+
+	function screenTest2(e){
+		if(e.matches) {
+
+			/*=============================================================================
+			===================     About US     ==========================================
+			==============================================================================*/	
+			
+			/*===(1)====================================================
+			(.component-aboutUs)
+
+			-->Layout change: mobile and not-mobile screen
+					--> .container-mainImage: render direction: 
+								 <= mobile: column along with other
+								 > mobile: shift to right half of the screen: 
+										 : moved from flexItem1
+										 : relocated to: flexItem2  
+			=========================================================*/			
+			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1 .container-mainImage");
+			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2");                                                
+			if(originalLocation_mainImage != null) {
+				newLocation_mainImage.appendChild(originalLocation_mainImage);
+			}
+
+
+
+
+
+		} //end of if(e.matches)
+	}
 
 
 
