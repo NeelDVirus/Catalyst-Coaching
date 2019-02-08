@@ -244,6 +244,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 @keyframes atom {
   to {
     stroke-dashoffset: 129; } }
+.wrapper-header .row-brand {
+  margin-top: 0 !important; }
+
 .wrapper-header .component-brand {
   font-size: 1em;
   display: flex;

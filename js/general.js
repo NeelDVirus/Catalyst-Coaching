@@ -199,6 +199,15 @@ $(document).ready(function(){
 				component_mTopBar.insertBefore(containerBrandMain, component_mTopBar.childNodes[0]);
 			}
 
+
+
+			/*===(4)====================================================
+			(Mobilemenu)
+			4.1 hambrger icon	
+			4.2 sidemenu
+				4.2.1 disable body scrolling when menu is open
+			=========================================================*/
+
 			//4.1 hambrger icon			
 			$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 				$(this).toggleClass('open');
@@ -255,56 +264,67 @@ $(document).ready(function(){
 
 		} else {
 
-			/*==========================================================
-			===================     Header     =++======================
-			===========================================================*/
-			let rowTopmost = document.querySelector(".row-topmost .component-welcome");
-
-			/*===(2)====================================================
-			(.row-topmost &&& .row-mV-welcome &&& .row-nav)
-
-			-->2.1 Shifting: 
-					2.1.1 ==> .component-mV-welcome to .row-topmost
-						Details --> welcome column (from .component-mV-welcome) to .row-topmost
-								--> welcome column = (.welcome-Note) + (.register) in .component-mV-welcome
-					2.1.2 ==>  .component-mV-nav (from .row-topmost) to .row-nav
-						Details 
-
-			-->2.2 Replace Class name: replace class ".component-mV-nav" with ".component-nav"		
-			-->2.3 Remove : remove component-mV-welcome after relocating all its children  
-			=============================================================*/
-
 			if (document.contains(document.querySelector(".component-mV-welcome"))) {
 			//document.contains() is a trick to check whether the page resized from mobile screen to bigger screen
-				//------------------
-				//---- 2.1.1 -------
-				//------------------
 
-				let elmToRelocate1 = document.querySelectorAll(".component-mV-welcome .welcomeNote, .component-mV-welcome .register");
-				elmToRelocate1.forEach(function(x){
-					rowTopmost.appendChild(x);
-				});
+				/*==========================================================
+				===================     Header     =++======================
+				===========================================================*/
+				let componentPageWelcome = document.querySelector(".row-topmost .component-welcome");
+				/*===(2)====================================================
+				(.row-topmost &&& .row-mV-welcome &&& .row-nav)
 
-				//------------------
-				//---- 2.3 ---------
-				//------------------
-				document.querySelector(".component-mV-welcome").remove();
+				-->2.1 Shifting: 
+						2.1.1 ==> .component-mV-welcome to .row-topmost
+							Details --> welcome column (from .component-mV-welcome) to .row-topmost
+									--> welcome column = (.welcome-Note) + (.register) in .component-mV-welcome
+						2.1.2 ==>  .component-mV-nav (from .row-topmost) to .row-nav
+							Details 
 
-				//------------------
-				//---- 2.1.2 -------
-				//------------------
-				let componentMVNav = document.querySelector(".component-mV-nav");
-				document.querySelector(".wrapper-header .col-nav").appendChild(componentMVNav);
+				-->2.2 Replace Class name: replace class ".component-mV-nav" with ".component-nav"		
+				-->2.3 Remove : remove component-mV-welcome after relocating all its children  
+				=============================================================*/
 
-				//------------------
-				//---- 2.2 ---------
-				//------------------
-				if (componentMVNav.classList.contains("component-mV-nav")) {
-					componentMVNav.classList.remove("component-mV-nav");
+				
+					//------------------
+					//---- 2.1.1 -------
+					//------------------
+
+					let elmToRelocate1 = document.querySelectorAll(".component-mV-welcome .welcomeNote, .component-mV-welcome .register");
+					componentPageWelcome.insertBefore(elmToRelocate1[0],componentPageWelcome.childNodes[0]);
+					componentPageWelcome.insertBefore(elmToRelocate1[1],null);
+
+					//------------------
+					//---- 2.3 ---------
+					//------------------
+					document.querySelector(".component-mV-welcome").remove();
+
+					//------------------
+					//---- 2.1.2 -------
+					//------------------
+					let componentMVNav = document.querySelector(".component-mV-nav");
+					document.querySelector(".wrapper-header .col-nav").appendChild(componentMVNav);
+
+					//------------------
+					//---- 2.2 ---------
+					//------------------
+					if (componentMVNav.classList.contains("component-mV-nav")) {
+						componentMVNav.classList.remove("component-mV-nav");
+					}
+					componentMVNav.classList.add("component-nav");
+
+
+
+				/*===(3)====================================================
+				(.row-topmost ---&&&--- .row-brand .container-brandMain)
+				Shifting of .container-brandMain to .row-brand
+				=========================================================*/
+				shiftingBrand_reverse();
+				function shiftingBrand_reverse() {
+					let containerBrandMain = componentPageWelcome.querySelector(".container-brandMain")
+					let componentBrand = document.querySelector(".row-brand .component-brand");
+					componentBrand.insertBefore(containerBrandMain, componentBrand.childNodes[0]);
 				}
-				componentMVNav.classList.add("component-nav");
-
-			}
 
 
 
@@ -312,30 +332,29 @@ $(document).ready(function(){
 
 
 
+				/*===========================================================
+				===================     About US     ========================
+				============================================================*/	
 
+				/*===(1)====================================================
+				(.component-aboutUs)
 
+				-->Layout change: mobile and not-mobile screen
+						--> .container-mainImage: render direction: 
+									<= mobile: column along with other
+									> mobile: shift to right half of the screen: 
+											: moved from flexItem1
+											: relocated to: flexItem2  
+				=========================================================*/			
+				let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1 .container-mainImage");
+				let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2");                                                
+				if(originalLocation_mainImage != null) {
+					newLocation_mainImage.appendChild(originalLocation_mainImage);
+				}
+
+			}//end of if(document.contains)
 			
-
-			/*===========================================================
-			===================     About US     ========================
-			============================================================*/	
-			
-			/*===(1)====================================================
-			(.component-aboutUs)
-
-			-->Layout change: mobile and not-mobile screen
-					--> .container-mainImage: render direction: 
-								 <= mobile: column along with other
-								 > mobile: shift to right half of the screen: 
-										 : moved from flexItem1
-										 : relocated to: flexItem2  
-			=========================================================*/			
-			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1 .container-mainImage");
-			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2");                                                
-			if(originalLocation_mainImage != null) {
-				newLocation_mainImage.appendChild(originalLocation_mainImage);
-			}
-		}
+		} //end of else part of window.matchMedia for mobile version
 	}
 
 
