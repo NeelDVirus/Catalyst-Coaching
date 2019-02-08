@@ -129,7 +129,7 @@ $(document).ready(function(){
 
 
 			/*===(1)====================================================
-			(.topmost-row)
+			(.row-topmost)
 
 			-->Setting: top-absolute-position: 
 							 = height of row-topmost row
@@ -139,35 +139,48 @@ $(document).ready(function(){
 
 
 			/*===(2)====================================================
-			(.topmost-row &&& .row-mV-welcome &&& .row-nav)
+			(.row-topmost &&& .row-mV-welcome &&& .row-nav)
 
-			-->2.1 create : componentMVWelcome
+			-->2.1 Create : componentMVWelcome
 			-->2.2 Shifting: 
-				2.2.1 ==> .topmost-row to .row-mV-welcome 
-					Welcome column(.welcome-Note, .register in .wrapper-header) in ".nav-column .component-mV-welcome"
-				2.2.2 ==> .component-nav (from .row-mV-Welcome) to .topmost-row 
+					2.2.1 ==> .row-topmost to .row-mV-welcome 
+						Details --> Welcome column to (.nav-column .component-mV-welcome")
+							    --> Welcome column = (.welcome-Note) + (.register) in .row-topmost 
+					2.2.2 ==> .component-nav (from .row-mV-Welcome) to .row-topmost 
+			-->2.3 Replace class name: replace ".component-nav" with ".component-mV-nav"
 			=============================================================*/
 
 			phoneResize2();
-			window.onresize(phoneResize2);
+			//window.onresize(phoneResize2);
 			function phoneResize2() {
-				//---- 2.1 + 2.2.1 ----
-				let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
 				
-				var frag = document.createDocumentFragment();			
+				//---------------------
+				//---- 2.1 + 2.2.1 ----
+				//---------------------
+
+				let shiftingTopRowElements = document.querySelectorAll(".wrapper-header .welcomeNote, .wrapper-header .register");
+
+				//creating documentFragment
+				var frag = document.createDocumentFragment();		
 				var createComponentMVWelcome = document.createElement("div");
 
+				//adding classname to created element
 				createComponentMVWelcome.className = "component-mV-welcome";
+				//appending elements as children to created element
 				shiftingTopRowElements.forEach(function(x){
 					frag.appendChild(x);			
 				});
+				//appending document fragment's child to  created element
 				createComponentMVWelcome.appendChild(frag);
+				//appending created element to colMVWelcome
 				colMVWelcome.appendChild(createComponentMVWelcome);
 
 				//Supplement: From banner section: negative margin
 				negativeTopMargin_banner();	 
 
-				//---- 2.2.2 ----
+				//-----------------------
+				//---- 2.2.2  and 2.3----
+				//-----------------------
 				var componentNav = document.querySelector(".row-mV-welcome .component-nav");
 				if (componentNav.classList.contains("component-nav")) {
 					componentNav.classList.remove("component-nav");
@@ -177,7 +190,7 @@ $(document).ready(function(){
 			}
 
 			/*===(3)====================================================
-			(.topmost-row ---&&&--- .row-brand .container-brandMain)
+			(.row-topmost ---&&&--- .row-brand .container-brandMain)
 			Shifting of .row-brand's .container-brandMain to .component-mTopBar
 			=========================================================*/
 			shiftingBrand();
@@ -233,32 +246,79 @@ $(document).ready(function(){
 				newLocation_mainImage.insertBefore(originalLocation_mainImage, nextShiblingOfMainImage);
 			}
 
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+
+		} else {
+
+			/*==========================================================
+			===================     Header     =++======================
+			===========================================================*/
+			let rowTopmost = document.querySelector(".row-topmost .component-welcome");
+
+			/*===(2)====================================================
+			(.row-topmost &&& .row-mV-welcome &&& .row-nav)
+
+			-->2.1 Shifting: 
+					2.1.1 ==> .component-mV-welcome to .row-topmost
+						Details --> welcome column (from .component-mV-welcome) to .row-topmost
+								--> welcome column = (.welcome-Note) + (.register) in .component-mV-welcome
+					2.1.2 ==>  .component-mV-nav (from .row-topmost) to .row-nav
+						Details 
+
+			-->2.2 Replace Class name: replace class ".component-mV-nav" with ".component-nav"		
+			-->2.3 Remove : remove component-mV-welcome after relocating all its children  
+			=============================================================*/
+
+			if (document.contains(document.querySelector(".component-mV-welcome"))) {
+			//document.contains() is a trick to check whether the page resized from mobile screen to bigger screen
+				//------------------
+				//---- 2.1.1 -------
+				//------------------
+
+				let elmToRelocate1 = document.querySelectorAll(".component-mV-welcome .welcomeNote, .component-mV-welcome .register");
+				elmToRelocate1.forEach(function(x){
+					rowTopmost.appendChild(x);
+				});
+
+				//------------------
+				//---- 2.3 ---------
+				//------------------
+				document.querySelector(".component-mV-welcome").remove();
+
+				//------------------
+				//---- 2.1.2 -------
+				//------------------
+				let componentMVNav = document.querySelector(".component-mV-nav");
+				document.querySelector(".wrapper-header .col-nav").appendChild(componentMVNav);
+
+				//------------------
+				//---- 2.2 ---------
+				//------------------
+				if (componentMVNav.classList.contains("component-mV-nav")) {
+					componentMVNav.classList.remove("component-mV-nav");
+				}
+				componentMVNav.classList.add("component-nav");
+
+			}
 
 
-		}
-	}
 
 
-	/*###########################################################
-	#############################################################
-	#############################################################
-	########                                             ########
-	########                Tablet VERSION               ########
-	########                                             ########
-	#############################################################
-	#############################################################  
-	############################################################*/
 
-	let mql_startFromTablet = window.matchMedia("(min-width: 48em)");
-	screenTest2(mql_startFromTablet);
-	mql_startFromTablet.addListener(screenTest2);
 
-	function screenTest2(e){
-		if(e.matches) {
 
-			/*=============================================================================
-			===================     About US     ==========================================
-			==============================================================================*/	
+
+
+			
+
+			/*===========================================================
+			===================     About US     ========================
+			============================================================*/	
 			
 			/*===(1)====================================================
 			(.component-aboutUs)
@@ -275,18 +335,57 @@ $(document).ready(function(){
 			if(originalLocation_mainImage != null) {
 				newLocation_mainImage.appendChild(originalLocation_mainImage);
 			}
-
-
-
-
-
-		} //end of if(e.matches)
+		}
 	}
 
 
 
 
 
+
+
+
+
+
+
+
+
+	/*###########################################################
+	#############################################################
+	#############################################################
+	########                                             ########
+	########                Tablet VERSION               ########
+	########                                             ########
+	#############################################################
+	#############################################################  
+	############################################################*/
+
+	let mql_startFromTablet = window.matchMedia("(min-width: 48em)");
+	//screenTest2(mql_startFromTablet);
+	//mql_startFromTablet.addListener(screenTest2);
+
+	function screenTest2(e){
+		if(e.matches) {
+		
+		
+		
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		} else {
+
+		}
+	}
+
+
+	
 })
 
 
