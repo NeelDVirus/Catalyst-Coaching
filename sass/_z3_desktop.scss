@@ -19,6 +19,10 @@
 
  @media only screen and (min-width: 62em) {
 
+	/*****************************************
+	*************   Brand row   **************/
+	.wrapper-header .row-brand {margin-top: 0 !important; } //undoing to margin set by javascript for mobile screen
+
 
 	/*****************************************
 	*************   Nav row   ****************/
