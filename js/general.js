@@ -325,7 +325,8 @@ $(document).ready(function(){
 					let componentBrand = document.querySelector(".row-brand .component-brand");
 					componentBrand.insertBefore(containerBrandMain, componentBrand.childNodes[0]);
 				}
-
+			
+			}//end of if(document.contains)
 
 
 
@@ -352,10 +353,10 @@ $(document).ready(function(){
 					newLocation_mainImage.appendChild(originalLocation_mainImage);
 				}
 
-			}//end of if(document.contains)
+			
 			
 		} //end of else part of window.matchMedia for mobile version
-	}
+	}//end of function screenTest1
 
 
 
@@ -380,28 +381,6 @@ $(document).ready(function(){
 	############################################################*/
 
 	let mql_startFromTablet = window.matchMedia("(min-width: 48em)");
-	//screenTest2(mql_startFromTablet);
-	//mql_startFromTablet.addListener(screenTest2);
-
-	function screenTest2(e){
-		if(e.matches) {
-		
-		
-		
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		//######################################################
-		} else {
-
-		}
-	}
 
 
 	
