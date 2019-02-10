@@ -881,9 +881,11 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 .component-aboutUs .container-mainImage {
   width: 100%;
   height: 200px;
-  border: 5px solid #000;
   margin-bottom: 25px;
   background-color: #aaa; }
+  .component-aboutUs .container-mainImage img {
+    width: 100%;
+    height: 100%; }
 .component-aboutUs .container-description .description {
   font-size: 0.85em;
   font-weight: 400;
@@ -944,7 +946,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       flex-basis: 40%; }
       .component-aboutUs .flexItem2 .container-mainImage {
         height: 23em;
-        width: 23em;
         margin-bottom: 0;
         margin-left: auto; } }
 @media screen and (min-width: 48em) and (max-width: 52.8125em) {

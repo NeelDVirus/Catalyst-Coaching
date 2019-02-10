@@ -40,7 +40,12 @@
 		.flexItem2 { 
 			display: flex;
 			flex-basis: 40%; 
-			.container-mainImage {height: 23em; width: 23em; margin-bottom: 0; margin-left: auto}
+			.container-mainImage {
+				height: 23em; 
+				//width: 23em; 
+				margin-bottom: 0; 
+				margin-left: auto
+			}
 		}
 	}
 

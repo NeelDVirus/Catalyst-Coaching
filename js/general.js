@@ -94,6 +94,78 @@ $(document).ready(function(){
 
 
 
+	/*###########################################################
+	#############################################################
+	#############################################################
+	########                                             ########
+	########        upto MOBILE-PORTRAIT VERSION         ########
+	########                                             ########
+	#############################################################
+	#############################################################  
+	############################################################*/
+
+
+	let mql_mobilePortait = window.matchMedia('(max-width: 47.9375em )'); //47.9375em =767px
+	screenTest1(mql_mobilePortait);
+	mql_mobilePortait.addListener(screenTest1);
+
+	function screenTest1(e) {
+		if(e.matches) {
+
+
+			/*=============================================================================
+			===================     About US     ==========================================
+			==============================================================================*/
+
+			/*===(1)====================================================
+			(.component-aboutUs)
+
+			-->Layout change: mobile and not-mobile screen
+					--> .container-mainImage: render direction: 
+								 <= mobile: column along with other
+								 > mobile: shift to right half of the screen: 
+										 : moved from flexItem1
+										 : relocated to: flexItem2  
+			=========================================================*/			
+			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2 .container-mainImage");
+			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1"); 
+
+			if(originalLocation_mainImage != null) {
+				let nextShiblingOfMainImage = newLocation_mainImage.querySelector(".container-description");
+				newLocation_mainImage.insertBefore(originalLocation_mainImage, nextShiblingOfMainImage);
+			}		
+
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		//######################################################
+		} else {
+
+			/*===========================================================
+			===================     About US     ========================
+			============================================================*/	
+			/*===(1)====================================================
+			(.component-aboutUs)
+			-->Layout change: mobile and not-mobile screen
+					--> .container-mainImage: render direction: 
+								<= mobile: column along with other
+								> mobile: shift to right half of the screen: 
+										: moved from flexItem1
+										: relocated to: flexItem2  
+			=========================================================*/			
+			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1 .container-mainImage");
+			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2");                                               
+			if(originalLocation_mainImage != null) {
+				newLocation_mainImage.appendChild(originalLocation_mainImage);
+			}
+		}
+	}
+
+
+
+
 
 
 
@@ -103,18 +175,18 @@ $(document).ready(function(){
 	#############################################################
 	#############################################################
 	########                                             ########
-	########                MOBILE VERSION               ########
+	########             Upto TABLET VERSION             ########
 	########                                             ########
 	#############################################################
 	#############################################################  
 	############################################################*/
 
 
-	let mql = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
-	screenTest1(mql);
-	mql.addListener(screenTest1); 
+	let mql_uptoTablet = window.matchMedia('(max-width: 61.9375em)'); //61.9375em = tablet-max
+	screenTest2(mql_uptoTablet);
+	mql_uptoTablet.addListener(screenTest2); 
 
-	function screenTest1(e) {
+	function screenTest2(e) {
 		if(e.matches) {
 
 			/*=============================================================================
@@ -233,27 +305,7 @@ $(document).ready(function(){
 
 
 
-			/*=============================================================================
-			===================     About US     ==========================================
-			==============================================================================*/
 
-			/*===(1)====================================================
-			(.component-aboutUs)
-
-			-->Layout change: mobile and not-mobile screen
-					--> .container-mainImage: render direction: 
-								 <= mobile: column along with other
-								 > mobile: shift to right half of the screen: 
-										 : moved from flexItem1
-										 : relocated to: flexItem2  
-			=========================================================*/			
-			let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2 .container-mainImage");
-			let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1"); 
-
-			if(originalLocation_mainImage != null) {
-				let nextShiblingOfMainImage = newLocation_mainImage.querySelector(".container-designation");
-				newLocation_mainImage.insertBefore(originalLocation_mainImage, nextShiblingOfMainImage);
-			}
 
 		//######################################################
 		//######################################################
@@ -333,25 +385,7 @@ $(document).ready(function(){
 
 
 
-				/*===========================================================
-				===================     About US     ========================
-				============================================================*/	
 
-				/*===(1)====================================================
-				(.component-aboutUs)
-
-				-->Layout change: mobile and not-mobile screen
-						--> .container-mainImage: render direction: 
-									<= mobile: column along with other
-									> mobile: shift to right half of the screen: 
-											: moved from flexItem1
-											: relocated to: flexItem2  
-				=========================================================*/			
-				let originalLocation_mainImage = document.querySelector(".component-aboutUs .flexItem1 .container-mainImage");
-				let newLocation_mainImage = document.querySelector(".component-aboutUs .flexItem2");                                                
-				if(originalLocation_mainImage != null) {
-					newLocation_mainImage.appendChild(originalLocation_mainImage);
-				}
 
 			
 			
