@@ -33,8 +33,14 @@
 	################################################*/
 
 	.component-aboutUs {
-		//display: flex;
-		//flex-direction: column;
+		width: 100%;
+		display: flex;
+		align-items: flex-end;
+		.flexItem1 {flex: 1 1 0; margin-right: 3em;}
+		.flexItem2 { 
+			flex-basis: 40%; 
+			.container-mainImage {height: 20em; margin-bottom: 0;}
+		}
 	}
 
  	
