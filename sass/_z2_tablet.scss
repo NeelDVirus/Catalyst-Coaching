@@ -38,8 +38,9 @@
 		align-items: flex-end;
 		.flexItem1 {flex: 1 1 0; margin-right: 3em;}
 		.flexItem2 { 
+			display: flex;
 			flex-basis: 40%; 
-			.container-mainImage {height: 20em; margin-bottom: 0;}
+			.container-mainImage {height: 23em; width: 23em; margin-bottom: 0; margin-left: auto}
 		}
 	}
 

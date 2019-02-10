@@ -685,12 +685,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 ##############     02 About Us    ##############
 ################################################*/
 .wrapper-aboutUs {
-	margin-top: 5em;
+	margin-top: 3em;
 	padding-bottom: 3em;
 }
 .component-aboutUs {
 	.container-heading {
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		.heading {
 			font-size: 1.6em; 
 			//font-family: $lato;
@@ -698,7 +698,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			text-transform: uppercase;
 			transform: scaleX(0.8);
 			transform-origin: left;
-			margin-bottom: 10px;
+			margin-bottom: 13px;
 		}
 		.subHeading {
 			font-size: 0.8em;
@@ -712,7 +712,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.underline {
 			height: 3px;
 			background-color: red;
-			width: 100px;
+			width: 80px;
 		}
 	}
 	.container-mainImage {
@@ -723,7 +723,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		background-color: #aaa;
 	}
 	.container-description { 
-		margin-bottom: 25px;
+		//margin-bottom: 25px;
 		.description {
 			font-size: 0.85em;
 			font-weight: $regular-openSans;
@@ -737,16 +737,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		justify-content: space-between;
 		align-items: center;
 		.name {
-			font-size: 1.1em;
+			font-size: 1.2em;
 			font-weight: $extraBold-openSans;
-			transform: scaleX(0.8);
+			transform: scale(0.7, 0.8);
 			transform-origin: left;
 		}
 		.designation {
 			font-size: 0.8em;
 			font-weight: $regular-openSans;
 			color: #444;
-			margin-top: 0.5em;
+			margin-top: 0.4em;
+			transform: scaleY(0.9);
 		}
 		.signature {
 			//font-weight: $bold-openSans;
