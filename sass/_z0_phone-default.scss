@@ -679,14 +679,14 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
-//##############################################################################################################################
+//################################################   END OF LANDING PAGE #################################################
 
 /*###############################################
 ##############     02 About Us    ##############
 ################################################*/
 .wrapper-aboutUs {
 	margin-top: 3em;
-	padding-bottom: 3em;
+	padding-bottom: 4.375em;
 }
 .component-aboutUs {
 	.container-heading {
@@ -704,13 +704,13 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			font-size: 0.8em;
 			font-weight: $regular-openSans;
 			color: #444;
-			margin-bottom: 15px;
 			transform: scaleY(0.9);
 
 		}
 		.g_subHeading {display: none;}
 		.underline {
 			height: 3px;
+			margin-top: 15px;
 			background-color: red;
 			width: 80px;
 		}
@@ -762,3 +762,120 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
 
 
+
+/*###############################################
+##############     03 Courses    ##############
+################################################*/
+.wrapper-courses{
+	position: relative;
+	padding-top: 4.375em;
+	padding-bottom: 6.3em;
+	background-color: #f9f9f9;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+		//background-image: url('../images/preview.png');
+		background-size: contain;
+		opacity: 0.24;
+		z-index: 1;
+	}
+}
+.component-courses {
+	position: relative;
+	z-index: 2;
+	.description {
+		position: relative;
+		//z-index: 2;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -20px; bottom: -20px; right: 5px; left: 0px;
+			height: inherit; width: inherit;
+			background-color: #f9f9f9;
+			z-index: -1;
+		}
+		.heading {
+			font-size: 1.6em;
+			font-family: $robotoCondensed;
+			font-weight: $bold-robotoCondensed;
+			text-transform: uppercase;
+		}
+		.subHeading {
+			font-size: 14px;
+			font-family: $raleway;
+			font-weight: $semiBold-raleway;
+			color: #555;
+			margin-top: 13px;
+			//text-shadow: 0 0 1px #666;		
+		}
+		.textNotForMobile {
+			display: none;
+		}
+		.underline {
+			height: 3px;
+			margin-top: 15px;
+			background-color: red;
+			width: 80px;
+		}
+		.descriptionContent {
+			font-size: 15px;
+			margin-top: 20px;
+			font-family: $raleway;
+			font-weight: $semiBold-raleway;
+			line-height: 1.4;
+			color: #555;		
+		}
+	}
+	.courses {
+		.container2 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 60px;
+			height: 447px;
+			width: 286px;
+			background-color: #f9f9f9;
+			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+		.imgContainer {
+			height: 190px;
+			width: 100%;
+			img {height: 100%; width: 100%;}
+		}
+		.buttonSeeDetails {
+			display: flex;
+			align-items: center;	
+			margin-top: calc(-35px/2);		
+			width: 174px;
+			height: 35px;
+			border-radius: 21px;
+			color: white;
+			background-image: linear-gradient(#FC004D,#FC9700);
+			span {
+				font-weight: $regular-openSans;				
+				display: inline-block; 
+				width: 100%; 
+				text-align: center;
+			}
+		}
+		.heading {
+			font-size: 20px;
+			margin-top: 18px;
+			font-family: $openSansCondensed;
+			font-weight: $bold-openSansCondensed
+
+		}
+		.demoClass {
+			display: flex;
+			align-items: center;
+			margin-top: auto;
+			height: 53px;
+			background-color: #F0F0F0;
+			p {
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+}

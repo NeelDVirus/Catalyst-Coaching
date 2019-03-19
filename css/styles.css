@@ -855,7 +855,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 ################################################*/
 .wrapper-aboutUs {
   margin-top: 3em;
-  padding-bottom: 3em; }
+  padding-bottom: 4.375em; }
 
 .component-aboutUs .container-heading {
   margin-bottom: 15px; }
@@ -870,12 +870,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     font-size: 0.8em;
     font-weight: 400;
     color: #444;
-    margin-bottom: 15px;
     transform: scaleY(0.9); }
   .component-aboutUs .container-heading .g_subHeading {
     display: none; }
   .component-aboutUs .container-heading .underline {
     height: 3px;
+    margin-top: 15px;
     background-color: red;
     width: 80px; }
 .component-aboutUs .container-mainImage {
@@ -912,6 +912,110 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     .component-aboutUs .container-designation .signature img {
       width: 100%; }
 
+/*###############################################
+##############     03 Courses    ##############
+################################################*/
+.wrapper-courses {
+  position: relative;
+  padding-top: 4.375em;
+  padding-bottom: 6.3em;
+  background-color: #f9f9f9; }
+  .wrapper-courses:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    opacity: 0.24;
+    z-index: 1; }
+
+.component-courses {
+  position: relative;
+  z-index: 2; }
+  .component-courses .description {
+    position: relative; }
+    .component-courses .description:before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      right: 5px;
+      left: 0px;
+      height: inherit;
+      width: inherit;
+      background-color: #f9f9f9;
+      z-index: -1; }
+    .component-courses .description .heading {
+      font-size: 1.6em;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase; }
+    .component-courses .description .subHeading {
+      font-size: 14px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      color: #555;
+      margin-top: 13px; }
+    .component-courses .description .textNotForMobile {
+      display: none; }
+    .component-courses .description .underline {
+      height: 3px;
+      margin-top: 15px;
+      background-color: red;
+      width: 80px; }
+    .component-courses .description .descriptionContent {
+      font-size: 15px;
+      margin-top: 20px;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #555; }
+  .component-courses .courses .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    height: 447px;
+    width: 286px;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .component-courses .courses .imgContainer {
+    height: 190px;
+    width: 100%; }
+    .component-courses .courses .imgContainer img {
+      height: 100%;
+      width: 100%; }
+  .component-courses .courses .buttonSeeDetails {
+    display: flex;
+    align-items: center;
+    margin-top: calc(-35px/2);
+    width: 174px;
+    height: 35px;
+    border-radius: 21px;
+    color: white;
+    background-image: linear-gradient(#FC004D, #FC9700); }
+    .component-courses .courses .buttonSeeDetails span {
+      font-weight: 400;
+      display: inline-block;
+      width: 100%;
+      text-align: center; }
+  .component-courses .courses .heading {
+    font-size: 20px;
+    margin-top: 18px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700; }
+  .component-courses .courses .demoClass {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    height: 53px;
+    background-color: #F0F0F0; }
+    .component-courses .courses .demoClass p {
+      text-align: center;
+      width: 100%; }
+
 /*Medium devices (tablets, 768px and up)
   min width 48em = 768px
   max-width 61.9375em = 991px */
@@ -945,7 +1049,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       display: flex;
       flex-basis: 40%; }
       .component-aboutUs .flexItem2 .container-mainImage {
-        height: 23em;
+        height: 27em;
         margin-bottom: 0;
         margin-left: auto; } }
 @media screen and (min-width: 48em) and (max-width: 52.8125em) {
