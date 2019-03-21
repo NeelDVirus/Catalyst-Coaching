@@ -834,7 +834,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			flex-direction: column;
 			align-items: center;
 			margin-top: 60px;
-			border: 1px solid #aaa;	
+			border: 1px solid #bbb;	
 			//border-color: #bbb;
 			width: 286px;
 			background-color: #f9f9f9;
@@ -882,8 +882,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		}
 		.courseDescription {
 			padding: 24px 12px 23px 12px;
-			//padding-bottom: 23px;
-			//border-bottom: 1px solid #eee;
 			p {
 				font-size: 15px;
 				font-family: $raleway;
@@ -897,7 +895,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			display: flex;
 			align-items: center;
 			height: 53px;
-			//border-top: 1px solid #f9f9f9;
 			background-color: #F0F0F0;
 			background-color: #eee;
 			width: 100%;
@@ -909,9 +906,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 				color: white;
 				font-weight: $regular-openSans;
 			}
-			// img {
-			// 	width: 100%;
-			// }
 		}
 
 	}
