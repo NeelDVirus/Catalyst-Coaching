@@ -972,70 +972,78 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       font-weight: 600;
       line-height: 1.4;
       color: #555; }
-  .component-courses .courses .container2 {
+  .component-courses .courses {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    border: 1px solid #bbb;
-    width: 286px;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  .component-courses .courses .imgContainer {
-    height: 190px;
-    width: 100%; }
-    .component-courses .courses .imgContainer img {
-      height: 100%;
+    align-items: center; }
+    @media only screen and (min-width: 48em) {
+      .component-courses .courses {
+        flex-direction: row;
+        justify-content: space-between; } }
+    .component-courses .courses .container2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      border: 1px solid #bbb;
+      width: 286px;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .component-courses .courses .imgContainer {
+      height: 190px;
       width: 100%; }
-  .component-courses .courses .buttonSeeDetails {
-    margin-top: calc(-58px/2); }
-    .component-courses .courses .buttonSeeDetails img {
-      display: inline-block;
-      background-color: #000000d9;
-      height: 50px;
-      border-radius: 35px; }
-  .component-courses .courses .heading {
-    font-size: 23px;
-    margin-top: 18px;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-weight: 700; }
-  .component-courses .courses .ratingContainer {
-    display: flex;
-    margin-top: 11px; }
-    .component-courses .courses .ratingContainer .star {
-      font-size: 0.8em;
-      color: #FF3215; }
-    .component-courses .courses .ratingContainer .border {
-      width: 1px;
-      margin: -1px 10px -4px 10px;
-      background-color: #ccc; }
-    .component-courses .courses .ratingContainer .reviews {
-      font-size: 13px;
-      font-weight: 700;
-      color: #555; }
-  .component-courses .courses .courseDescription {
-    padding: 24px 12px 23px 12px; }
-    .component-courses .courses .courseDescription p {
-      font-size: 15px;
-      font-family: "Raleway", sans-serif;
-      font-weight: 500;
-      color: #444;
-      line-height: 1.5;
-      text-align: justify; }
-  .component-courses .courses .demoClass {
-    display: flex;
-    align-items: center;
-    height: 53px;
-    background-color: #F0F0F0;
-    background-color: #eee;
-    width: 100%;
-    padding: 0 12px;
-    background-image: linear-gradient(to right, #ff105a, #ffc008); }
-    .component-courses .courses .demoClass p {
-      text-align: center;
+      .component-courses .courses .imgContainer img {
+        height: 100%;
+        width: 100%; }
+    .component-courses .courses .buttonSeeDetails {
+      margin-top: calc(-58px/2); }
+      .component-courses .courses .buttonSeeDetails img {
+        display: inline-block;
+        background-color: #000000d9;
+        height: 50px;
+        border-radius: 35px; }
+    .component-courses .courses .heading {
+      font-size: 23px;
+      margin-top: 18px;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-weight: 700; }
+    .component-courses .courses .ratingContainer {
+      display: flex;
+      margin-top: 11px; }
+      .component-courses .courses .ratingContainer .star {
+        font-size: 0.8em;
+        color: #FF3215; }
+      .component-courses .courses .ratingContainer .border {
+        width: 1px;
+        margin: -1px 10px -4px 10px;
+        background-color: #ccc; }
+      .component-courses .courses .ratingContainer .reviews {
+        font-size: 13px;
+        font-weight: 700;
+        color: #555; }
+    .component-courses .courses .courseDescription {
+      padding: 24px 12px 23px 12px; }
+      .component-courses .courses .courseDescription p {
+        font-size: 15px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        color: #444;
+        line-height: 1.5;
+        text-align: justify; }
+    .component-courses .courses .demoClass {
+      display: flex;
+      align-items: center;
+      height: 53px;
+      background-color: #F0F0F0;
+      background-color: #eee;
       width: 100%;
-      color: white;
-      font-weight: 400; }
+      padding: 0 12px;
+      background-image: linear-gradient(to right, #ff105a, #ffc008); }
+      .component-courses .courses .demoClass p {
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-weight: 400; }
 
 /*Medium devices (tablets, 768px and up)
   min width 48em = 768px
