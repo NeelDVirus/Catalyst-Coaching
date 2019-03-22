@@ -37,6 +37,46 @@
 	}//End of .wrapper-header
 
 
+	/*###############################################
+	##############     03 Courses    ##############
+	################################################*/
+
+	.component-courses {
+		flex-direction: row;		
+		.courses {		
+			justify-content: space-between;	
+			.container2 {
+				width: 389px;
+				margin-top: 0;			
+				&:first-child {
+					margin-right: 29px;
+				}
+			}
+			.heading {
+				font-size: 25px;
+			}
+			.imgContainer {
+				height: 270px;
+			}
+			.ratingContainer {
+				margin-top: 14px;
+			}
+			.courseDescription {
+				padding-bottom: 32px;
+				p {
+					font-size: 16px;
+				}
+			}
+			.demoClass {
+				p {font-size: 18px;}
+			}
+		}
+	}
+
+
+
+
+
  }//End of media query
 
 
