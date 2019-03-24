@@ -938,17 +938,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   flex-direction: column; }
   .component-courses .description {
     position: relative; }
-    .component-courses .description:before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      bottom: -20px;
-      right: 5px;
-      left: 0px;
-      height: inherit;
-      width: inherit;
-      background-color: #f9f9f9;
-      z-index: -1; }
     .component-courses .description .heading {
       font-size: 1.6em;
       font-family: "Roboto Condensed", sans-serif;
@@ -1008,7 +997,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         background-color: #000000d9;
         height: 50px;
         border-radius: 35px; }
-    .component-courses .courses .heading {
+    .component-courses .courses .headingCourse {
       font-size: 23px;
       margin-top: 18px;
       font-family: "Open Sans Condensed", sans-serif;
@@ -1127,23 +1116,41 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   ################################################*/
   .component-courses {
     flex-direction: row; }
+    .component-courses .description {
+      padding: 20px 5px 20px 20px; }
+      .component-courses .description .heading {
+        font-size: 39px; }
+      .component-courses .description .subHeading {
+        font-size: 17px;
+        font-weight: 500; }
+      .component-courses .description .descriptionContent {
+        font-size: 17px;
+        font-weight: 500; }
     .component-courses .courses {
       justify-content: space-between; }
       .component-courses .courses .container2 {
         width: 389px;
-        margin-top: 0; }
+        margin-top: 0;
+        box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
         .component-courses .courses .container2:first-child {
           margin-right: 29px; }
-      .component-courses .courses .heading {
+      .component-courses .courses .headingCourse {
         font-size: 25px; }
       .component-courses .courses .imgContainer {
         height: 270px; }
+      .component-courses .courses .buttonSeeDetails img {
+        height: 55.1px; }
       .component-courses .courses .ratingContainer {
         margin-top: 14px; }
       .component-courses .courses .courseDescription {
-        padding-bottom: 32px; }
+        padding-bottom: 32px;
+        padding: 20px 18px 32px 13px; }
         .component-courses .courses .courseDescription p {
-          font-size: 16px; }
+          font-size: 16px;
+          font-family: "Raleway", sans-serif;
+          font-weight: 500;
+          text-align: justify;
+          word-spacing: 3px; }
       .component-courses .courses .demoClass p {
         font-size: 18px; } }
 @media screen and (min-width: 61.9375em) and (max-width: 74.9375em) {

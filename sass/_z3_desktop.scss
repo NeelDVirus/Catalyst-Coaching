@@ -40,31 +40,60 @@
 	/*###############################################
 	##############     03 Courses    ##############
 	################################################*/
-
+	.wrapper-courses {
+		//background-image: url("../images/preview.png");
+		//background-image:  
+	}
 	.component-courses {
 		flex-direction: row;		
+		.description{
+			padding: 20px 5px 20px 20px;
+			//background-color: #f9f9f9;
+			.heading {
+				font-size: 39px;
+			}
+			.subHeading {
+				font-size: 17px;
+				font-weight: $medium-raleway;
+			}
+			.descriptionContent {
+				font-size: 17px;
+				font-weight: $medium-raleway;
+			}
+		}
 		.courses {		
 			justify-content: space-between;	
 			.container2 {
 				width: 389px;
-				margin-top: 0;			
+				margin-top: 0;
+				box-shadow: 0 16px 28px 0 rgba(0,0,0,0.22), 0 25px 55px 0 rgba(0,0,0,0.21);			
 				&:first-child {
 					margin-right: 29px;
 				}
 			}
-			.heading {
+			.headingCourse {
 				font-size: 25px;
 			}
 			.imgContainer {
 				height: 270px;
+			}
+			.buttonSeeDetails {
+				img {
+					height: 55.1px;
+				}
 			}
 			.ratingContainer {
 				margin-top: 14px;
 			}
 			.courseDescription {
 				padding-bottom: 32px;
+				padding: 20px 18px 32px 13px;
 				p {
 					font-size: 16px;
+					font-family: $raleway;
+					font-weight: $medium-raleway;
+					text-align: justify;
+					word-spacing: 3px;
 				}
 			}
 			.demoClass {
