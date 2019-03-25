@@ -1119,7 +1119,8 @@ $xsBp-max= max-width = 36.9375em;  //575px */
   ##############     03 Courses    ##############
   ################################################*/
   .component-courses {
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: center; }
     .component-courses .description {
       padding: 20px 5px 20px 20px; }
       .component-courses .description .heading {
@@ -1132,31 +1133,36 @@ $xsBp-max= max-width = 36.9375em;  //575px */
         font-weight: 500; }
     .component-courses .courses {
       justify-content: space-between; }
+      .component-courses .courses .courseContainer {
+        margin-right: 29px; }
+        .component-courses .courses .courseContainer:last-child {
+          margin-right: 0; }
       .component-courses .courses .container2 {
-        width: 328px;
+        width: 330px;
         margin-top: 0;
-        box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
-        .component-courses .courses .container2:first-child {
-          margin-right: 29px; }
+        border: 0px; }
       .component-courses .courses .headingCourse {
-        font-size: 24px; }
+        font-size: 24px;
+        margin-top: 14px; }
       .component-courses .courses .imgContainer {
         height: 235px; }
       .component-courses .courses .buttonSeeDetails img {
-        height: 55.1px; }
+        height: 53.1px; }
       .component-courses .courses .ratingContainer {
-        margin-top: 14px; }
+        margin-top: 11px; }
       .component-courses .courses .courseDescription {
         padding-bottom: 32px;
-        padding: 20px 18px 27px 13px; }
+        padding: 18px 18px 25px 13px; }
         .component-courses .courses .courseDescription p {
           font-size: 16px;
           font-family: "Raleway", sans-serif;
           font-weight: 500;
           text-align: justify;
           word-spacing: 3px; }
-      .component-courses .courses .demoClass p {
-        font-size: 18px; } }
+      .component-courses .courses .demoClass {
+        height: 42px; }
+        .component-courses .courses .demoClass p {
+          font-size: 17px; } }
 @media screen and (min-width: 61.9375em) and (max-width: 74.9375em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
