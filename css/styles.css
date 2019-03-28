@@ -967,13 +967,6 @@ $xsBp-max= max-width = 36.9375em;  //575px */
     display: flex;
     flex-direction: column;
     align-items: center; }
-    @media only screen and (min-width: 48em) {
-      .component-courses .courses {
-        flex-direction: row;
-        justify-content: space-around; } }
-    @media only screen and (min-width: 51.875em) {
-      .component-courses .courses {
-        justify-content: space-evenly; } }
     .component-courses .courses .container2 {
       display: flex;
       flex-direction: column;
@@ -981,7 +974,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       margin-top: 60px;
       border: 1px solid #bbb;
       border-bottom: 0;
-      width: 286px;
+      width: 285px;
       background-color: #f9f9f9;
       box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .component-courses .courses .imgContainer {
@@ -994,7 +987,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       margin-top: calc(-58px/2); }
       .component-courses .courses .buttonSeeDetails img {
         display: inline-block;
-        background-color: #000000d9;
+        background-color: rgba(0, 0, 0, 0.85);
         height: 50px;
         border-radius: 35px; }
     .component-courses .courses .headingCourse {
@@ -1079,7 +1072,19 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       .component-aboutUs .flexItem2 .container-mainImage {
         height: 27em;
         margin-bottom: 0;
-        margin-left: auto; } }
+        margin-left: auto; }
+
+  /*###############################################
+  ##############     03 Courses    ##############
+  ################################################*/
+  .component-courses .courses {
+    flex-direction: row;
+    justify-content: space-between; } }
+  @media only screen and (min-width: 48em) and (min-width: 51.875em) {
+    .component-courses .courses {
+      justify-content: space-around;
+      justify-content: space-evenly; } }
+
 @media screen and (min-width: 48em) and (max-width: 52.8125em) {
   /*###############################################
   #############    02 BannerAppendix    ###########
@@ -1117,12 +1122,20 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 
   /*###############################################
   ##############     03 Courses    ##############
-  ################################################*/
+  ################################################*/ }
+@media only screen and (min-width: 62em) and (min-width: 80em) {
+  .wrapper-courses {
+    background-color: #f9f9f9;
+    padding-top: 7.375em; }
+
   .component-courses {
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
     .component-courses .description {
-      margin-right: 115px; }
+      width: 395px;
+      position: relative;
+      margin-right: 29px; }
       .component-courses .description .heading {
         font-size: 31px; }
       .component-courses .description .subHeading {

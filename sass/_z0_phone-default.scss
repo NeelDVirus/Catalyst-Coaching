@@ -833,13 +833,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		@include mq("tablet-min") {
-			flex-direction: row;
-			justify-content: space-around;
-		}
-		@media only screen and (min-width: 51.875em) {
-			justify-content: space-evenly;
-		}
+		
 		.container2 {
 			display: flex;
 			flex-direction: column;
@@ -847,7 +841,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			margin-top: 60px;
 			border: 1px solid #bbb;
 			border-bottom: 0;	
-			width: 286px;
+			width: 285px;
 			background-color: #f9f9f9;
 			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		}
@@ -860,7 +854,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			margin-top: calc(-58px/2);
 			img {
 				display: inline-block;
-				background-color: #000000d9;
+				background-color: rgba(0,0,0,0.85);
 				height: 50px;
 				border-radius: 35px;
 			}

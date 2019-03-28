@@ -49,6 +49,25 @@
 		}
 	}
 
+
+
+	/*###############################################
+	##############     03 Courses    ##############
+	################################################*/
+
+	.component-courses .courses {
+		flex-direction: row;
+		justify-content: space-between;
+		@media only screen and (min-width: 51.875em) {
+			justify-content: space-around;
+			justify-content: space-evenly;
+		}
+	}
+
+	
+
+
+
  	
  } 
 
