@@ -670,14 +670,16 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       @media screen and (min-width: 48em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
           font-size: 1.5em; } }
-      @media screen and (min-width: 62em) and (max-width: 87em) {
+      @media screen and (min-width: 62em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-          font-size: 2.7em;
+          font-size: 2.2em;
           margin-bottom: 0.3em; } }
+      @media screen and (min-width: 75em) {
+        .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
+          font-size: 2.6em; } }
       @media screen and (min-width: 87.0625em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
-          font-size: 3.2em;
-          margin-bottom: 0.3em; } }
+          font-size: 3.2em; } }
       @media only screen and (min-width: 100em) {
         .wrapper-banner .col-heroImage .container-contentHeroImage .heading {
           font-size: 3.35em; } }
@@ -699,6 +701,10 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             word-spacing: -3px; }
             .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
               padding-bottom: .3em; } }
+  @media screen and (min-width: 62em) and (max-width: 87em) and (min-width: 75em) {
+    .wrapper-banner .col-heroImage .container-contentHeroImage .heading span:first-child {
+      padding-bottom: .3em; } }
+
         @media screen and (min-width: 87.0625em) {
           .wrapper-banner .col-heroImage .container-contentHeroImage .heading span {
             font-weight: 700;
@@ -711,7 +717,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       text-shadow: 2px 2px 10px #333;
       font-weight: 300;
       transform: scale(1, 0.95);
-      transform-origin: left; }
+      transform-origin: left;
+      font-family: "Raleway", sans-serif;
+      font-weight: 300; }
     .wrapper-banner .col-heroImage .container-contentHeroImage .links {
       display: flex;
       align-items: center;
@@ -720,13 +728,17 @@ $xsBp-max= max-width = 36.9375em;  //575px */
       .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
         flex: 1 1 0;
         font-family: "Raleway", sans-serif;
-        font-weight: 300;
+        font-weight: 500;
         text-transform: uppercase;
         border: 1px solid #ff3215;
         padding: 0.8em 1.5em;
         text-align: center; }
         .wrapper-banner .col-heroImage .container-contentHeroImage .links a.performance {
           background-color: #ff3215; }
+          @media screen and (max-width: 36.9375em) {
+            .wrapper-banner .col-heroImage .container-contentHeroImage .links a.performance {
+              background-color: #c6230d;
+              border-color: #c6230d; } }
     @media only screen and (min-width: 48em) {
       .wrapper-banner .col-heroImage .container-contentHeroImage {
         font-size: 0.95em;
@@ -738,11 +750,19 @@ $xsBp-max= max-width = 36.9375em;  //575px */
             line-height: 2; }
         .wrapper-banner .col-heroImage .container-contentHeroImage .links {
           margin-top: 3em; }
+          .wrapper-banner .col-heroImage .container-contentHeroImage .links a {
+            flex: 0 1 12em;
+            padding: 0.9em 1.5em; }
           .wrapper-banner .col-heroImage .container-contentHeroImage .links a:first-child {
             margin-right: 2em; } }
     @media screen and (min-width: 48em) and (orientation: portrait) {
       .wrapper-banner .col-heroImage .container-contentHeroImage {
         width: 55%; } }
+    @media screen and (min-width: 75em) and (max-width: 87em) {
+      .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent {
+        font-size: 1em; }
+      .wrapper-banner .col-heroImage .container-contentHeroImage .links {
+        margin-top: 2.5em; } }
     @media only screen and (max-width: 47.9375em) {
       .wrapper-banner .col-heroImage .container-contentHeroImage {
         flex: 1 1 auto;
@@ -770,9 +790,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
           display: flex;
           flex-direction: column;
           justify-content: center;
-          margin-right: 10%;
-          font-family: "Raleway", sans-serif;
-          font-weight: 300; }
+          margin-right: 10%; }
           .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span {
             font-size: 1.1em; }
           .wrapper-banner .col-heroImage .container-contentHeroImage .headingContent span:first-child {
