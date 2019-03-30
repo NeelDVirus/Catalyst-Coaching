@@ -741,27 +741,44 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	.container-heading {
 		margin-bottom: 15px;
 		.heading {
-			font-size: 1.6em; 
-			//font-family: $lato;
-			font-weight: $extraBold-openSans;
+			font-size: 1.6em;
+			font-size: 40px; 
+			font-family: $robotoCondensed;
+			font-weight: $bold-robotoCondensed;
 			text-transform: uppercase;
-			transform: scaleX(0.8);
-			transform-origin: left;
+			//transform: scaleX(0.8);
+			//transform-origin: left;
 			margin-bottom: 13px;
 		}
 		.subHeading {
-			font-size: 0.8em;
-			font-weight: $regular-openSans;
-			color: #444;
-			transform: scaleY(0.9);
+			//font-size: 0.9375em;
+			font-family: $raleway;
+			font-weight: $medium-raleway;;
+			//line-height: 1.8;
+			color: #666;
 
 		}
 		.g_subHeading {display: none;}
 		.underline {
 			height: 3px;
-			margin-top: 15px;
+			margin-top: 18px;
 			background-color: red;
 			width: 80px;
+		}
+		@media only screen and (max-width: 47.9375em) {
+			margin-bottom: 19px;
+			.heading {
+				margin-bottom: 10px;
+			}
+			.underline {
+				margin-top: 12px;
+			}
+		}
+		@media only screen and (max-width: 36.9375em) {
+			.heading { 
+				font-size: 32px;
+				span.notForMobile {display: none;}
+			}
 		}
 	}
 	.container-mainImage {
@@ -775,11 +792,12 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 	.container-description { 
 		//margin-bottom: 25px;
 		.description {
-			font-size: 0.85em;
-			font-weight: $regular-openSans;
-			color: #444;
+			//font-size: 0.9375em;
+			font-family: $raleway;
+			font-weight: $medium-raleway;;
 			line-height: 1.8;
-			transform: scaleY(0.9);
+			color: #666;
+			//transform: scaleY(0.9);
 		}
 	}
 	.container-designation {
@@ -865,9 +883,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		}
 		.underline {
 			height: 3px;
-			margin-top: 15px;
+			margin-top: 18px;
 			background-color: red;
-			width: 80px;
+			width: 108px;
 		}
 		.descriptionContent {
 			font-size: 15px;
@@ -888,9 +906,9 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 			flex-direction: column;
 			align-items: center;
 			margin-top: 60px;
-			border: 1px solid #bbb;
+			//border: 1px solid #bbb;
 			border-bottom: 0;	
-			width: 285px;
+			width: 290px;
 			background-color: #f9f9f9;
 			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		}
@@ -951,7 +969,7 @@ $xsBp-max= max-width = 36.9375em;  //575px */
 		.demoClass {
 			display: flex;
 			align-items: center;
-			height: 53px;
+			height: 45px;
 			background-color: #F0F0F0;
 			background-color: #eee;
 			width: 100%;
